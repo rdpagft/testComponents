@@ -1,0 +1,80 @@
+<div class="inputs-container primary">
+
+    <h4>Inputs</h4>
+    <mat-form-field  appearance="outline" [hideRequiredMarker]="false">
+        <mat-label>Name</mat-label>
+        <input type="text" class="primary" color="accent" matInput placeholder="Enter your name" autofocus>
+    </mat-form-field>
+    <mat-form-field  appearance="outline" [hideRequiredMarker]="false">
+        <mat-label>Lastname</mat-label>
+        <input type="text" [disabled]="activate" class="" matInput placeholder="Enter your name" autofocus>
+    </mat-form-field>
+    <br>
+    
+    <h5>ICON</h5>
+    <mat-form-field appearance="outline">
+        <mat-label> Username </mat-label>
+        <mat-icon matPrefix>person</mat-icon>
+        <input matInput formControlName="username" type="text" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Username </mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input [disabled]="activate" matInput formControlName="username" type="text" />
+    </mat-form-field>
+    <br>
+
+    <h5>DESCRIPTION</h5>
+    <mat-form-field appearance="outline">
+      <mat-label> Username </mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input matInput formControlName="username" type="text" />
+      <mat-hint>description...!</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Username </mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input [disabled]="activate" matInput formControlName="username" type="text" />
+      <mat-hint>description...!</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Username </mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input [disabled]="activate" matInput formControlName="username" type="text" />
+      <mat-hint>  <mat-icon matPrefix>person</mat-icon> description...!</mat-hint>
+    </mat-form-field>
+    
+    <br>
+
+    <h5>flot label</h5>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label> Username </mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input matInput formControlName="username" type="text" />
+      <mat-hint>description...!</mat-hint>
+    </mat-form-field>
+      <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label> Username </mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input [disabled]="activate" matInput formControlName="username" type="text" />
+      <mat-hint>description...!</mat-hint>
+    </mat-form-field>
+    
+    <h4>error</h4>
+    <form [formGroup]="firstFormGroup" >
+        <mat-form-field appearance="outline" floatLabel="always"> 
+            <input class="primary" color="primary" matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            <mat-error class="accent" color="warn" >ingresa un valor </mat-error>
+        </mat-form-field>   
+    </form>
+
+    <h4>clear</h4>
+    <mat-form-field class="example-form-field" appearance="outline" floatLabel="always">
+        <mat-label>PersonaX</mat-label>
+        <input matInput type="text" [(ngModel)]="value">
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-icon matPrefix>person</mat-icon>
+      </mat-form-field>
+</div>

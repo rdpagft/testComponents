@@ -1,0 +1,33 @@
+@import '/src/custom.scss';
+
+
+$primary: map-get($my-theme, primary);
+
+
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width:100%;
+    display: grid;
+ }
+
+::ng-deep input:focus-visible{
+    outline-offset: 0px !important;
+}
+
+.example{
+    color: $color-success;
+}
+
+// ::ng-deep .accent .mat-checkbox-frame {
+//     border: 1px dashed  mat-color($primary);
+// }
+
+
+
+// .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+//     background-color: $color-emerald !important;
+// }

@@ -1,0 +1,23 @@
+@import '/src/custom.scss';
+/* ::ng-deep .mat-vertical-stepper-content {
+    position: absolute ;
+    right: 0;
+    border: 1px solid red;
+    width: 48%;
+} */
+
+.stepper-container{
+    border: 1px solid black;
+    max-width: 80%;
+    margin: 0 auto;
+}
+/* 
+::ng-deep .mat-vertical-stepper-header {
+    border: 1px solid blue;
+    max-width: 47%;
+    margin: 0;
+} */
+
+.lol{
+    color: $color-error;
+}

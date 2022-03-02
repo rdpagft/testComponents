@@ -1,0 +1,72 @@
+
+  <div class="container primary">
+      <h4>sin icon</h4>
+      <mat-form-field class="primary" appearance="outline" floatLabel="always">
+        <mat-label>select</mat-label>
+        <mat-select  placeholder="Favorite animal" [formControl]="animalControl" required>
+          <mat-option selected> --</mat-option>
+          <mat-option *ngFor="let animal of animals" [value]="animal">
+            {{animal.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field class="primary" appearance="outline" floatLabel="always">
+      <mat-label>select</mat-label>
+      <mat-select [disabled]="true" placeholder="Favorite animal">
+        <mat-option selected> --</mat-option>
+      </mat-select>
+    </mat-form-field>
+  <br>
+      <h4>icon</h4>
+      <mat-form-field class="primary" appearance="outline" floatLabel="always">
+          <mat-label>select</mat-label>
+          <mat-select  placeholder="Favorite animal" >
+            <mat-option selected> --</mat-option>
+           
+          </mat-select>
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+          <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+      </mat-form-field>
+      
+      <mat-form-field class="primary" appearance="outline" floatLabel="always">
+        <mat-label>select</mat-label>
+        <mat-select [disabled]="true" placeholder="Favorite animal">
+          <mat-option selected> --</mat-option>
+        </mat-select>
+        <mat-icon matPrefix>person</mat-icon>
+    </mat-form-field>
+      <mat-form-field class="primary" appearance="outline" floatLabel="always">
+        <mat-label>select</mat-label>
+        <mat-select [disabled]="true" placeholder="Favorite animal">
+          <mat-option selected> --</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <h4>pagination</h4>
+    <mat-form-field class="primary" appearance="outline" floatLabel="always">
+          <mat-label>label</mat-label>
+          <mat-select  placeholder="Default" >
+            <mat-option selected> --</mat-option>
+          </mat-select>
+          <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+    <mat-form-field class="primary" appearance="outline" floatLabel="always">
+          <mat-label>label</mat-label>
+          <mat-select  placeholder="Default" >
+            <mat-option selected> --</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field class="primary" appearance="outline" floatLabel="always">
+        <mat-label>label</mat-label>
+        <mat-select [disabled]="true" placeholder="Default">
+          <mat-option selected> --</mat-option>
+        </mat-select>
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+
+  </div>

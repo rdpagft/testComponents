@@ -1,0 +1,24 @@
+<div class="container primary">
+    <p>radio button normal</p>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button  color="primary" value="1">Option 1</mat-radio-button>
+        <mat-radio-button [disabled]="true" color="primary" value="1">Option 1</mat-radio-button> 
+    </mat-radio-group>
+    <br><p></p>
+    <p>radio button active</p>
+    <mat-radio-group>
+        <mat-radio-button [checked]="true" color="primary" value="1">Option 1</mat-radio-button>
+        <mat-radio-button [checked]="true" [disabled]="true" color="primary" value="1">Option 1</mat-radio-button>
+    </mat-radio-group>
+</div>
+<br>
+
+<div class="container primary">
+    <p>radio button normal</p>
+    <mat-checkbox  color="primary">Check me!</mat-checkbox>
+    <mat-checkbox [disabled]="true"  color="primary">Check me!</mat-checkbox>
+    
+    <p>check box active</p>
+    <mat-checkbox [checked]="true" class="" color="primary">Check me!</mat-checkbox>
+    <mat-checkbox [disabled]="true" [checked]="true" class="" color="primary">Check me!</mat-checkbox>
+</div>
