@@ -23,6 +23,12 @@ import  {  NgxMatExtSelectModule  }  from  '@fgrid-ngx/mat-ext-select';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { RadioComponent } from './components/radio/radio.component';
 import { ListComponent } from './components/list/list.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { SlideComponent } from './components/slide/slide.component';
+import { ChipsComponent } from './components/chips/chips.component';
+import {MatChipsModule} from '@angular/material/chips';
+import { BadgesComponent } from './components/badges/badges.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -35,6 +41,9 @@ import { ListComponent } from './components/list/list.component';
     ButtonsComponent,
     RadioComponent,
     ListComponent,
+    SlideComponent,
+    ChipsComponent,
+    BadgesComponent,
 
   ],
   imports: [
@@ -55,7 +64,10 @@ import { ListComponent } from './components/list/list.component';
     MatStepperModule,
     MatCheckboxModule,
     MatSelectModule,
-    NgxMatExtSelectModule
+    NgxMatExtSelectModule,
+    MatSlideToggleModule,
+    MatChipsModule,
+    MatBadgeModule
   ],
   providers: [
       // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},

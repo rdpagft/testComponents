@@ -50,6 +50,7 @@ $color-success: #339966 !default;
   $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
+
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
     // color: mat-color($alternate-primary) !important;;
     opacity: .1 !important;
@@ -114,11 +115,12 @@ $color-success: #339966 !default;
     border-color: mat-color($alternate-primary) !important;
     opacity:.6  !important
   }
-
-  
-.mat-checkbox-disabled.mat-uncheckbox-checked .mat-checkbox-background{
+  .mat-checkbox-disabled.mat-uncheckbox-checked .mat-checkbox-background{
   background-color: red !important;
-}
+  }
+  .mat-chip.mat-standard-chip{
+    color: $color-cloud !important;
+  }
 }
 .big-button{
   $alternate-primary: mat.define-palette($custom-palette, brand);
@@ -209,6 +211,10 @@ $color-success: #339966 !default;
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
   }
+
+  .mat-badge-content {
+    color: $color-cloud !important;
+  }
 }
 .accent {
   $alternate-primary: mat.define-palette($custom-palette, emerald);
@@ -242,6 +248,11 @@ $color-success: #339966 !default;
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
     color: mat-color($alternate-primary) !important;;
     opacity: .1 !important;
+  }
+
+  .mat-chip.mat-standard-chip{
+    background-color: $color-carbon40;
+    color: $color-cloud !important;
   }
 }
 

@@ -2,24 +2,28 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InputsComponent } from './components/inputs/inputs.component';
 import { TableComponent } from './components/table/table.component';
-import { CheckboxesComponent } from './components/checkboxes/checkboxes.component';
 import { SelectComponent } from './components/select/select.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { RadioComponent } from './components/radio/radio.component';
 import { ListComponent } from './components/list/list.component';
+import { SlideComponent } from './components/slide/slide.component';
+import { ChipsComponent } from './components/chips/chips.component';
+import { BadgesComponent } from './components/badges/badges.component';
 
 const routes: Routes = [
   {path:'', component:TableComponent},
   {path:'inputs-text', component:InputsComponent},
-  {path:'ckeckbox', component:CheckboxesComponent},
   {path:'select', component:SelectComponent},
   {path:'buttons', component:ButtonsComponent},
   {path:'radio', component:RadioComponent},
-  {path:'list', component:ListComponent}
+  {path:'slide', component:SlideComponent},
+  {path:'chips', component:ChipsComponent},
+  {path:'list', component:ListComponent},
+  {path:'badges', component:BadgesComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

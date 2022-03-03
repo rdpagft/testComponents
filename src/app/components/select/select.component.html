@@ -6,7 +6,6 @@
         <mat-select  placeholder="Favorite animal" [formControl]="animalControl" required>
           <mat-option selected> --</mat-option>
           <mat-option *ngFor="let animal of animals" [value]="animal">
-            {{animal.name}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
@@ -67,6 +66,18 @@
         </mat-select>
         <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
-
+    <br>
+    <h4>Opciones con imagen</h4>
+    <mat-form-field class="primary" appearance="outline" floatLabel="always">
+      <mat-label>select</mat-label>
+      <mat-select  placeholder="Favorite animal" [formControl]="animalControl" required>
+        <mat-option selected> --</mat-option>
+        <mat-option *ngFor="let animal of animals" [value]="animal">
+          <mat-icon>imagen</mat-icon> {{animal.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+      <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+  </mat-form-field>
 
   </div>
