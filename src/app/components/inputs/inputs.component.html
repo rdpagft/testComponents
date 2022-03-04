@@ -1,5 +1,5 @@
 <div class="inputs-container primary">
-
+  <div [formGroup]="firstFormGroup">
     <h4>Inputs</h4>
     <mat-form-field  appearance="outline" [hideRequiredMarker]="false">
         <mat-label>Name</mat-label>
@@ -23,7 +23,7 @@
       <input [disabled]="activate" matInput formControlName="username" type="text" />
     </mat-form-field>
     <br>
-
+    
     <h5>DESCRIPTION</h5>
     <mat-form-field appearance="outline">
       <mat-label> Username </mat-label>
@@ -45,7 +45,6 @@
     </mat-form-field>
     
     <br>
-
     <h5>flot label</h5>
     <mat-form-field appearance="outline" floatLabel="always">
       <mat-label> Username </mat-label>
@@ -67,14 +66,15 @@
             <mat-error class="accent" color="warn" >ingresa un valor </mat-error>
         </mat-form-field>   
     </form>
-
-    <h4>clear</h4>
-    <mat-form-field class="example-form-field" appearance="outline" floatLabel="always">
-        <mat-label>PersonaX</mat-label>
-        <input matInput type="text" [(ngModel)]="value">
-        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-          <mat-icon>close</mat-icon>
-        </button>
-        <mat-icon matPrefix>person</mat-icon>
-      </mat-form-field>
+    
+  </div>
+  <h4>clear</h4>
+  <mat-form-field class="example-form-field" appearance="outline" floatLabel="always">
+      <mat-label>PersonaX</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-icon matPrefix>person</mat-icon>
+    </mat-form-field>
 </div>

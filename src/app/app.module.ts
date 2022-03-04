@@ -32,6 +32,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     BadgesComponent,
     TypografyComponent,
     AutocompleteComponent,
+    SearchComponent,
 
   ],
   imports: [

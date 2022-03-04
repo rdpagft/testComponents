@@ -11,6 +11,7 @@ import { ChipsComponent } from './components/chips/chips.component';
 import { BadgesComponent } from './components/badges/badges.component';
 import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   {path:'', component:TableComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'list', component:ListComponent},
   {path:'badges', component:BadgesComponent},
   {path:'autocomplete', component:AutocompleteComponent},
+  {path:'search', component:SearchComponent},
   {path:'**', component:TableComponent}
 ];
 

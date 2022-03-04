@@ -16,7 +16,8 @@ export class InputsComponent implements OnInit {
 
   ngOnInit(): void {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+      firstCtrl: ['', Validators.required],
+      username: ['', Validators.required]
     });
   }
 }
