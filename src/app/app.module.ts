@@ -29,6 +29,9 @@ import { ChipsComponent } from './components/chips/chips.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { BadgesComponent } from './components/badges/badges.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { TypografyComponent } from './components/typografy/typografy.component';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     SlideComponent,
     ChipsComponent,
     BadgesComponent,
+    TypografyComponent,
+    AutocompleteComponent,
 
   ],
   imports: [
@@ -67,7 +72,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     NgxMatExtSelectModule,
     MatSlideToggleModule,
     MatChipsModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatAutocompleteModule
   ],
   providers: [
       // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},

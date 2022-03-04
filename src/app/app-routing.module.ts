@@ -9,6 +9,8 @@ import { ListComponent } from './components/list/list.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { ChipsComponent } from './components/chips/chips.component';
 import { BadgesComponent } from './components/badges/badges.component';
+import { TypografyComponent } from './components/typografy/typografy.component';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 
 const routes: Routes = [
   {path:'', component:TableComponent},
@@ -19,11 +21,13 @@ const routes: Routes = [
   {path:'slide', component:SlideComponent},
   {path:'chips', component:ChipsComponent},
   {path:'list', component:ListComponent},
-  {path:'badges', component:BadgesComponent}
+  {path:'badges', component:BadgesComponent},
+  {path:'autocomplete', component:AutocompleteComponent},
+  {path:'**', component:TableComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }
