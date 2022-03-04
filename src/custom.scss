@@ -98,6 +98,10 @@ $color-success: #339966 !default;
     background-color: $color-carbon10 !important;
     color: $color-cloud  !important;
   }
+  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{
+    width: 1.5em !important;
+    height: 1.5em !important;
+  }
 
   .mat-icon-button.mat-button-disabled.mat-button-disabled{
     background-color: $color-carbon10 !important;
