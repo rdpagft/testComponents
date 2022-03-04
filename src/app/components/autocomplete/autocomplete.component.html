@@ -1,0 +1,40 @@
+<div class="container primary">
+    <p>AUTOCOMPLETE</p>
+    <form class="example-form">
+        <mat-form-field class="example-full-width gray" appearance="outline" floatLabel="always">
+            <mat-label>State</mat-label>
+            <input matInput
+                    placeholder="select country"
+                   aria-label="State"
+                   [matAutocomplete]="auto"
+                   [formControl]="stateCtrl"
+                  >
+            <button mat-button *ngIf="stateCtrl.value" matSuffix mat-icon-button aria-label="Clear" (click)="clear(stateCtrl)">
+                <mat-icon>close</mat-icon>
+            </button>    
+            <mat-autocomplete  #auto="matAutocomplete">
+              <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                <span>{{state.name}}</span> |
+                <small>Population: {{state.population}}</small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field  class="example-full-width" appearance="outline" floatLabel="always">
+            <mat-label>State</mat-label>
+            <input matInput
+                    placeholder="select country"
+                   aria-label="State"
+                   [matAutocomplete]="auto"
+                   [formControl]="stateCtrlDisabled"
+                   [disabled]="true">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                <span>{{state.name}}</span> |
+                <small>Population: {{state.population}}</small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+      </form>
+</div>

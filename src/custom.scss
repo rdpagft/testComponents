@@ -94,6 +94,11 @@ $color-success: #339966 !default;
     background-color: mat-color($alternate-primary) !important;
     color: $color-cloud;
   }
+  .gray .mat-icon-button{
+    background-color: $color-carbon10 !important;
+    color: $color-cloud  !important;
+  }
+
   .mat-icon-button.mat-button-disabled.mat-button-disabled{
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
@@ -120,6 +125,11 @@ $color-success: #339966 !default;
   }
   .mat-chip.mat-standard-chip{
     color: $color-cloud !important;
+  }
+  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon {
+    color: $color-carbon20;
+    // width: 2em;
+    // height: 2em;
   }
 }
 .big-button{
