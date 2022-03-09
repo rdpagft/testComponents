@@ -33,6 +33,10 @@ import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { SearchComponent } from './components/search/search.component';
+import { GestorComponent } from './components/gestor/gestor.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,7 @@ import { SearchComponent } from './components/search/search.component';
     TypografyComponent,
     AutocompleteComponent,
     SearchComponent,
+    GestorComponent,
 
   ],
   imports: [
@@ -75,7 +80,10 @@ import { SearchComponent } from './components/search/search.component';
     MatSlideToggleModule,
     MatChipsModule,
     MatBadgeModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatMenuModule
   ],
   providers: [
       // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},

@@ -272,3 +272,16 @@ $color-success: #339966 !default;
 
 
 
+.light{
+  $alternate-primary: mat.define-palette($custom-palette, cloud);
+  $alternate-accent:  mat.define-palette($custom-palette, cloud54);
+  $alternate-warn:  mat.define-palette($custom-palette, fresh-berry);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+  @include angular-material-theme($alternate-theme);
+  
+  .mat-toolbar {
+    margin: 0;
+    box-shadow: 0 4px 6px -6px #222;
+  }
+}

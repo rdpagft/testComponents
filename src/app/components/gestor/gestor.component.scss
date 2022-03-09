@@ -1,0 +1,73 @@
+.logo-container {
+    font-size: 24px !important;
+    width: 10%;
+}
+.options-container{
+    width: 60%;
+}
+
+.options-container ul{
+    list-style: none;
+}
+.options-container ul li a{
+    width: 20%;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #666666;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+}
+.active{
+    border-bottom:  1px solid orange;
+    
+     a{
+        
+        color: orange !important;
+    }
+}
+.options-container > a:focus{
+color: red;
+}
+.options-container > a:link{
+    color: green;
+}
+.options-container > a:visited{
+    color: blue;
+}
+.options-container > a:active{
+    color: orange;
+    text-decoration: underline;
+    line-height: 1;
+    .options-container{
+        border: 2px solid purple;
+    }
+}
+
+.actions-container{
+    width: 20%;
+}
+
+.user-menu-container{
+    width: 10%;
+}
+
+.user-name > span{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    /* AMIS Primary/Carbon 60 */
+
+color: #666666;
+}

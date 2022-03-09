@@ -12,7 +12,7 @@ import { BadgesComponent } from './components/badges/badges.component';
 import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { SearchComponent } from './components/search/search.component';
-
+import { GestorComponent } from './components/gestor/gestor.component';
 const routes: Routes = [
   {path:'', component:TableComponent},
   {path:'inputs-text', component:InputsComponent},
@@ -25,6 +25,7 @@ const routes: Routes = [
   {path:'badges', component:BadgesComponent},
   {path:'autocomplete', component:AutocompleteComponent},
   {path:'search', component:SearchComponent},
+  {path:'gestor', component:GestorComponent},
   {path:'**', component:TableComponent}
 ];
 

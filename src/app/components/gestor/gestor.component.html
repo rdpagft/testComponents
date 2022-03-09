@@ -1,0 +1,71 @@
+<div class="light">
+    <div class="line-down">
+        
+        <mat-toolbar class="" color="accent"  fxLayoutAlign="space-between center">
+            <div class="logo-container" fxLayout="row" fxFlexAlign="center center">
+                <img src="assets/images/Logo.png" alt="">
+            </div>
+            <div class="options-container" fxLayout="row" fxHide.xs="true" fxHide.sm="true">
+                <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
+                    <li routerLinkActive="active">
+                        <a [routerLink]='["/inputs"]' >INICIO</a>
+
+                    </li>
+                    <li routerLinkActive="active">
+
+                        <a [routerLink]='["/select"]'  >CONSULTAS</a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]='["/buttons"]' >LOTES</a>
+
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]='["/chips"]' >REPORTES</a>
+
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]='["/autocomplete"]' >ADMINISTRACIÓN</a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="actions-container"  fxLayoutAlign="end center">
+                <button mat-icon-button>
+                    <mat-icon>
+                        search
+                    </mat-icon>
+                  
+                </button>
+                <button mat-icon-button>
+                    <mat-icon matBadge="15" matBadgeColor="warn">
+                        notification_important
+                    </mat-icon>
+                </button>
+            </div>
+            <div class="user-menu-container" fxLayout="row"  fxLayoutAlign="center center">
+                <div class="user-name" fxLayout="column">
+                    <span>Nombre</span>
+                </div>
+                <div class="menu-icon" >
+                    <button  mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>arrow_drop_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>Redial</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                </div>
+            </div>
+          </mat-toolbar>
+    </div>
+</div>
