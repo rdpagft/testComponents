@@ -37,6 +37,8 @@ import { GestorComponent } from './components/gestor/gestor.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
+import { AministracionComponent } from './components/aministracion/aministracion.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,7 @@ import {MatMenuModule} from '@angular/material/menu';
     AutocompleteComponent,
     SearchComponent,
     GestorComponent,
-
+    AministracionComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatAutocompleteModule,
     MatToolbarModule,
     FlexLayoutModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule
+
   ],
   providers: [
       // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},

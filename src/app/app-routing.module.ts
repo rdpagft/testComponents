@@ -13,6 +13,7 @@ import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { SearchComponent } from './components/search/search.component';
 import { GestorComponent } from './components/gestor/gestor.component';
+import { AministracionComponent } from './components/aministracion/aministracion.component';
 const routes: Routes = [
   {path:'', component:TableComponent},
   {path:'inputs-text', component:InputsComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:'autocomplete', component:AutocompleteComponent},
   {path:'search', component:SearchComponent},
   {path:'gestor', component:GestorComponent},
+  {path:'administracion', component:AministracionComponent},
   {path:'**', component:TableComponent}
 ];
 

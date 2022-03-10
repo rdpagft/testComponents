@@ -1,7 +1,5 @@
-<div class="light">
-    <div class="line-down">
-        
-        <mat-toolbar class="" color="accent"  fxLayoutAlign="space-between center">
+<div class="light contenedor">        
+        <mat-toolbar class="contenedor__navbar" color="accent"  fxLayoutAlign="space-between center">
             <div class="logo-container" fxLayout="row" fxFlexAlign="center center">
                 <img src="assets/images/Logo.png" alt="">
             </div>
@@ -16,7 +14,7 @@
                         <a [routerLink]='["/select"]'  >CONSULTAS</a>
                     </li>
                     <li routerLinkActive="active">
-                        <a [routerLink]='["/buttons"]' >LOTES</a>
+                        <a [routerLink]='["/autocomplete"]' >LOTES</a>
 
                     </li>
                     <li routerLinkActive="active">
@@ -24,7 +22,7 @@
 
                     </li>
                     <li routerLinkActive="active">
-                        <a [routerLink]='["/autocomplete"]' >ADMINISTRACIÓN</a>
+                        <a [routerLink]='["/administracion"]' >ADMINISTRACIÓN</a>
 
                     </li>
                 </ul>
@@ -38,7 +36,7 @@
                 </button>
                 <button mat-icon-button>
                     <mat-icon matBadge="15" matBadgeColor="warn">
-                        notification_important
+                        notifications
                     </mat-icon>
                 </button>
             </div>
@@ -67,5 +65,4 @@
                 </div>
             </div>
           </mat-toolbar>
-    </div>
 </div>

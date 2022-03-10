@@ -243,7 +243,7 @@ $color-success: #339966 !default;
     opacity:.5  !important
   }
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
-    color: mat-color($alternate-primary) !important;;
+    color: mat-color($alternate-primary) !important;
     opacity: .2 I !important;
   }
 }
@@ -284,4 +284,14 @@ $color-success: #339966 !default;
     margin: 0;
     box-shadow: 0 4px 6px -6px #222;
   }
+
+  .mat-badge-content{
+    color: $color-cloud
+  }
+
+  .mat-icon{
+    padding-right: 5px;
+  }
+
+  
 }
