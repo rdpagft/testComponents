@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use '@angular/material'as mat;
 @import '~@angular/material/theming';
 @import './custom-palette.scss';
 @include mat.core();
@@ -8,20 +8,17 @@ $accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
 $warn: mat.define-palette(mat.$yellow-palette);
 
 
-$my-theme: mat.define-light-theme((
- color: (
-   primary: $primary,
-   accent: $accent,
-   warn: $warn,
- )
-));
+$my-theme: mat.define-light-theme((color: (primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    )));
 
 
 @include mat.all-component-themes($my-theme);
 
-            
+
 // COLORS
-$color-brand: #F07F13 !default;;
+$color-brand: #F07F13 !default;
 $color-citrus: #E9780B !default;
 $color-warning: #FFD631 !default;
 $color-fresh-berry: #B10231 !default;
@@ -34,20 +31,20 @@ $color-carbon10: #EBEBEB !default;
 $color-carbon20: #a7a7a7 !default;
 $color-carbon40: #919191 !default;
 $color-carbon60: #666666 !default;
-$color-carbon64: rgba(0,0,0,0.64) !default;
+$color-carbon64: rgba(0, 0, 0, 0.64) !default;
 $color-carbon100: #000000 !default;
 $color-cloud: #FFFFFF !default;
-$color-cloud54: rgba(255,255,255,0.64) !default;
+$color-cloud54: rgba(255, 255, 255, 0.64) !default;
 $color-success: #339966 !default;
 
 
 
 .primary {
   $alternate-primary: mat.define-palette($custom-palette, brand);
-  $alternate-accent:  mat.define-palette($custom-palette, sea);
-  $alternate-warn:  mat.define-palette($custom-palette, sky);
+  $alternate-accent: mat.define-palette($custom-palette, sea);
+  $alternate-warn: mat.define-palette($custom-palette, sky);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
 
@@ -69,127 +66,165 @@ $color-success: #339966 !default;
   .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
     color: $color-error !important;
   }
-  .mat-form-field.mat-form-field-invalid .mat-form-field-label{
+
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label {
     color: $color-error
   }
-  .mat-flat-button, .mat-raised-button, .mat-fab,  .mat-mini-fab {
+
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-mini-fab {
     color: $color-cloud !important;
     border-radius: 20px;
-    padding:0 5%;
+    padding: 0 5%;
   }
-  .mat-flat-button:hover, .mat-raised-button:hover, .mat-fab:hover,  .mat-mini-fab:hover {
+
+  .mat-flat-button:hover,
+  .mat-raised-button:hover,
+  .mat-fab:hover,
+  .mat-mini-fab:hover {
     background-color: $color-citrus !important;
   }
 
-  .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled {
+  .mat-raised-button.mat-primary.mat-button-disabled,
+  .mat-raised-button.mat-button-disabled.mat-button-disabled {
     background-color: $color-carbon10;
     color: $color-carbon20 !important;
   }
-  .mat-raised-button.mat-primary.mat-button-disabled:hover, .mat-raised-button.mat-button-disabled.mat-button-disabled:hover{
+
+  .mat-raised-button.mat-primary.mat-button-disabled:hover,
+  .mat-raised-button.mat-button-disabled.mat-button-disabled:hover {
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
   }
 
-  .mat-icon-button{
+  .mat-icon-button {
     background-color: mat-color($alternate-primary) !important;
     color: $color-cloud;
   }
-  .gray .mat-icon-button{
+
+  .gray .mat-icon-button {
     background-color: $color-carbon10 !important;
-    color: $color-cloud  !important;
+    color: $color-cloud !important;
   }
-  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{
+
+  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
     width: 1.5em !important;
     height: 1.5em !important;
   }
 
-  .mat-icon-button.mat-button-disabled.mat-button-disabled{
+  .mat-icon-button.mat-button-disabled.mat-button-disabled {
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
   }
+
   .mat-radio-button.mat-radio-disabled .mat-radio-outer-circle {
     background-color: $color-carbon10 !important;
   }
-  
-  .mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle{
+
+  .mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle {
     border-color: mat-color($alternate-primary) !important;
-    opacity:.6  !important
+    opacity: .6 !important
   }
-  .mat-radio-button.mat-radio-disabled .mat-radio-inner-circle{
+
+  .mat-radio-button.mat-radio-disabled .mat-radio-inner-circle {
     background-color: mat-color($alternate-primary) !important;
-    opacity:.6  !important
+    opacity: .6 !important
   }
-  .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background{
+
+  .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
     background-color: mat-color($alternate-primary) !important;
     border-color: mat-color($alternate-primary) !important;
-    opacity:.6  !important
+    opacity: .6 !important
   }
-  .mat-checkbox-disabled.mat-uncheckbox-checked .mat-checkbox-background{
-  background-color: red !important;
+
+  .mat-checkbox-disabled.mat-uncheckbox-checked .mat-checkbox-background {
+    background-color: red !important;
   }
-  .mat-chip.mat-standard-chip{
+
+  .mat-chip.mat-standard-chip {
     color: $color-cloud !important;
   }
+
   .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon {
     color: $color-cloud;
     // width: 2em;
     // height: 2em;
   }
 }
-.big-button{
-  $alternate-primary: mat.define-palette($custom-palette, brand);
-  $alternate-accent:  mat.define-palette($custom-palette, sea);
-  $alternate-warn:  mat.define-palette($custom-palette, sky);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+.big-button {
+  $alternate-primary: mat.define-palette($custom-palette, brand);
+  $alternate-accent: mat.define-palette($custom-palette, sea);
+  $alternate-warn: mat.define-palette($custom-palette, sky);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
-   .mat-raised-button {
+  .mat-raised-button {
     background-color: mat-color($alternate-primary) !important;
     color: $color-cloud !important;
     padding: 10px 30px !important;
   }
+
   .mat-raised-button-disabled {
     background-color: mat-color($alternate-primary) !important;
     color: $color-cloud !important;
     padding: 10px 30px !important;
   }
 
-  .mat-flat-button:hover, .mat-raised-button:hover, .mat-fab:hover,  .mat-mini-fab:hover {
+  .mat-flat-button:hover,
+  .mat-raised-button:hover,
+  .mat-fab:hover,
+  .mat-mini-fab:hover {
     background-color: $color-citrus !important;
   }
+
   .mat-raised-button.mat-button-disabled.mat-button-disabled {
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
   }
 }
-.secondary{
-  $alternate-primary: mat.define-palette($custom-palette, cloud);
-  $alternate-accent:  mat.define-palette($custom-palette, carbon20);
-  $alternate-warn:  mat.define-palette($custom-palette, carbon40);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+.secondary {
+  $alternate-primary: mat.define-palette($custom-palette, cloud);
+  $alternate-accent: mat.define-palette($custom-palette, carbon20);
+  $alternate-warn: mat.define-palette($custom-palette, carbon40);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
   @include angular-material-theme($alternate-theme);
-  .mat-flat-button, .mat-raised-button, .mat-fab,  .mat-mini-fab {
+
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-mini-fab {
     background-color: $color-cloud !important;
     color: $color-carbon40 !important;
     border: 1px solid $color-carbon40 !important;
     border-radius: 20px;
-    padding:0 5%;
+    padding: 0 5%;
   }
-  .mat-flat-button:hover, .mat-raised-button:hover, .mat-fab:hover,  .mat-mini-fab:hover {
+
+  .mat-flat-button:hover,
+  .mat-raised-button:hover,
+  .mat-fab:hover,
+  .mat-mini-fab:hover {
     background-color: $color-carbon20 !important;
     color: $color-cloud !important;
     border: 1px solid $color-carbon40 !important;
   }
 
-  .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled {
+  .mat-raised-button.mat-primary.mat-button-disabled,
+  .mat-raised-button.mat-button-disabled.mat-button-disabled {
     background-color: $color-cloud !important;
     color: $color-carbon20 !important;
     border: 1px solid $color-carbon20 !important;
     opacity: .5;
   }
-  .mat-raised-button.mat-primary.mat-button-disabled:hover, .mat-raised-button.mat-button-disabled.mat-button-disabled:hover{
+
+  .mat-raised-button.mat-primary.mat-button-disabled:hover,
+  .mat-raised-button.mat-button-disabled.mat-button-disabled:hover {
     background-color: $color-cloud !important;
     color: $color-carbon20 !important;
     border: 1px solid $color-carbon20 !important;
@@ -197,31 +232,41 @@ $color-success: #339966 !default;
   }
 }
 
-.delete{
+.delete {
   $alternate-primary: mat.define-palette($custom-palette, error);
-  $alternate-accent:  mat.define-palette($custom-palette, error);
-  $alternate-warn:  mat.define-palette($custom-palette, fresh-berry);
+  $alternate-accent: mat.define-palette($custom-palette, error);
+  $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
 
   @include angular-material-theme($alternate-theme);
 
-  .mat-flat-button, .mat-raised-button, .mat-fab,  .mat-mini-fab {
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-mini-fab {
     background-color: $color-error !important;
     color: $color-cloud !important;
     border-radius: 20px;
-    padding:0 5%;
+    padding: 0 5%;
   }
-  .mat-flat-button:hover, .mat-raised-button:hover, .mat-fab:hover,  .mat-mini-fab:hover {
+
+  .mat-flat-button:hover,
+  .mat-raised-button:hover,
+  .mat-fab:hover,
+  .mat-mini-fab:hover {
     background-color: $color-fresh-berry !important;
     color: $color-cloud !important;
   }
 
-  .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled {
+  .mat-raised-button.mat-primary.mat-button-disabled,
+  .mat-raised-button.mat-button-disabled.mat-button-disabled {
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
   }
-  .mat-raised-button.mat-primary.mat-button-disabled:hover, .mat-raised-button.mat-button-disabled.mat-button-disabled:hover{
+
+  .mat-raised-button.mat-primary.mat-button-disabled:hover,
+  .mat-raised-button.mat-button-disabled.mat-button-disabled:hover {
     background-color: $color-carbon10 !important;
     color: $color-carbon20 !important;
   }
@@ -230,41 +275,46 @@ $color-success: #339966 !default;
     color: $color-cloud !important;
   }
 }
+
 .accent {
   $alternate-primary: mat.define-palette($custom-palette, emerald);
-  $alternate-accent:  mat.define-palette($custom-palette, citrus);
-  $alternate-warn:  mat.define-palette($custom-palette, fresh-berry);
+  $alternate-accent: mat.define-palette($custom-palette, citrus);
+  $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
-  .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background{
+  .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
     background-color: mat-color($alternate-primary) !important;
-    opacity:.5  !important
+    opacity: .5 !important
   }
+
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
     color: mat-color($alternate-primary) !important;
     opacity: .2 I !important;
   }
 }
+
 .feedback {
   $alternate-primary: mat.define-palette($custom-palette, success);
-  $alternate-accent:  mat.define-palette($custom-palette, error);
-  $alternate-warn:  mat.define-palette($custom-palette, warning);
+  $alternate-accent: mat.define-palette($custom-palette, error);
+  $alternate-warn: mat.define-palette($custom-palette, warning);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
-  .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background{
+  .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
     background-color: mat-color($alternate-primary) !important;
-    opacity:.5  !important
+    opacity: .5 !important
   }
+
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
-    color: mat-color($alternate-primary) !important;;
+    color: mat-color($alternate-primary) !important;
+    ;
     opacity: .1 !important;
   }
 
-  .mat-chip.mat-standard-chip{
+  .mat-chip.mat-standard-chip {
     background-color: $color-carbon40;
     color: $color-cloud !important;
   }
@@ -272,26 +322,26 @@ $color-success: #339966 !default;
 
 
 
-.light{
+.light {
   $alternate-primary: mat.define-palette($custom-palette, cloud);
-  $alternate-accent:  mat.define-palette($custom-palette, cloud54);
-  $alternate-warn:  mat.define-palette($custom-palette, fresh-berry);
+  $alternate-accent: mat.define-palette($custom-palette, cloud54);
+  $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent,  $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
   @include angular-material-theme($alternate-theme);
-  
+
   .mat-toolbar {
     margin: 0;
     box-shadow: 0 4px 6px -6px #222;
   }
 
-  .mat-badge-content{
+  .mat-badge-content {
     color: $color-cloud
   }
 
-  .mat-icon{
+  .mat-icon {
     padding-right: 5px;
   }
 
-  
+
 }

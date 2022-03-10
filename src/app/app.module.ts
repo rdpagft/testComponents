@@ -7,38 +7,44 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableComponent } from './components/table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import {
+  MatFormFieldModule,
+  MAT_FORM_FIELD_DEFAULT_OPTIONS,
+} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
-import { StepperComponent } from './components/stepper/stepper.component'
-import { MatStepperIntl, MatStepperModule} from '@angular/material/stepper';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { StepperComponent } from './components/stepper/stepper.component';
+import { MatStepperIntl, MatStepperModule } from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { InputsComponent } from './components/inputs/inputs.component';
 import { CheckboxesComponent } from './components/checkboxes/checkboxes.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { SelectComponent } from './components/select/select.component';
-import  {  NgxMatExtSelectModule  }  from  '@fgrid-ngx/mat-ext-select';
+import { NgxMatExtSelectModule } from '@fgrid-ngx/mat-ext-select';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { RadioComponent } from './components/radio/radio.component';
 import { ListComponent } from './components/list/list.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { SlideComponent } from './components/slide/slide.component';
 import { ChipsComponent } from './components/chips/chips.component';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { BadgesComponent } from './components/badges/badges.component';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatBadgeModule } from '@angular/material/badge';
 import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { SearchComponent } from './components/search/search.component';
 import { GestorComponent } from './components/gestor/gestor.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { AministracionComponent } from './components/aministracion/aministracion.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
+import { TablaUsuariosComponent } from './components/tabla-usuarios/tabla-usuarios.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -59,6 +65,7 @@ import {MatDividerModule} from '@angular/material/divider';
     SearchComponent,
     GestorComponent,
     AministracionComponent,
+    TablaUsuariosComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,12 +93,13 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     FlexLayoutModule,
     MatMenuModule,
-    MatDividerModule
-
+    MatDividerModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
-      // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},
-    ],
-  bootstrap: [AppComponent]
+    // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

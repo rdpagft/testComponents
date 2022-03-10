@@ -1,81 +1,98 @@
-.contenedor{
-    height: 100% !important;
-    .contenedor__titulo{
-        padding-top: 1%;
-        height: 4%;
-        width: 90%;
-        margin: 0 auto 2% auto;
-        label{
-            font-family: Quicksand;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 32px;
-            line-height: 36px;
-            color: #000000;
-        }
-    }
-    .contenedor__acciones{
-        width: 90%;
-        margin: 0 auto;
-        height: 15%;
-        // border-bottom: 1px dashed #A7A7A7 !important;
-        // border: 1px solid blue;
-        margin: 0 auto;
-        .contenedor__busqueda{
-            width: 50%;  
-            .contenedor-opciones-busqueda{
-                width: 80%;
-                label{
-                    margin: 3% 2%;
-                    font-family: Quicksand;
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: 16px;
-                    line-height: 20px;
-                    letter-spacing: 0.2px;
-                    color: #000000;
-                }
-                a{
-                    margin: 3% 2%;
-                    font-family: Quicksand;
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 14px;
-                    line-height: 16px;
-                    /* identical to box height, or 114% */
+.contenedor {
+  height: 100% !important;
 
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    letter-spacing: 1.2px;
-                    color: #3366CC;                                
-                    cursor: pointer;
-                }
-            }
-            .contenedor-entrada-texto{
-                width: 80%;
-                .mat-form-field {
-                    width: 100%;                   
-                }
-            }
+  .contenedor__titulo {
+    padding-top: 1%;
+    height: 4%;
+    width: 90%;
+    margin: 0 auto 2% auto;
+
+    label {
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 36px;
+      color: #000000;
+    }
+  }
+
+  .contenedor__acciones {
+    width: 90%;
+    margin: 0 auto;
+    height: 15%;
+    // border-bottom: 1px dashed #A7A7A7 !important;
+    // border: 1px solid blue;
+    margin: 0 auto;
+
+    .contenedor__busqueda {
+      width: 50%;
+
+      .contenedor-opciones-busqueda {
+        width: 80%;
+
+        label {
+          margin: 3% 2%;
+          font-family: Quicksand;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+          color: #000000;
         }
-        .contenedor__botones{
-            width: 50%;
-            button{
-                margin: 3% 2%;
-                width: 40%;
-                display: flex;
-            }
-        }  
+
+        a {
+          margin: 3% 2%;
+          font-family: Quicksand;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 16px;
+          /* identical to box height, or 114% */
+
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 1.2px;
+          color: #3366CC;
+          cursor: pointer;
+        }
+      }
+
+      .contenedor-entrada-texto {
+        width: 80%;
+
+        .mat-form-field {
+          width: 100%;
+        }
+      }
     }
 
-    .contenedor__opciones__filtro{
-        width: 60%;
-        margin-bottom: 1%;
+    .contenedor__botones {
+      width: 50%;
+
+      button {
+        margin: 3% 2%;
+        width: 40%;
+        display: flex;
+      }
     }
-    .border-divisor{
-        width: 90%;
-        margin: 0 auto;
-        border: 1px dashed #A7A7A7;
-    }
+  }
+
+  .contenedor__opciones__filtro {
+    width: 60%;
+    margin-bottom: 1%;
+  }
+
+  .border-divisor {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px dashed #A7A7A7;
+  }
+
+  &__tabla {
+    width: 90%;
+    margin: 16px auto;
+  }
 }

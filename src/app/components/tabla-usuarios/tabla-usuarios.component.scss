@@ -1,0 +1,15 @@
+@import '../../../custom.scss';
+
+table {
+  width: 100%;
+
+  .cabecera__acciones {
+    transform: translateY(-100%);
+  }
+
+  .cabecera {
+    background-color: $color-sky;
+  }
+
+
+}
