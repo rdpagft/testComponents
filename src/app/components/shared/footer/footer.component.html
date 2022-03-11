@@ -1,0 +1,80 @@
+
+
+<mat-toolbar *ngIf="mostrarMenuRestante" class="contenedor__navbar__menu2__responsive" fxLayout="column">
+    <div class="options__container__responsive">
+      <ul fxLayout="row" fxLayoutAlign="space-around end" >
+          <li routerLinkActive="active">
+              <a [routerLink]='["/s"]' >
+                  <mat-icon class="material-icons-outlined">
+                    search
+                </mat-icon>
+              </a>
+          </li>
+          <li routerLinkActive="active">
+              <a [routerLink]='["/s"]'  >
+                  <mat-icon class="material-icons-outlined">notifications</mat-icon>
+              </a>
+          </li>
+          <li routerLinkActive="active" >
+              <a [routerLink]='["/s"]'>
+                  <mat-icon class="material-icons-outlined">logout</mat-icon>
+              </a>
+          </li>
+
+
+          <li class="boton__cerrar" routerLinkActive="active" fxLayout="row" fxLayoutAlign="center center">
+              <a (click)="mostrarOpcionesRestantes()" fxLayout="row" fxLayoutAlign="center center">
+                  <mat-icon>close</mat-icon>
+                  <mat-label>cerrar</mat-label>
+              </a>
+          </li>
+      </ul>
+  </div>
+</mat-toolbar>
+
+
+<mat-toolbar class="contenedor__navbar__responsive" fxLayout="column">
+ 
+    <div class="options__container__responsive">
+      <ul fxLayout="row" fxLayoutAlign="space-around center" >
+          <li routerLinkActive="active">
+              <a [routerLink]='["/inputs"]' >
+                  <mat-icon class="material-icons-outlined">
+                    home
+                </mat-icon>
+              </a>
+          </li>
+          <li routerLinkActive="active">
+              <a [routerLink]='["/select"]'  >
+                  <mat-icon>manage_search</mat-icon>
+              </a>
+          </li>
+          <li routerLinkActive="active">
+              <a [routerLink]='["/autocomplete"]'>
+                  <mat-icon>upload_file</mat-icon>
+              </a>
+          </li>
+          <li routerLinkActive="active">
+              <a [routerLink]='["/chips"]' >
+                  <mat-icon>bar_chart</mat-icon>
+              </a>
+          </li>
+          <li routerLinkActive="active">
+              <a [routerLink]='["/administracion"]' >
+                  <mat-icon class="material-icons-outlined">settings</mat-icon>
+                  <!-- <mat-label>Admin</mat-label> -->
+              </a>
+              <div *ngIf="mostrarMenuRestante">
+
+              </div>
+
+          </li>
+          <li routerLinkActive="active">
+              <a (click)="mostrarOpcionesRestantes()">
+                  <mat-icon>more_vert</mat-icon>
+              </a>
+
+          </li>
+      </ul>
+  </div>
+</mat-toolbar>

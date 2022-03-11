@@ -1,4 +1,14 @@
-<app-gestor></app-gestor>
-<div class="contenedor">
-    <router-outlet></router-outlet>
+
+<div class="contenedor__principal">
+    <div fxLayout="column" fxFlexFill >
+        <div class="header">
+            <app-header></app-header>
+        </div> 
+        <div class="contenedor" fxFlex.xs="85" fxFlex.sm="85" fxFlex.md="90" fxFlex.lg="90" fxFlex.xl="90">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="footer" fxShow.md="false" fxShow.lg="false" fxShow.xl="false">
+            <app-footer></app-footer>        
+        </div>
+    </div>
 </div>

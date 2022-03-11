@@ -39,6 +39,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
 import { AministracionComponent } from './components/aministracion/aministracion.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { TemplateComponent } from './components/shared/template/template.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,10 @@ import {MatDividerModule} from '@angular/material/divider';
     SearchComponent,
     GestorComponent,
     AministracionComponent,
+    InicioComponent,
+    HeaderComponent,
+    FooterComponent,
+    TemplateComponent,
   ],
   imports: [
     BrowserModule,

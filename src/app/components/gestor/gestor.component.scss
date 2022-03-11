@@ -1,7 +1,34 @@
-.contenedor{
-    height: 8.5vh;
-}
+.contenedor__navbar__responsive{
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 10%;
+    .options__container__responsive {
+        height: inherit;
+        width: inherit;
+        ul{
+            height: inherit;
+            width: inherit;
+            padding: 0;
+            margin:0;
+            list-style: none;
+            li{
+                a{
+                    color: #666666
+                }
+            }
 
+        }
+        
+    }
+    .active{
+        border: none;        
+         a{ 
+            color: orange !important;
+        }
+    }
+}
 .logo-container {
     font-size: 24px !important;
     width: 10%;
@@ -10,7 +37,7 @@
     width: 60%;
 }
 
-.options-container ul{
+.options-container ul, .options-container-responsive ul{
     list-style: none;
 }
 .options-container ul li a{
@@ -75,4 +102,3 @@ color: red;
 
 color: #666666;
 }
-

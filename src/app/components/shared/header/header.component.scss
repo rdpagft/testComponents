@@ -1,0 +1,55 @@
+.contenedor__navbar__dektop{
+    // height: 10%;
+
+    .contenedor__navbar{
+        .contenedor__logo{
+            font-size: 24px !important;
+            width: 10%;
+        }
+        .contenedor__opciones{
+            width: 60%;
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        width: 20%;
+                        text-decoration: none;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        color: #666666;
+                        font-family: Quicksand;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .active{
+        border-bottom:  1px solid orange;
+         a{    
+            color: orange !important;
+        }
+    }
+    .contenedor__acciones{
+        width: 20%;
+    }
+    .contenedor__menu__usuario{
+        width: 10%;
+        .menu__usuairo{
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: #666666;
+        }
+    }
+
+}
+

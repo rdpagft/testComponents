@@ -1,9 +1,9 @@
-<div class="light">        
+<div class="light contenedor__navbar__dektop">        
     <mat-toolbar class="contenedor__navbar" color="accent"  fxLayoutAlign="space-between center">
-        <div class="logo-container" fxLayout="row" fxFlexAlign="center center">
+        <div class="contenedor__logo" fxLayout="row" fxFlexAlign="center center">
             <img src="assets/images/Logo.png" alt="">
         </div>
-        <div class="options-container" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
+        <div class="contenedor__opciones" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
             <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
                 <li routerLinkActive="active">
                     <a [routerLink]='["/inputs"]' >INICIO</a>
@@ -28,7 +28,7 @@
             </ul>
         </div>
 
-        <div class="actions-container"  fxLayoutAlign="end center" fxShow.sm="false" fxShow.xs="false">
+        <div class="contenedor__acciones"  fxLayoutAlign="end center" fxShow.sm="false" fxShow.xs="false">
             <button mat-icon-button>
                 <mat-icon>
                     search
@@ -41,7 +41,7 @@
                 </mat-icon>
             </button>
         </div>
-        <div class="user-menu-container" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
+        <div class="contenedor__menu__usuario" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
             <div class="user-name" fxLayout="column">
                 <span>Nombre</span>
             </div>
@@ -66,43 +66,5 @@
             </div>
         </div>
     </mat-toolbar>
-    <mat-toolbar class="contenedor__navbar__responsive" fxShow.md="false" fxShow.lg="false" fxShow.xl="false">
-          <div class="options__container__responsive">
-            <ul fxLayout="row" fxLayoutAlign="space-around center" >
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/inputs"]' >
-                        <mat-icon>home</mat-icon>
-                    </a>
-                </li>
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/select"]'  >
-                        <mat-icon>home</mat-icon>
-                    </a>
-                </li>
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/autocomplete"]'>
-                        <mat-icon>home</mat-icon>
-                    </a>
-                </li>
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/chips"]' >
-                        <mat-icon>poll</mat-icon>
-                    </a>
-                </li>
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/administracion"]' >
-                        <mat-icon>settings</mat-icon>
-                        <!-- <mat-label>Admin</mat-label> -->
-                    </a>
-
-                </li>
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/administracion"]' >
-                        <mat-icon>more_vert</mat-icon>
-                    </a>
-
-                </li>
-            </ul>
-        </div>
-    </mat-toolbar>
+  
 </div>

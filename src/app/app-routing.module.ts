@@ -14,8 +14,10 @@ import { AutocompleteComponent } from './components/autocomplete/autocomplete.co
 import { SearchComponent } from './components/search/search.component';
 import { GestorComponent } from './components/gestor/gestor.component';
 import { AministracionComponent } from './components/aministracion/aministracion.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { TemplateComponent } from './components/shared/template/template.component';
 const routes: Routes = [
-  {path:'', component:TableComponent},
+  {path:'', component:InicioComponent},
   {path:'inputs-text', component:InputsComponent},
   {path:'select', component:SelectComponent},
   {path:'buttons', component:ButtonsComponent},
@@ -28,7 +30,8 @@ const routes: Routes = [
   {path:'search', component:SearchComponent},
   {path:'gestor', component:GestorComponent},
   {path:'administracion', component:AministracionComponent},
-  {path:'**', component:TableComponent}
+  {path:'inicio', component:InicioComponent},
+  {path:'**', component:InicioComponent}
 ];
 
 @NgModule({

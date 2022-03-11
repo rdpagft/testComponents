@@ -1,3 +1,21 @@
-.contenedor{
-    height: 91vh;
+
+.contenedor__principal{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    .contenedor{
+        // height: 80%;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0;
+        margin: 0;
+    }
+    .header{
+        display: contents;
+    }
+    footer{
+        display: contents;
+    }
+    
 }
