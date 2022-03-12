@@ -4,20 +4,26 @@
     <div class="options__container__responsive">
       <ul fxLayout="row" fxLayoutAlign="space-around end" >
           <li routerLinkActive="active">
-              <a [routerLink]='["/s"]' >
+              <a [routerLink]='["/s"]'  fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon class="material-icons-outlined">
                     search
                 </mat-icon>
+                <span>Buscar</span>
+
               </a>
           </li>
           <li routerLinkActive="active">
-              <a [routerLink]='["/s"]'  >
+              <a [routerLink]='["/s"]'   fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon class="material-icons-outlined">notifications</mat-icon>
+                <span>avisos</span>
+
               </a>
           </li>
           <li routerLinkActive="active" >
-              <a [routerLink]='["/s"]'>
+              <a [routerLink]='["/s"]' fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon class="material-icons-outlined">logout</mat-icon>
+                <span>salir</span>
+
               </a>
           </li>
 
@@ -38,31 +44,38 @@
     <div class="options__container__responsive">
       <ul fxLayout="row" fxLayoutAlign="space-around center" >
           <li routerLinkActive="active">
-              <a [routerLink]='["/inputs"]' >
+              <a [routerLink]='["/inputs"]' fxLayout="column">
                   <mat-icon class="material-icons-outlined">
                     home
                 </mat-icon>
+                <span>Inicio</span>
               </a>
           </li>
           <li routerLinkActive="active">
-              <a [routerLink]='["/select"]'  >
+              <a [routerLink]='["/select"]'   fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon>manage_search</mat-icon>
+                    <span>Consultas</span>
               </a>
           </li>
           <li routerLinkActive="active">
-              <a [routerLink]='["/autocomplete"]'>
+              <a [routerLink]='["/autocomplete"]' fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon>upload_file</mat-icon>
+                    <span>Lotes</span>
               </a>
           </li>
           <li routerLinkActive="active">
-              <a [routerLink]='["/chips"]' >
+              <a [routerLink]='["/chips"]' fxLayout="column" fxLayoutAlign="center center" >
                   <mat-icon>bar_chart</mat-icon>
+                <span>Reportes</span>
+
               </a>
           </li>
           <li routerLinkActive="active">
-              <a [routerLink]='["/administracion"]' >
+              <a [routerLink]='["/administracion"]'  fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon class="material-icons-outlined">settings</mat-icon>
                   <!-- <mat-label>Admin</mat-label> -->
+                <span>Admin</span>
+
               </a>
               <div *ngIf="mostrarMenuRestante">
 
@@ -70,8 +83,10 @@
 
           </li>
           <li routerLinkActive="active">
-              <a (click)="mostrarOpcionesRestantes()">
+              <a (click)="mostrarOpcionesRestantes()" fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon>more_vert</mat-icon>
+                <span>Más</span>
+
               </a>
 
           </li>

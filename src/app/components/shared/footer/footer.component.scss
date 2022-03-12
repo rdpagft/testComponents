@@ -14,7 +14,19 @@
             list-style: none;
             li{
                 a{
-                    color: #666666
+                    color: #666666;
+                    text-decoration: none;
+                    span{
+                        font-family: 'Quicksand';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 16px;
+                        /* identical to box height, or 133% */
+
+                        text-align: center;
+                        letter-spacing: 0.2px;
+                    }
                 }
             }
 
@@ -48,7 +60,20 @@
             list-style: none;
             li{
                 a{
-                    color: #666666
+                    color: #666666;
+                    text-decoration: none;
+
+                    span{
+                        font-family: 'Quicksand';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 16px;
+                        /* identical to box height, or 133% */
+
+                        text-align: center;
+                        letter-spacing: 0.2px;
+                    }
                 }
             }
             .boton__cerrar{
@@ -59,6 +84,7 @@
                     font-weight: 300;
                     font-size: 14px;
                     line-height: 16px;
+                
                 }
             }
 
