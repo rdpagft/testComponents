@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   mostrarMenuRestante: boolean;
   constructor() {
-    this.mostrarMenuRestante = true
+    this.mostrarMenuRestante = false
   }
 
 
@@ -16,6 +16,10 @@ export class FooterComponent implements OnInit {
   }
   mostrarOpcionesRestantes(){
     console.log("mostrar menu");
-    this.mostrarMenuRestante =  !this.mostrarMenuRestante
+    this.mostrarMenuRestante =  true
+  }
+  ocultarOpcionesRestantes(){
+    console.log("mostrar menu");
+    this.mostrarMenuRestante =  false
   }
 }
