@@ -1,7 +1,7 @@
 
 
-<mat-toolbar *ngIf="mostrarMenuRestante" class="contenedor__navbar__menu2__responsive" fxLayout="column">
-    <div class="options__container__responsive">
+<mat-toolbar *ngIf="mostrarMenuRestante" class="container__navbar__menu2__responsive" fxLayout="column">
+    <div class="container__options__responsive">
       <ul fxLayout="row" fxLayoutAlign="space-around end" >
           <li routerLinkActive="active">
               <a [routerLink]='["/s"]'  fxLayout="column" fxLayoutAlign="center center">
@@ -28,7 +28,7 @@
           </li>
 
 
-          <li class="boton__cerrar" routerLinkActive="active" fxLayout="row" fxLayoutAlign="center center">
+          <li class="container__close__button" routerLinkActive="active" fxLayout="row" fxLayoutAlign="center center">
               <a (click)="ocultarOpcionesRestantes()" fxLayout="row" fxLayoutAlign="center center">
                   <mat-icon>close</mat-icon>
                   <mat-label>cerrar</mat-label>
@@ -39,9 +39,9 @@
 </mat-toolbar>
 
 
-<mat-toolbar class="contenedor__navbar__responsive" fxLayout="column">
+<mat-toolbar class="container__navbar__responsive" fxLayout="column">
  
-    <div class="options__container__responsive">
+    <div class="container__options__responsive">
       <ul fxLayout="row" fxLayoutAlign="space-around center" >
           <li routerLinkActive="active">
               <a [routerLink]='["/inputs"]' fxLayout="column">

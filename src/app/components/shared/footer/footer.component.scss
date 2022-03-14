@@ -1,9 +1,9 @@
-.contenedor__navbar__responsive{
+.container__navbar__responsive{
     // height: 10%;
     padding: 0;
     margin: 0;
     background-color: #fff;
-    .options__container__responsive {
+    .container__options__responsive {
         height: 100%;
         width: inherit;
         ul{
@@ -40,12 +40,12 @@
         }
     }
 }
-.contenedor__navbar__menu2__responsive{
+.container__navbar__menu2__responsive{
     // height: 10%;
     padding: 0;
     margin: 0;
     background-color: #fff;
-    .options__container__responsive {
+    .container__options__responsive {
         height: 100%;
         width: inherit;
         ul{
@@ -76,7 +76,7 @@
                     }
                 }
             }
-            .boton__cerrar{
+            .container__close__button{
                 align-self: flex-start;
                 a{
                     font-family: 'Quicksand';

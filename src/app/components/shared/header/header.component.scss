@@ -1,12 +1,12 @@
-.contenedor__navbar__dektop{
+.container__navbar__dekstop{
     // height: 10%;
 
-    .contenedor__navbar{
-        .contenedor__logo{
+    .container__navbar{
+        .container__logo{
             font-size: 24px !important;
             width: 10%;
         }
-        .contenedor__opciones{
+        .container__options{
             width: 60%;
             ul{
                 list-style: none;
@@ -33,22 +33,11 @@
             color: orange !important;
         }
     }
-    .contenedor__acciones{
+    .container__actions{
         width: 20%;
     }
-    .contenedor__menu__usuario{
+    .container__user__menu{
         width: 10%;
-        .menu__usuairo{
-            font-family: Quicksand;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 16px;
-            display: flex;
-            align-items: center;
-            text-align: right;
-            color: #666666;
-        }
     }
 
 }

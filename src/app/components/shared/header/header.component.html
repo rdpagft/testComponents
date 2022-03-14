@@ -1,9 +1,9 @@
-<div class="light contenedor__navbar__dektop">        
-    <mat-toolbar class="contenedor__navbar" color="accent"  fxLayoutAlign="space-between center">
-        <div class="contenedor__logo" fxLayout="row" fxFlexAlign="center center">
+<div class="light container__navbar__dekstop">        
+    <mat-toolbar class="container__navbar" color="accent"  fxLayoutAlign="space-between center">
+        <div class="container__logo" fxLayout="row" fxFlexAlign="center center">
             <img src="assets/images/Logo.png" alt="">
         </div>
-        <div class="contenedor__opciones" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
+        <div class="container__options" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
             <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
                 <li routerLinkActive="active">
                     <a [routerLink]='["/inputs"]' >INICIO</a>
@@ -28,7 +28,7 @@
             </ul>
         </div>
 
-        <div class="contenedor__acciones"  fxLayoutAlign="end center" fxShow.sm="false" fxShow.xs="false">
+        <div class="container__actions"  fxLayoutAlign="end center" fxShow.sm="false" fxShow.xs="false">
             <button mat-icon-button>
                 <mat-icon>
                     search
@@ -41,7 +41,7 @@
                 </mat-icon>
             </button>
         </div>
-        <div class="contenedor__menu__usuario" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
+        <div class="container__user__menu" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
             <div class="user-name" fxLayout="column">
                 <span>Nombre</span>
             </div>
