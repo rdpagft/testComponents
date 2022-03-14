@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import '/src/custom.scss';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "/src/custom.scss";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
 
 $primary: map-get($my-theme, primary);
-

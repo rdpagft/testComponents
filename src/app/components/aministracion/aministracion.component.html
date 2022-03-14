@@ -1,111 +1,215 @@
-<div class="contenedor">
-  <div class="contenedor__titulo">
-    <label for="">
-      Administración
-    </label>
-  </div>
-  <div class="contenedor__acciones" fxLayout="row">
-    <div class="contenedor__busqueda" fxLayout="column">
-      <div class="contenedor-opciones-busqueda" fxLayout="row" fxLayoutAlign="space-between center">
-        <label for="">Buscar Usuarios</label>
-        <a>Todos los usuarios</a>
+<div class="container users-admin mat-typography">
+  <div class="header">
+    <h2 class="mat-title">Administración</h2>
+    <div
+      class="header__actions"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+    >
+      <div class="header__actions__search" fxFlex="40" fxLayout="column">
+        <div
+          class="header__actions__search__header"
+          fxLayout="row"
+          fxLayoutAlign="space-between center"
+        >
+          <h4 class="mat-subheading-1">Buscar usuarios</h4>
+          <h5 class="mat-subheading-2">
+            <a class="cta">Todos los usuarios</a>
+          </h5>
+        </div>
+        <div class="header__actions__search__form" fxLayout="column">
+          <form [formGroup]="searchFormGroup" fxFlexFill>
+            <mat-form-field appearance="outline" fxFlexFill>
+              <mat-label> Buscar por nombre o correo </mat-label>
+              <mat-icon matPrefix>search</mat-icon>
+              <input
+                placeholder="Buscar por nombre o correo"
+                matInput
+                formControlName="username"
+                type="text"
+                #searchUsername
+              />
+              <button
+                (click)="searchUsername.value = ''"
+                *ngIf="searchUsername.value"
+                matSuffix
+                mat-icon-button
+              >
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-form-field>
+          </form>
+        </div>
       </div>
-      <div class="contenedor-entrada-texto primary" fxLayout="column" fxLayoutAlign="end none">
-        <form [formGroup]="searchFormGroup">
-          <mat-form-field appearance="outline">
-            <mat-label> Buscar </mat-label>
-            <mat-icon matPrefix>search</mat-icon>
-            <input placeholder="Buscar por nombre o correo" matInput formControlName="username" type="text" />
+      <div
+        class="header__actions__buttons"
+        fxFlex="25"
+        fxLayout="column"
+        fxLayoutAlign="center"
+        fxLayoutGap="16px"
+      >
+        <button
+          mat-raised-button
+          color="users-admin"
+          fxFlexFill
+          class="header__actions__buttons__button"
+        >
+          <span
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="9"
+            ><mat-icon> person_add</mat-icon>
+            <mat-label>Nuevo usuario</mat-label></span
+          >
+          <span fxFlex="10" fxLayoutAlign="end center">
+            <mat-icon>chevron_right</mat-icon>
+          </span>
+        </button>
+        <button
+          mat-raised-button
+          fxFlexFill
+          class="header__actions__buttons__button"
+        >
+          <span
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="9"
+            ><mat-icon>assignment</mat-icon>
+            <mat-label>Consultar bitácora</mat-label></span
+          >
+          <span fxFlex="10" fxLayoutAlign="end center">
+            <mat-icon>chevron_right</mat-icon>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="header__filters"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+    >
+      <div>
+        <input class="header__filters__date" [matDatepicker]="picker" />
+        <mat-datepicker #picker></mat-datepicker>
+        <button mat-flat-button class="filter-text" (click)="picker.open()">
+          <mat-label> Fecha Registro</mat-label>
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button
+          mat-flat-button
+          class="filter-text"
+          [matMenuTriggerFor]="menuDependency"
+        >
+          <mat-label> Dependencia</mat-label
+          ><mat-icon>arrow_drop_down</mat-icon>
+        </button>
+
+        <mat-menu #menuDependency="matMenu">
+          <div class="header__filters__menu">
+            <mat-radio-group fxLayout="column" [(ngModel)]="favoriteSeason">
+              <mat-radio-button
+                class="header__filters__menu__button"
+                *ngFor="let season of seasons"
+                [value]="season"
+              >
+                {{ season | uppercase }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </mat-menu>
+      </div>
+      <div>
+        <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menu">
+          Compañía / Sector<mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" fxLayout="column">
+          <mat-form-field appearance="outline" floatLabel="auto">
+            <input
+              matInput
+              placeholder="Simple placeholder"
+              autofocus
+              required
+            />
           </mat-form-field>
-        </form>
+        </mat-menu>
+      </div>
+      <div>
+        <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menu">
+          Oficina<mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" fxLayout="column">
+          <mat-radio-group
+            fxLayout="column"
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            [(ngModel)]="favoriteSeason"
+            color="primary"
+          >
+            <mat-radio-button
+              class="example-radio-button"
+              *ngFor="let season of seasons"
+              [value]="season"
+            >
+              {{ season }}
+            </mat-radio-button>
+          </mat-radio-group>
+        </mat-menu>
+      </div>
+      <div class="filtro__estatus">
+        <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menu">
+          Estatus<mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu class="" #menu="matMenu" fxLayout="column">
+          <mat-radio-group
+            fxLayout="column"
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            [(ngModel)]="favoriteSeason"
+            color="primary"
+          >
+            <mat-radio-button
+              class="example-radio-button"
+              *ngFor="let season of seasons"
+              [value]="season"
+            >
+              {{ season }}
+            </mat-radio-button>
+          </mat-radio-group>
+        </mat-menu>
       </div>
     </div>
-    <div class="light contenedor__botones" fxLayout="column" fxLayoutAlign="center end">
-      <button mat-raised-button>
-        <mat-icon>person_add</mat-icon>
-        <mat-label>Usuario</mat-label>
-        <mat-icon>chevron_right</mat-icon>
-      </button>
-      <button mat-raised-button>
-        <mat-icon>assignment</mat-icon>
-        <mat-label>Consultar bitácora</mat-label>
-        <mat-icon>chevron_right</mat-icon>
-      </button>
-    </div>
   </div>
-
-  <div class="contenedor__opciones__filtro" fxLayout="row" fxLayoutAlign="space-around center">
-    <div class="filtro__fecha">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        Fecha Registro<mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu class="" #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-            {{season}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </mat-menu>
-    </div>
-    <div class="filtro__dependencia">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        Dependencia<mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu class="" #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-            {{season}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </mat-menu>
-    </div>
-    <div class="filtro__compania__sector">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        Compañía / Sector<mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu class="" #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-            {{season}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </mat-menu>
-    </div>
-    <div class="filtro__oficina">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        Oficina<mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu class="" #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-            {{season}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </mat-menu>
-    </div>
-    <div class="filtro__estatus">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        Estatus<mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu class="" #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-            {{season}}
-          </mat-radio-button>
-        </mat-radio-group>
-      </mat-menu>
-    </div>
-  </div>
-
 
   <mat-divider class="border-divisor"></mat-divider>
-  <div class="contenedor__tabla">
-    <app-tabla-usuarios></app-tabla-usuarios>
+
+  <div class="filter" fxLayout="row" fxLayoutAlign="space-between">
+    <div>
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <mat-chip>
+          Uno
+          <button matChipRemove>
+            <mat-icon class="close-chip">close</mat-icon>
+          </button>
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+    <div fxLayout="row" fxLayoutGap="16">
+      <button mat-stroked-button class="filter__button">Limpiar filtros</button>
+      <button
+        mat-flat-button
+        color="primary"
+        class="filter__button filter__button--primary"
+      >
+        Aplicar filtros
+      </button>
+    </div>
   </div>
 
+  <div class="table">
+    <app-tabla-usuarios></app-tabla-usuarios>
+  </div>
 </div>

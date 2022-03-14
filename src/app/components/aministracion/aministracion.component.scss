@@ -1,98 +1,74 @@
-.contenedor {
-  height: 100% !important;
+.container {
+  width: 90%;
+  margin: 48px auto;
+  max-width: 1280px;
+}
 
-  .contenedor__titulo {
-    padding-top: 1%;
-    height: 4%;
-    width: 90%;
-    margin: 0 auto 2% auto;
+.header {
+  width: 100%;
 
-    label {
-      font-family: Quicksand;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 36px;
-      color: #000000;
-    }
-  }
+  &__actions {
+    width: 100%;
+    margin: 0;
 
-  .contenedor__acciones {
-    width: 90%;
-    margin: 0 auto;
-    height: 15%;
-    // border-bottom: 1px dashed #A7A7A7 !important;
-    // border: 1px solid blue;
-    margin: 0 auto;
+    &__search {
+      width: 100%;
 
-    .contenedor__busqueda {
-      width: 50%;
-
-      .contenedor-opciones-busqueda {
-        width: 80%;
-
-        label {
-          margin: 3% 2%;
-          font-family: Quicksand;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 20px;
-          letter-spacing: 0.2px;
-          color: #000000;
-        }
-
-        a {
-          margin: 3% 2%;
-          font-family: Quicksand;
-          font-style: normal;
-          font-weight: 300;
-          font-size: 14px;
-          line-height: 16px;
-          /* identical to box height, or 114% */
-
-          display: flex;
-          align-items: center;
-          text-align: center;
-          letter-spacing: 1.2px;
-          color: #3366CC;
-          cursor: pointer;
-        }
+      &__header {
+        margin-bottom: 24px;
       }
 
-      .contenedor-entrada-texto {
-        width: 80%;
-
-        .mat-form-field {
-          width: 100%;
-        }
+      &__form {
+        width: 100%;
       }
     }
 
-    .contenedor__botones {
-      width: 50%;
+    &__buttons {
+      height: 100%;
 
-      button {
-        margin: 3% 2%;
-        width: 40%;
-        display: flex;
+      &__button {
+        width: 100%;
       }
     }
   }
 
-  .contenedor__opciones__filtro {
+  &__filters {
     width: 60%;
-    margin-bottom: 1%;
-  }
 
-  .border-divisor {
-    width: 90%;
-    margin: 0 auto;
-    border: 1px dashed #A7A7A7;
-  }
+    &__date {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+    }
 
-  &__tabla {
-    width: 90%;
-    margin: 16px auto;
+    &__menu {
+      width: 220px;
+
+      &__button {
+        padding: 14px 18px;
+      }
+    }
   }
+}
+
+.filter {
+  width: 100%;
+  margin-bottom: 33px;
+  
+  &__button {
+    border-radius: 99px;
+
+    &--primary {
+      color: #fff;
+    }
+  }
+}
+
+.close-chip {
+  color: #fff;
+}
+
+.table {
+  width: 100%;
 }

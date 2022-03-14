@@ -1,56 +1,56 @@
-@use '@angular/material'as mat;
-@import '~@angular/material/theming';
-@import './custom-palette.scss';
+@use "@angular/material"as mat;
+@import "~@angular/material/theming";
+@import "./custom-palette.scss";
 @include mat.core();
 
 $primary: mat.define-palette(mat.$orange-palette, 500);
 $accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
 $warn: mat.define-palette(mat.$yellow-palette);
-
+$typography: mat.define-typography-config($font-family: "Quicksand",
+);
 
 $my-theme: mat.define-light-theme((color: (primary: $primary,
       accent: $accent,
       warn: $warn,
-    )));
-
+    ),
+    typography: $typography,
+  ));
 
 @include mat.all-component-themes($my-theme);
 
-
 // COLORS
-$color-brand: #F07F13 !default;
-$color-citrus: #E9780B !default;
-$color-warning: #FFD631 !default;
-$color-fresh-berry: #B10231 !default;
-$color-error: #CC0000 !default;
-$color-sea: #3366CC !default;
-$color-sky: #FEF3DF !default;
-$color-emerald: #3399CC !default;
+$color-brand: #f07f13 !default;
+$color-citrus: #e9780b !default;
+$color-warning: #ffd631 !default;
+$color-fresh-berry: #b10231 !default;
+$color-error: #cc0000 !default;
+$color-sea: #3366cc !default;
+$color-sky: #fef3df !default;
+$color-emerald: #3399cc !default;
 $color-carbon5: #f5f5f5 !default;
-$color-carbon10: #EBEBEB !default;
+$color-carbon10: #ebebeb !default;
 $color-carbon20: #a7a7a7 !default;
 $color-carbon40: #919191 !default;
 $color-carbon60: #666666 !default;
 $color-carbon64: rgba(0, 0, 0, 0.64) !default;
 $color-carbon100: #000000 !default;
-$color-cloud: #FFFFFF !default;
+$color-cloud: #ffffff !default;
 $color-cloud54: rgba(255, 255, 255, 0.64) !default;
 $color-success: #339966 !default;
-
-
 
 .primary {
   $alternate-primary: mat.define-palette($custom-palette, brand);
   $alternate-accent: mat.define-palette($custom-palette, sea);
   $alternate-warn: mat.define-palette($custom-palette, sky);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
   @include angular-material-theme($alternate-theme);
-
 
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
     // color: mat-color($alternate-primary) !important;;
-    opacity: .1 !important;
+    opacity: 0.1 !important;
     background-color: $color-carbon40;
     border-radius: 7px;
   }
@@ -68,7 +68,7 @@ $color-success: #339966 !default;
   }
 
   .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: $color-error
+    color: $color-error;
   }
 
   .mat-flat-button,
@@ -125,18 +125,18 @@ $color-success: #339966 !default;
 
   .mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle {
     border-color: mat-color($alternate-primary) !important;
-    opacity: .6 !important
+    opacity: 0.6 !important;
   }
 
   .mat-radio-button.mat-radio-disabled .mat-radio-inner-circle {
     background-color: mat-color($alternate-primary) !important;
-    opacity: .6 !important
+    opacity: 0.6 !important;
   }
 
   .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
     background-color: mat-color($alternate-primary) !important;
     border-color: mat-color($alternate-primary) !important;
-    opacity: .6 !important
+    opacity: 0.6 !important;
   }
 
   .mat-checkbox-disabled.mat-uncheckbox-checked .mat-checkbox-background {
@@ -152,6 +152,7 @@ $color-success: #339966 !default;
     // width: 2em;
     // height: 2em;
   }
+
 }
 
 .big-button {
@@ -159,7 +160,9 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, sea);
   $alternate-warn: mat.define-palette($custom-palette, sky);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
   .mat-raised-button {
@@ -192,7 +195,9 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, carbon20);
   $alternate-warn: mat.define-palette($custom-palette, carbon40);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
   .mat-flat-button,
@@ -220,7 +225,7 @@ $color-success: #339966 !default;
     background-color: $color-cloud !important;
     color: $color-carbon20 !important;
     border: 1px solid $color-carbon20 !important;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   .mat-raised-button.mat-primary.mat-button-disabled:hover,
@@ -228,7 +233,7 @@ $color-success: #339966 !default;
     background-color: $color-cloud !important;
     color: $color-carbon20 !important;
     border: 1px solid $color-carbon20 !important;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -237,7 +242,9 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, error);
   $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
 
   @include angular-material-theme($alternate-theme);
 
@@ -281,17 +288,19 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, citrus);
   $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
   .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
     background-color: mat-color($alternate-primary) !important;
-    opacity: .5 !important
+    opacity: 0.5 !important;
   }
 
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
     color: mat-color($alternate-primary) !important;
-    opacity: .2 I !important;
+    opacity: 0.2 I !important;
   }
 }
 
@@ -300,18 +309,19 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, error);
   $alternate-warn: mat.define-palette($custom-palette, warning);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
   .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
     background-color: mat-color($alternate-primary) !important;
-    opacity: .5 !important
+    opacity: 0.5 !important;
   }
 
   .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
     color: mat-color($alternate-primary) !important;
-    ;
-    opacity: .1 !important;
+    opacity: 0.1 !important;
   }
 
   .mat-chip.mat-standard-chip {
@@ -320,14 +330,14 @@ $color-success: #339966 !default;
   }
 }
 
-
-
 .light {
   $alternate-primary: mat.define-palette($custom-palette, cloud);
   $alternate-accent: mat.define-palette($custom-palette, cloud54);
   $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent, $alternate-warn);
+  $alternate-theme: mat-light-theme($alternate-primary,
+      $alternate-accent,
+      $alternate-warn);
   @include angular-material-theme($alternate-theme);
 
   .mat-toolbar {
@@ -336,12 +346,130 @@ $color-success: #339966 !default;
   }
 
   .mat-badge-content {
-    color: $color-cloud
+    color: $color-cloud;
   }
 
   .mat-icon {
     padding-right: 5px;
   }
+}
 
+// ==============================================================================
+.users-admin {
+  $users-primary: mat.define-palette($custom-palette, brand);
+  $users-accent: mat.define-palette($custom-palette, sea);
+  $users-warn: mat.define-palette($custom-palette, error);
+  $users-typography: mat.define-typography-config($font-family: "Quicksand",
+    );
 
+  $users-theme: mat.define-light-theme((color: (primary: $users-primary,
+          accent: $users-accent,
+          warn: $users-warn,
+        ),
+        typography: $users-typography,
+      ));
+  @include angular-material-theme($users-theme);
+
+  .mat-title {
+    color: $color-carbon100;
+    font-size: 32px;
+    font-family: Quicksand;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .mat-subheading-1 {
+    color: $color-carbon100;
+    font-size: 16px;
+    font-family: Quicksand;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin: 0;
+  }
+
+  .mat-subheading-2 {
+    color: $color-sea;
+    font-size: 14px;
+    font-family: Quicksand;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    margin: 0;
+  }
+
+  .cta {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .mat-raised-button:not([class*="mat-elevation-z"]) {
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.14);
+  }
+
+  .mat-raised-button {
+    color: $color-carbon60;
+  }
+
+  .mat-icon-button {
+    color: $color-carbon20;
+  }
+
+  .filter-text {
+    color: $color-carbon60;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    padding: 0;
+  }
+
+  .mat-divider {
+    border: 1px dashed $color-carbon20;
+    margin: 20px 0;
+  }
+
+  .mat-chip.mat-standard-chip {
+    background-color: $color-carbon40;
+    color: $color-cloud;
+    font-family: Quicksand;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+
+// ==============================================================================
+
+.table-admin {
+  $table-primary: mat.define-palette($custom-palette, brand);
+  $table-accent: mat.define-palette($custom-palette, sea);
+  $table-warn: mat.define-palette($custom-palette, error);
+  $table-typography: mat.define-typography-config($font-family: "Quicksand",
+    );
+
+  $table-theme: mat.define-light-theme((color: (primary: $table-primary,
+          accent: $table-accent,
+          warn: $table-warn,
+        ),
+        typography: $table-typography,
+      ));
+  @include angular-material-theme($table-theme);
+
+  .mat-header-row.cdk-header-row.ng-star-inserted {
+    background-color: $color-sky;
+    color: $color-carbon60;
+  }
+
+  .mat-row.cdk-row.ng-star-inserted:nth-child(2n + 2) {
+    background-color: $color-carbon5;
+  }
+
+  .mat-header-row>.cdk-column-selector>.mat-checkbox {
+    transform: translateY(-250%);
+  }
 }

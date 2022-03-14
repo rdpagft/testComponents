@@ -45,6 +45,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { TablaUsuariosComponent } from './components/tabla-usuarios/tabla-usuarios.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -96,8 +99,14 @@ import { MatSortModule } from '@angular/material/sort';
     MatDividerModule,
     MatPaginatorModule,
     MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule,
   ],
   providers: [
+    MatDatepickerModule,
+    MatNativeDateModule,
+    // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
     // {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}},
   ],
   bootstrap: [AppComponent],
