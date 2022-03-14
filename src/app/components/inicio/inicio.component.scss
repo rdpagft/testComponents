@@ -1,0 +1,90 @@
+.container__section{
+    padding: 2%;
+    display: block !important;
+    width: inherit;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    &__text{
+        height: 10%;   
+        // border: 1px solid red;   
+        &__title{
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #000000;
+            height: 50%;
+        }
+        &__subtitle{
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 1.2px;
+            color: #000000;
+            height: 50%;
+        }
+    }
+    &__options{
+        height: 90%;
+        // border: 1px solid red;
+        margin: 0 auto;
+        &__one{
+            display: contents;
+            &__card{
+                height: 90%;
+                // border: 1px solid #000;
+                background: linear-gradient(180deg, rgba(204, 0, 0, 0.2) -9.65%, #CC0000 158.66%);
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                cursor: pointer;
+                &__text{
+                    background: rgba(255, 255, 255, 0.8);
+                    position: absolute;
+                    width: 100%;
+                    height: 35%;
+                    bottom: 0;
+                    p{
+                        font-family: 'Quicksand';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 16px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        letter-spacing: 0.2px;
+                        color: #666666;
+                        padding-top: 10px;
+                    }
+                    img{
+                        position: absolute;
+                        top: -20%;
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+            &__card:hover > &__card__text{
+                background: #fff;
+            }
+        }
+        // &__one, &__two, &__three{
+        //     border: 1px solid blue;
+        // }
+    }
+}
+
+@media screen and (min-width: 960px) { 
+    .container__section{
+        &__options{
+            height: 30%;
+            margin: 0
+        }
+    }
+ } 
