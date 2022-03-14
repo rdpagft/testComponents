@@ -1,1 +1,54 @@
-<p>inicio works!</p>
+<section class="container__section">
+    <div class="container__section__text" fxLayout="column" fxFlex="100">
+        <div class="container__section__text__title" fxFlex="50"  fxLayoutAlign="start center">
+            <label for="title">
+                Bienvenido al Sistema OCRA Virtual
+            </label>
+        </div>
+        <div class="container__section__text__subtitle" fxFlex="50"  fxLayoutAlign="start center">
+            Elige la operación que deseas realizar.
+        </div>
+    </div>
+    
+    <div class="container__section__options"  fxFlex="100" fxLayout.sm="column" fxLayout.xs="column" fxLayout.md="row" fxLayout.lg="row" fxLayout.xl="row"> 
+        <div class="container__section__options__one" fxFlex.lt-md="33%"  fxFlex.gt-sm="25%" fxLayoutAlign="center center">
+            <section class="container__section__options__one__card" fxLayout="row" fxFlex="80" fxLayoutAlign="center none" (click)="option('stole')">
+                <div class="container__section__options__one__card__img">
+                    <img src="assets/images/robo.png" alt="">
+                </div>
+                <div class="container__section__options__one__card__text" fxLayoutAlign="center center">
+                    <p>
+                        Crear reporte de Robo o Abuso de Confianza
+                    </p>
+                    <img src="assets/images/add.png" alt="add">
+                </div>
+            </section>
+        </div>
+        <div class="container__section__options__two" fxFlex.lt-md="34%"  fxFlex.gt-sm="25%" fxLayoutAlign="center center">
+            <section class="container__section__options__one__card" fxLayout="row" fxFlex="80" fxLayoutAlign="center none" (click)="option('create')">
+                <div class="container__section__options__one__card__img">
+                    <img src="assets/images/alta.png" alt="">
+                </div>
+                <div class="container__section__options__one__card__text" fxLayoutAlign="center center">
+                    <p>
+                        Crear alta de Localización
+                    </p>
+                    <img src="assets/images/add.png" alt="add">
+                </div>
+            </section>
+        </div>
+        <div class="container__section__options__three" fxFlex.lt-md="33%"  fxFlex.gt-sm="25%" fxLayoutAlign="center center">
+            <section class="container__section__options__one__card" fxLayout="row" fxFlex="80" fxLayoutAlign="center none" (click)="option('recovery')">
+                <div class="container__section__options__one__card__img">
+                    <img src="assets/images/recuperar.png" alt="">
+                </div>
+                <div class="container__section__options__one__card__text" fxLayoutAlign="center center">
+                    <p>
+                        Crear alta de Recuperación
+                    </p>
+                    <img src="assets/images/add.png" alt="add">
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnInit {
 
@@ -12,4 +12,7 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  option(redirect: string):void{
+    console.log("reditext to", redirect);
+  }
 }
