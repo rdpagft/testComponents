@@ -7,7 +7,7 @@
             <img src="assets/images/logo-img.png" alt="">
         </div>
         <div class="container__navbar__title" fxShow.lt-md="true" fxHide.gt-sm="true">
-            <label for="section">{{nameRoute}}</label>
+            <label for="section">{{nameRoute | titlecase }}</label>
         </div>
         <div class="container__navbar__options" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
             <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
