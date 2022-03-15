@@ -1,9 +1,15 @@
 <div class="light container__navbar__dekstop">        
-    <mat-toolbar class="container__navbar" color="accent"  fxLayoutAlign="space-between center">
-        <div class="container__logo" fxLayout="row" fxFlexAlign="center center">
+    <mat-toolbar class="container__navbar" color="accent"  fxLayoutAlign.gt-sm="space-between center"  fxLayoutAlign.lt-md="none center">
+        <div class="container__navbar__logo" fxLayout="row" fxFlexAlign="center center" fxHide.lt-md="true" fxShow.gt-sm="true">
             <img src="assets/images/Logo.png" alt="">
         </div>
-        <div class="container__options" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
+        <div class="container__navbar__logo" fxLayout="row" fxFlexAlign="center center" fxShow.lt-md="true" fxHide.gt-sm="true">
+            <img src="assets/images/logo-img.png" alt="">
+        </div>
+        <div class="container__navbar__title" fxShow.lt-md="true" fxHide.gt-sm="true">
+            <label for="section">{{nameRoute | titlecase }}</label>
+        </div>
+        <div class="container__navbar__options" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
             <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
                 <li routerLinkActive="active">
                     <a [routerLink]='["/inputs"]' >INICIO</a>
@@ -28,7 +34,7 @@
             </ul>
         </div>
 
-        <div class="container__actions"  fxLayoutAlign="end center" fxShow.sm="false" fxShow.xs="false">
+        <div class="container__navbar__actions" fxHide.lt-md="true" fxShow.gt-sm="true" fxLayoutAlign="end center" >
             <button mat-icon-button>
                 <mat-icon>
                     search
@@ -41,7 +47,27 @@
                 </mat-icon>
             </button>
         </div>
-        <div class="container__user__menu" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
+
+        <div *ngIf="nameRoute === 'administracion'" class="container__navbar__admin" fxShow.lt-md="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center">
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon  class="material-icons-outlined">
+                    person_add 
+                </mat-icon>
+            </button>
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon class="material-icons-outlined" >
+                    assignment
+                </mat-icon>
+            </button>
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon class="material-icons-outlined">
+                    folder_delete        
+                </mat-icon>
+            </button>
+        </div>
+
+
+        <div class="container__navbar__user__menu" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
             <div class="user-name" fxLayout="column">
                 <span>Nombre</span>
             </div>

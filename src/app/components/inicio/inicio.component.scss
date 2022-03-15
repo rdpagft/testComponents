@@ -8,7 +8,6 @@
     &__text{
         height: 10%;   
         width: 90% ;
-        // border: 1px solid red;   
         margin: 0 auto;
         &__title{
             font-family: 'Quicksand';
@@ -33,7 +32,6 @@
     }
     &__options{
         height: 90%;
-        // border: 1px solid red;
         margin: 0 auto;
         &__one{
             &__card{
@@ -54,8 +52,6 @@
             display: contents;
             &__card{
                 height: 90%;
-                // border: 1px solid #000;
-                // background: linear-gradient(180deg, rgba(204, 0, 0, 0.2) -9.65%, #CC0000 158.66%);
                 border-radius: 5px;
                 position: relative;
                 display: flex;
@@ -96,9 +92,6 @@
 
             }
         }
-        // &__one, &__two, &__three{
-        //     border: 1px solid blue;
-        // }
     }
 }
 

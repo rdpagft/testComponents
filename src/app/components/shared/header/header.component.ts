@@ -1,15 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router, Event, NavigationEnd} from '@angular/router';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  nameRoute:string;
+  subscription !: Subscription;
 
-  ngOnInit(): void {
+
+  constructor(private router: Router) {
+    this.nameRoute = "";  
+  }
+ 
+  ngOnDestroy(){
+    this.subscription.unsubscribe()
   }
 
+  ngOnInit(): void { 
+    this.getRoute()
+  }
+
+  getRoute(){
+    this.subscription = this.router.events.subscribe((event: Event) => {
+
+      if (event instanceof NavigationEnd) {
+        // Hide loading indicator
+        this.nameRoute = event.url.toString().replace('/', '');          
+          console.log(event);
+          console.log("route", this.nameRoute);
+      }
+    });
+  }
 }
