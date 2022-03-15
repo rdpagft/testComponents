@@ -7,7 +7,9 @@
     padding: 0;
     &__text{
         height: 10%;   
+        width: 90% ;
         // border: 1px solid red;   
+        margin: 0 auto;
         &__title{
             font-family: 'Quicksand';
             font-style: normal;
@@ -34,11 +36,26 @@
         // border: 1px solid red;
         margin: 0 auto;
         &__one{
+            &__card{
+                background: linear-gradient(180deg, rgba(204, 0, 0, 0.2) -9.65%, #CC0000 158.66%);
+            }
+        }
+        &__two{
+            &__card{
+                background: linear-gradient(180deg, rgba(240, 127, 19, 0.2) -9.65%, #F07F13 158.66%);
+            }
+        } 
+        &__three{
+            &__card{
+                background:  linear-gradient(180deg, rgba(51, 153, 204, 0.2) -9.65%, #3399CC 158.66%);
+            }
+        }
+        &__one, &__two, &__three{
             display: contents;
             &__card{
                 height: 90%;
                 // border: 1px solid #000;
-                background: linear-gradient(180deg, rgba(204, 0, 0, 0.2) -9.65%, #CC0000 158.66%);
+                // background: linear-gradient(180deg, rgba(204, 0, 0, 0.2) -9.65%, #CC0000 158.66%);
                 border-radius: 5px;
                 position: relative;
                 display: flex;
@@ -53,25 +70,30 @@
                         font-family: 'Quicksand';
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 12px;
+                        font-size: 11px;
                         line-height: 16px;
                         display: flex;
                         align-items: center;
                         text-align: center;
                         letter-spacing: 0.2px;
                         color: #666666;
-                        padding-top: 10px;
+                        padding-top: 15px;
                     }
                     img{
                         position: absolute;
-                        top: -20%;
-                        height: 20px;
-                        width: 20px;
+                        top: -25%;
+                        height: 25px;
+                        width: 25px;
                     }
                 }
             }
+            &__card:hover{
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
             &__card:hover > &__card__text{
                 background: #fff;
+                border-radius: 5px;
+
             }
         }
         // &__one, &__two, &__three{
