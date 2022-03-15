@@ -2,11 +2,20 @@
     // height: 10%;
 
     .container__navbar{
-        .container__logo{
+        &__logo{
             font-size: 24px !important;
-            width: 10%;
         }
-        .container__options{
+        &__title{
+            padding-left: 5px;
+            width: auto;
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #000000;
+        }
+        &__options{
             width: 60%;
             ul{
                 list-style: none;
@@ -26,6 +35,18 @@
                 }
             }
         }
+        &__admin{
+            width: 40%;
+            position: absolute;
+            right: 0;
+            margin-right: 1%;
+            &__icons{
+                color: #666666;
+            }
+            &__icons:hover{
+                color: orange;
+            }
+        }
     }
     .active{
         border-bottom:  1px solid orange;
@@ -33,10 +54,10 @@
             color: orange !important;
         }
     }
-    .container__actions{
+    &__actions{
         width: 20%;
     }
-    .container__user__menu{
+    &__user__menu{
         width: 10%;
     }
 
