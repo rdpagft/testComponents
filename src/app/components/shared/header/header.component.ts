@@ -30,8 +30,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
         this.nameRoute = event.url.toString().replace('/', '');          
-          console.log(event);
-          console.log("route", this.nameRoute);
+        if(this.nameRoute == "administracion") this.nameRoute = "administración"
       }
     });
   }
