@@ -38,6 +38,16 @@ $color-cloud: #ffffff !default;
 $color-cloud54: rgba(255, 255, 255, 0.64) !default;
 $color-success: #339966 !default;
 
+
+// clase general para los bages de los icons
+
+.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+  right: -3px;
+}
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+  top: -9px;
+}
+
 .primary {
   $alternate-primary: mat.define-palette($custom-palette, brand);
   $alternate-accent: mat.define-palette($custom-palette, sea);
