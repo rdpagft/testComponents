@@ -451,6 +451,14 @@ $color-success: #339966 !default;
     font-weight: 400;
     line-height: 16px;
   }
+
+  .mat-form-field-underline {
+    width: 0;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 8px;
+  }
 }
 
 // ==============================================================================
@@ -481,5 +489,12 @@ $color-success: #339966 !default;
 
   .mat-header-row>.cdk-column-selector>.mat-checkbox {
     transform: translateY(-250%);
+  }
+
+  @media screen and (max-width:420px) {
+
+    .mat-paginator-page-size.ng-star-inserted {
+      transform: translateY(-150%);
+    }
   }
 }

@@ -52,6 +52,11 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { TemplateComponent } from './components/shared/template/template.component';
 import { MatCardModule } from '@angular/material/card';
+import { AdministrationHeaderComponent } from './components/administration-header/administration-header.component';
+import { AdministrationHeaderMobileComponent } from './components/administration-header-mobile/administration-header-mobile.component';
+import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile/tabla-usuarios-mobile.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +82,11 @@ import { MatCardModule } from '@angular/material/card';
     FooterComponent,
     TemplateComponent,
     TablaUsuariosComponent,
+    AdministrationHeaderComponent,
+    AdministrationHeaderMobileComponent,
+    TablaUsuariosMobileComponent,
+    FilterComponent,
+    FilterMobileComponent,
   ],
   imports: [
     BrowserModule,

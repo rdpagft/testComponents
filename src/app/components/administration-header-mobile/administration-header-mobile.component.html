@@ -1,0 +1,45 @@
+<div class="header">
+  <div class="header__title" fxLayout="row" fxLayoutAlign="space-between center">
+    <h2 class="mat-title header__title__h2">Administración</h2>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>person_add</mat-icon>
+      <span>Nuevo usuario</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>assignment</mat-icon>
+      <span>Consultar bitácora</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>folder_delete</mat-icon>
+      <span>Depurar reportes</span>
+    </button>
+  </mat-menu>
+  <div class="header__actions" fxLayout="column" fxLayoutAlign="space-between center">
+    <div class="header__actions__search" fxFlex="100" fxLayout="column">
+      <div class="header__actions__search__header" fxLayout="row" fxLayoutAlign="space-between center">
+        <h4 class="mat-subheading-1">Buscar usuarios</h4>
+        <h5 class="mat-subheading-2">
+          <a class="cta">Todos los usuarios</a>
+        </h5>
+      </div>
+      <div class="header__actions__search__form" fxLayout="column">
+        <form [formGroup]="searchFormGroup" fxFlexFill>
+          <mat-form-field appearance="fill" fxFlexFill>
+            <mat-label> Buscar por nombre o correo </mat-label>
+            <mat-icon matPrefix>search</mat-icon>
+            <input placeholder="Buscar por nombre o correo" matInput formControlName="username" type="text"
+              #searchUsername />
+            <button (click)="searchUsername.value = ''" matSuffix mat-icon-button>
+              <mat-icon>tune</mat-icon>
+            </button>
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
