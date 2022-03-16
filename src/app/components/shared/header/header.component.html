@@ -11,8 +11,8 @@
         </div>
         <div class="container__navbar__options" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
             <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
-                <li routerLinkActive="active">
-                    <a [routerLink]='["/inputs"]' >INICIO</a>
+                <li routerLinkActive="active" >
+                    <a [routerLink]='["/inicio"]'  >INICIO</a>
 
                 </li>
                 <li routerLinkActive="active">
@@ -48,7 +48,7 @@
             </button>
         </div>
 
-        <div *ngIf="nameRoute === 'administracion'" class="container__navbar__admin" fxShow.lt-md="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center">
+        <div *ngIf="nameRoute === 'administración'" class="container__navbar__admin" fxShow.lt-md="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center">
             <button mat-icon-button class="container__navbar__admin__icons">
                 <mat-icon  class="material-icons-outlined">
                     person_add 
@@ -92,5 +92,37 @@
             </div>
         </div>
     </mat-toolbar>
-  
+    <mat-toolbar  *ngIf="showTableAction && nameRoute === 'administración'" class="container__navbar" color="accent"  fxLayoutAlign.gt-sm="space-between center"  fxLayoutAlign.lt-md="none center" fxShow.lt-md="true" fxHide.gt-sm="true">
+        <div (click)="back()" class="container__navbar__logo__table" fxLayout="row" fxFlexAlign="center center" fxShow.lt-md="true" fxHide.gt-sm="true">
+           <mat-icon>
+            chevron_left
+           </mat-icon>
+        </div>
+        <div class="container__navbar__title__table">
+            <label for="section">11</label>
+        </div>
+
+        <div class="container__navbar__admin2" fxShow.lt-md="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center">
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon  class="material-icons-outlined">
+                    visibility 
+                </mat-icon>
+            </button>
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon class="material-icons-outlined" >
+                    edit
+                </mat-icon>
+            </button>
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon class="material-icons-outlined">
+                    power_settings_new        
+                </mat-icon>
+            </button>
+            <button mat-icon-button class="container__navbar__admin__icons">
+                <mat-icon class="material-icons-outlined">
+                    file_download        
+                </mat-icon>
+            </button>
+        </div>
+    </mat-toolbar>
 </div>
