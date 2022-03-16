@@ -1,21 +1,12 @@
-<div class="table-admin container">
+<div class="table-admin table-header">
   <div fxLayout="row" fxLayoutAlign="space-between center">
-    <div
-      class="container__actions"
-      fxFlex="15"
-      fxLayout="row"
-      fxLayoutAlign="center none"
-    >
-      <span class="container__span"></span>
+    <div class="table-header__actions" fxFlex="15" fxLayout="row" fxLayoutAlign="center none">
+      <span class="table-header__span"></span>
       <mat-icon>save_alt</mat-icon>
     </div>
-    <div class="container__paginator" fxFlex>
-      <mat-paginator
-        [pageSizeOptions]="[5, 10, 20]"
-        showFirstLastButtons
-        aria-label="Select page of periodic elements"
-        class="container__paginator__buttons"
-      >
+    <div class="table-header__paginator" fxFlex>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Usuarios"
+        class="table-header__paginator__buttons">
       </mat-paginator>
     </div>
   </div>
@@ -23,21 +14,13 @@
   <table class="table" mat-table [dataSource]="dataSource" matSort>
     <ng-container matColumnDef="selector">
       <th mat-header-cell *matHeaderCellDef>
-        <mat-checkbox
-          (change)="$event ? masterToggle() : null"
-          [checked]="selection.hasValue() && isAllSelected()"
-          [indeterminate]="selection.hasValue() && !isAllSelected()"
-          [aria-label]="checkboxLabel()"
-        >
+        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
         </mat-checkbox>
       </th>
       <td mat-cell *matCellDef="let row">
-        <mat-checkbox
-          (click)="$event.stopPropagation()"
-          (change)="$event ? selection.toggle(row) : null"
-          [checked]="selection.isSelected(row)"
-          [aria-label]="checkboxLabel(row)"
-        >
+        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
         </mat-checkbox>
       </td>
     </ng-container>

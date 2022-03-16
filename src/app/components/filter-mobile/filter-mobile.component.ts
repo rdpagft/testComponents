@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-filter-mobile',
   templateUrl: './filter-mobile.component.html',
-  styleUrls: ['./filter-mobile.component.css']
+  styleUrls: ['./filter-mobile.component.scss'],
 })
 export class FilterMobileComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
