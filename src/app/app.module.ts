@@ -55,6 +55,8 @@ import { MatCardModule } from '@angular/material/card';
 import { AdministrationHeaderComponent } from './components/administration-header/administration-header.component';
 import { AdministrationHeaderMobileComponent } from './components/administration-header-mobile/administration-header-mobile.component';
 import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile/tabla-usuarios-mobile.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile
     AdministrationHeaderComponent,
     AdministrationHeaderMobileComponent,
     TablaUsuariosMobileComponent,
+    FilterComponent,
+    FilterMobileComponent,
   ],
   imports: [
     BrowserModule,

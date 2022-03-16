@@ -480,4 +480,11 @@ $color-success: #339966 !default;
   .mat-header-row>.cdk-column-selector>.mat-checkbox {
     transform: translateY(-250%);
   }
+
+  @media screen and (max-width:420px) {
+
+    .mat-paginator-page-size.ng-star-inserted {
+      transform: translateY(-150%);
+    }
+  }
 }

@@ -1,32 +1,9 @@
 import { SelectionModel } from '@angular/cdk/collections';
-import { Component, Injectable, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subject } from 'rxjs';
-
-// @Injectable()
-// export class MyCustomPaginatorIntl implements MatPaginatorIntl {
-//   firstPageLabel = `First page`;
-//   itemsPerPageLabel = `Items per page:`;
-//   lastPageLabel = `Last page`;
-
-//   changes = new Subject<void>();
-
-//     // You can set labels to an arbitrary string too, or dynamically compute
-//   // it through other third-party internationalization libraries.
-//   nextPageLabel = 'Next page';
-//   previousPageLabel = 'Previous page';
-
-//   getRangeLabel(page: number, pageSize: number, length: number): string {
-//     if (length === 0) {
-//       return `Página 1 de 1`;
-//     }
-//     const amountPages = Math.ceil(length / pageSize);
-//     return `Página ${page + 1} de ${amountPages}`;
-//   }
-
-// }
 
 @Component({
   selector: 'app-tabla-usuarios',
@@ -69,12 +46,6 @@ export class TablaUsuariosComponent {
         } de un total de ${lenght} registros`;
       },
     };
-    // this.paginator._intl.itemsPerPageLabel = 'Mostrar';
-    // this.paginator._intl.itemsPerPageLabel = 'Prueba1';
-    // this.paginator._intl.firstPageLabel = 'Prueba2';
-    // this.paginator._intl.lastPageLabel = 'Prueba3';
-    // this.paginator._intl.nextPageLabel = 'Prueba4';
-    // this.paginator._intl.previousPageLabel = 'Prueba5';
 
     this.dataSource.sort = this.sort;
   }
