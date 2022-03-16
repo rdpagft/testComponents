@@ -3,7 +3,7 @@
   <app-administration-header fxShow="true" fxShow.lt-md="false"></app-administration-header>
   <app-administration-header-mobile fxShow="true" fxShow.gt-sm="false"></app-administration-header-mobile>
 
-  <mat-divider class="border-divisor"></mat-divider>
+  <mat-divider fxShow="true" fxShow.lt-md="false" class="border-divisor"></mat-divider>
 
   <div class="filter" fxLayout="row" fxLayoutAlign="space-between">
     <div>
@@ -25,6 +25,6 @@
   </div>
 
   <div class="table">
-    <app-tabla-usuarios></app-tabla-usuarios>
+    <app-tabla-usuarios fxShow="true" fxShow.lt-md="false"></app-tabla-usuarios>
   </div>
 </div>

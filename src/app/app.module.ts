@@ -54,6 +54,7 @@ import { TemplateComponent } from './components/shared/template/template.compone
 import { MatCardModule } from '@angular/material/card';
 import { AdministrationHeaderComponent } from './components/administration-header/administration-header.component';
 import { AdministrationHeaderMobileComponent } from './components/administration-header-mobile/administration-header-mobile.component';
+import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile/tabla-usuarios-mobile.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { AdministrationHeaderMobileComponent } from './components/administration
     TablaUsuariosComponent,
     AdministrationHeaderComponent,
     AdministrationHeaderMobileComponent,
+    TablaUsuariosMobileComponent,
   ],
   imports: [
     BrowserModule,
