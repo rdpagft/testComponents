@@ -65,18 +65,32 @@
                 color: orange;
             }
         }
+        &__actions{
+            width: auto;
+            margin-right: 2%;
+            button{
+                padding: 0 5px;
+                width: auto;
+                color: #666666;
+                label{
+                    font-family: 'Quicksand';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #666666;margin-right: 10px;
+                }
+            }
+            button:last-child{
+                padding-left: 20%;
+            }
+        }
     }
     .active{
         border-bottom:  1px solid orange;
          a{    
             color: orange !important;
         }
-    }
-    &__actions{
-        width: 20%;
-    }
-    &__user__menu{
-        width: 10%;
     }
 
 }
