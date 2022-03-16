@@ -17,7 +17,7 @@ import { AministracionComponent } from './components/aministracion/aministracion
 import { InicioComponent } from './components/inicio/inicio.component';
 import { TemplateComponent } from './components/shared/template/template.component';
 const routes: Routes = [
-  {path:'', component:InicioComponent},
+  {  path: '', pathMatch: 'full', redirectTo: 'inicio'},
   {path:'inputs-text', component:InputsComponent},
   {path:'select', component:SelectComponent},
   {path:'buttons', component:ButtonsComponent},

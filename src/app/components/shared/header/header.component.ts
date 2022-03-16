@@ -10,10 +10,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   nameRoute:string;
   subscription !: Subscription;
-
+  showTableAction:boolean;
 
   constructor(private router: Router) {
     this.nameRoute = "";  
+    this.showTableAction = true
   }
  
   ngOnDestroy(){
@@ -22,6 +23,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void { 
     this.getRoute()
+  }
+  back(){
+    this.showTableAction = false
   }
 
   getRoute(){
