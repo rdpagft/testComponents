@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
+
   option(redirect: string):void{
     console.log("reditext to", redirect);
   }
+
 }
+
+

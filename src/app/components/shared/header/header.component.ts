@@ -1,6 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, Event, NavigationEnd} from '@angular/router';
 import { Subscription } from 'rxjs';
+import { BusquedaInicioComponent } from '../../modals/busqueda-inicio/busqueda-inicio.component';
+import { MatDialog } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,7 +15,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   subscription !: Subscription;
   showTableAction:boolean;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public dialog: MatDialog) {
     this.nameRoute = "";  
     this.showTableAction = true
   }
@@ -26,6 +29,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
   back(){
     this.showTableAction = false
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(BusquedaInicioComponent, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+        autoFocus: false
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   getRoute(){

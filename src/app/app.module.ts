@@ -57,6 +57,8 @@ import { AdministrationHeaderMobileComponent } from './components/administration
 import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile/tabla-usuarios-mobile.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.component';
+import { BusquedaInicioComponent } from './components/modals/busqueda-inicio/busqueda-inicio.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,7 @@ import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.
     TablaUsuariosMobileComponent,
     FilterComponent,
     FilterMobileComponent,
+    BusquedaInicioComponent,
   ],
   imports: [
     BrowserModule,
@@ -120,6 +123,7 @@ import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
+    MatDialogModule,
   ],
   providers: [
     MatDatepickerModule,
