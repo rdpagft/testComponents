@@ -32,7 +32,9 @@
     }
     &__options{
         height: 90%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 0 auto !important;
+        border: 1px solid;
         &__one{
             &__card{
                 background: linear-gradient(180deg, rgba(204, 0, 0, 0.2) -9.65%, #CC0000 158.66%);
@@ -99,7 +101,8 @@
     .container__section{
         &__options{
             height: 30%;
-            margin: 0
+            margin: 0;
+            width: 95%;
         }
     }
  } 

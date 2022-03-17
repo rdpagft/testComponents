@@ -29,8 +29,8 @@ const routes: Routes = [
   {path:'autocomplete', component:AutocompleteComponent},
   {path:'search', component:SearchComponent},
   {path:'gestor', component:GestorComponent},
-  {path:'administracion', component:AministracionComponent},
-  {path:'inicio', component:InicioComponent},
+  {path:'administracion', component:AministracionComponent, data:{ title:"Administración" }},
+  {path:'inicio', component:InicioComponent, data:{ title:"Inicio" }},
   {path:'**', component:InicioComponent}
 ];
 
