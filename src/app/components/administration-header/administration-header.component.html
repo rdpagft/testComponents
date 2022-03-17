@@ -48,7 +48,7 @@
       <input class="header__filters__date" [matDatepicker]="picker" />
       <mat-datepicker #picker></mat-datepicker>
       <button mat-flat-button class="filter-text" (click)="picker.open()">
-        <mat-label> Fecha Registro</mat-label>
+        <mat-label>Fecha Registro</mat-label>
         <mat-icon>arrow_drop_down</mat-icon>
       </button>
     </div>
@@ -57,7 +57,6 @@
         <mat-label> Dependencia</mat-label>
         <mat-icon>arrow_drop_down</mat-icon>
       </button>
-
       <mat-menu #menuDependency="matMenu">
         <div class="header__filters__menu">
           <mat-radio-group fxLayout="column" [(ngModel)]="favoriteSeason">
@@ -69,36 +68,34 @@
       </mat-menu>
     </div>
     <div>
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menu">
+      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuCompany">
         Compañía / Sector<mat-icon>arrow_drop_down</mat-icon>
       </button>
-      <mat-menu #menu="matMenu" fxLayout="column">
+      <mat-menu #menuCompany="matMenu" fxLayout="column">
         <mat-form-field appearance="outline" floatLabel="auto">
-          <input matInput placeholder="Simple placeholder" autofocus required />
+          <input matInput placeholder="Compania" autofocus required />
         </mat-form-field>
       </mat-menu>
     </div>
     <div>
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menu">
+      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuOficina">
         Oficina<mat-icon>arrow_drop_down</mat-icon>
       </button>
-      <mat-menu #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+      <mat-menu #menuOficina="matMenu" fxLayout="column">
+        <mat-radio-group fxLayout="column" aria-labelledby="Oficina" [(ngModel)]="favoriteSeason" color="primary">
+          <mat-radio-button *ngFor="let season of seasons" [value]="season">
             {{ season }}
           </mat-radio-button>
         </mat-radio-group>
       </mat-menu>
     </div>
-    <div class="filtro__estatus">
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menu">
+    <div>
+      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuStatus">
         Estatus<mat-icon>arrow_drop_down</mat-icon>
       </button>
-      <mat-menu class="" #menu="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="example-radio-group-label" class="example-radio-group"
-          [(ngModel)]="favoriteSeason" color="primary">
-          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+      <mat-menu #menuStatus="matMenu" fxLayout="column">
+        <mat-radio-group fxLayout="column" aria-labelledby="Estatus" [(ngModel)]="favoriteSeason" color="primary">
+          <mat-radio-button *ngFor="let season of seasons" [value]="season">
             {{ season }}
           </mat-radio-button>
         </mat-radio-group>

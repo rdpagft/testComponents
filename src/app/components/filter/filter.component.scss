@@ -1,0 +1,16 @@
+.filter {
+  width: 100%;
+  margin-bottom: 33px;
+
+  &__button {
+    border-radius: 99px;
+
+    &--primary {
+      color: #fff;
+    }
+  }
+}
+
+.close-chip {
+  color: #fff;
+}
