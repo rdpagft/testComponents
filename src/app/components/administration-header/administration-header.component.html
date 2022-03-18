@@ -1,8 +1,16 @@
 <div class="header">
   <h2 class="mat-title">Administración</h2>
-  <div class="header__actions" fxLayout="row" fxLayoutAlign="space-between center">
+  <div
+    class="header__actions"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+  >
     <div class="header__actions__search" fxFlex="40" fxLayout="column">
-      <div class="header__actions__search__header" fxLayout="row" fxLayoutAlign="space-between center">
+      <div
+        class="header__actions__search__header"
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+      >
         <h4 class="mat-subheading-1">Buscar usuarios</h4>
         <h5 class="mat-subheading-2">
           <a class="cta">Todos los usuarios</a>
@@ -13,18 +21,44 @@
           <mat-form-field appearance="outline" fxFlexFill>
             <mat-label> Buscar por nombre o correo </mat-label>
             <mat-icon matPrefix>search</mat-icon>
-            <input placeholder="Buscar por nombre o correo" matInput formControlName="username" type="text"
-              #searchUsername />
-            <button (click)="searchUsername.value = ''" *ngIf="searchUsername.value" matSuffix mat-icon-button>
+            <input
+              placeholder="Buscar por nombre o correo"
+              matInput
+              formControlName="username"
+              type="text"
+              #searchUsername
+            />
+            <button
+              (click)="searchUsername.value = ''"
+              *ngIf="searchUsername.value"
+              matSuffix
+              mat-icon-button
+            >
               <mat-icon>cancel</mat-icon>
             </button>
           </mat-form-field>
         </form>
       </div>
     </div>
-    <div class="header__actions__buttons" fxFlex="25" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="16px">
-      <button mat-raised-button color="users-admin" fxFlexFill class="header__actions__buttons__button">
-        <span fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="9">
+    <div
+      class="header__actions__buttons"
+      fxFlex="25"
+      fxLayout="column"
+      fxLayoutAlign="center"
+      fxLayoutGap="16px"
+    >
+      <button
+        mat-raised-button
+        color="users-admin"
+        fxFlexFill
+        class="header__actions__buttons__button"
+      >
+        <span
+          fxFlex
+          fxLayout="row"
+          fxLayoutAlign="start center"
+          fxLayoutGap="9"
+        >
           <mat-icon class="material-icons-outlined"> person_add</mat-icon>
           <mat-label>Nuevo usuario</mat-label>
         </span>
@@ -32,8 +66,17 @@
           <mat-icon>chevron_right</mat-icon>
         </span>
       </button>
-      <button mat-raised-button fxFlexFill class="header__actions__buttons__button">
-        <span fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="9">
+      <button
+        mat-raised-button
+        fxFlexFill
+        class="header__actions__buttons__button"
+      >
+        <span
+          fxFlex
+          fxLayout="row"
+          fxLayoutAlign="start center"
+          fxLayoutGap="9"
+        >
           <mat-icon class="material-icons-outlined">assignment</mat-icon>
           <mat-label>Consultar bitácora</mat-label>
         </span>
@@ -43,7 +86,11 @@
       </button>
     </div>
   </div>
-  <div class="header__filters" fxLayout="row" fxLayoutAlign="space-between center">
+  <div
+    class="header__filters"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+  >
     <div>
       <input class="header__filters__date" [matDatepicker]="picker" />
       <mat-datepicker #picker></mat-datepicker>
@@ -53,14 +100,22 @@
       </button>
     </div>
     <div>
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuDependency">
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuDependency"
+      >
         <mat-label> Dependencia</mat-label>
         <mat-icon>arrow_drop_down</mat-icon>
       </button>
       <mat-menu #menuDependency="matMenu">
         <div class="header__filters__menu">
           <mat-radio-group fxLayout="column" [(ngModel)]="favoriteSeason">
-            <mat-radio-button class="header__filters__menu__button" *ngFor="let season of seasons" [value]="season">
+            <mat-radio-button
+              class="header__filters__menu__button"
+              *ngFor="let season of seasons"
+              [value]="season"
+            >
               {{ season | uppercase }}
             </mat-radio-button>
           </mat-radio-group>
@@ -68,7 +123,11 @@
       </mat-menu>
     </div>
     <div>
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuCompany">
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuCompany"
+      >
         Compañía / Sector<mat-icon>arrow_drop_down</mat-icon>
       </button>
       <mat-menu #menuCompany="matMenu" fxLayout="column">
@@ -78,11 +137,20 @@
       </mat-menu>
     </div>
     <div>
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuOficina">
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuOficina"
+      >
         Oficina<mat-icon>arrow_drop_down</mat-icon>
       </button>
       <mat-menu #menuOficina="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="Oficina" [(ngModel)]="favoriteSeason" color="primary">
+        <mat-radio-group
+          fxLayout="column"
+          aria-labelledby="Oficina"
+          [(ngModel)]="favoriteSeason"
+          color="primary"
+        >
           <mat-radio-button *ngFor="let season of seasons" [value]="season">
             {{ season }}
           </mat-radio-button>
@@ -90,11 +158,20 @@
       </mat-menu>
     </div>
     <div>
-      <button mat-flat-button class="filter-text" [matMenuTriggerFor]="menuStatus">
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuStatus"
+      >
         Estatus<mat-icon>arrow_drop_down</mat-icon>
       </button>
       <mat-menu #menuStatus="matMenu" fxLayout="column">
-        <mat-radio-group fxLayout="column" aria-labelledby="Estatus" [(ngModel)]="favoriteSeason" color="primary">
+        <mat-radio-group
+          fxLayout="column"
+          aria-labelledby="Estatus"
+          [(ngModel)]="favoriteSeason"
+          color="primary"
+        >
           <mat-radio-button *ngFor="let season of seasons" [value]="season">
             {{ season }}
           </mat-radio-button>

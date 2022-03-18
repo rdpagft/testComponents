@@ -1,5 +1,9 @@
 .table-header {
-  &__paginator__buttons {
-    margin-top: 60px;
+  &__actions {
+    margin-top: 40px;
+  }
+
+  &__paginator {
+    margin-top: 0px;
   }
 }

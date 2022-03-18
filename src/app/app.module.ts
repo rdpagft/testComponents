@@ -57,6 +57,7 @@ import { AdministrationHeaderMobileComponent } from './components/administration
 import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile/tabla-usuarios-mobile.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.component';
+import { TableCardMobileComponent } from './components/table-card-mobile/table-card-mobile.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.
     TablaUsuariosMobileComponent,
     FilterComponent,
     FilterMobileComponent,
+    TableCardMobileComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,19 @@
-<div class="table-admin">
-
+<div class="table-admin table-header">
   <div class="table-header__actions">
-    <button>
+    <button mat-icon-button>
       <mat-icon>save_alt</mat-icon>
     </button>
   </div>
   <div class="table-header__paginator">
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" aria-label="Select page of periodic elements"
-      class="table-header__paginator__buttons">
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+      aria-label="Select page of periodic elements"
+      class="table-header__paginator__buttons"
+    >
     </mat-paginator>
   </div>
 
+  <div class="table">
+    <app-table-card-mobile></app-table-card-mobile>
+  </div>
 </div>
