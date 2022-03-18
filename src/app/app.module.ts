@@ -59,6 +59,8 @@ import { FilterComponent } from './components/filter/filter.component';
 import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.component';
 import { BusquedaInicioComponent } from './components/modals/busqueda-inicio/busqueda-inicio.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ConfirmacionEdicionUsuarioComponent } from './components/modals/administracion/confirmacion-edicion-usuario/confirmacion-edicion-usuario.component';
+import { ConfirmacionInactivarUsuarioComponent } from './components/modals/administracion/confirmacion-inactivar-usuario/confirmacion-inactivar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +92,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     FilterComponent,
     FilterMobileComponent,
     BusquedaInicioComponent,
+    ConfirmacionEdicionUsuarioComponent,
+    ConfirmacionInactivarUsuarioComponent,
   ],
   imports: [
     BrowserModule,
