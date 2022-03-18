@@ -32,7 +32,7 @@ export class TablaUsuariosComponent {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-    console.log(this.paginator);
+
     this.paginator._intl = {
       itemsPerPageLabel: 'Mostrar',
       firstPageLabel: '',

@@ -48,7 +48,7 @@ export class TablaUsuariosMobileComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 }
 
-const ELEMENT_DATA: DatosUsuarios[] = [
+export const ELEMENT_DATA: DatosUsuarios[] = [
   {
     nombre: 'Jaime Medina Suarez',
     dependencia: 'AMIS',
