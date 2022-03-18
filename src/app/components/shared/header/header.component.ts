@@ -3,6 +3,8 @@ import { Router, Event, NavigationEnd} from '@angular/router';
 import { Subscription } from 'rxjs';
 import { BusquedaInicioComponent } from '../../modals/busqueda-inicio/busqueda-inicio.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ConfirmacionEdicionUsuarioComponent } from '../../modals/administracion/confirmacion-edicion-usuario/confirmacion-edicion-usuario.component';
+import { ConfirmacionInactivarUsuarioComponent } from '../../modals/administracion/confirmacion-inactivar-usuario/confirmacion-inactivar-usuario.component';
 
 @Component({
   selector: 'app-header',
@@ -32,6 +34,33 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
   openDialog() {
     const dialogRef = this.dialog.open(BusquedaInicioComponent, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+        autoFocus: false
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openDialog2() {
+    const dialogRef = this.dialog.open(ConfirmacionEdicionUsuarioComponent, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+        autoFocus: false
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openDialog3() {
+    const dialogRef = this.dialog.open(ConfirmacionInactivarUsuarioComponent, {
         maxWidth: '100vw',
         maxHeight: '100vh',
         height: '100%',
