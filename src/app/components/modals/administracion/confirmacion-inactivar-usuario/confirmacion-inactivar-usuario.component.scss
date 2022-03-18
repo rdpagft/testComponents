@@ -1,0 +1,55 @@
+main{
+    .container{
+        &__text{
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 44px;
+            color: #000000;
+            padding-right: 10%;
+            &__success{
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 44px;
+                color: #339966;
+                padding-right: 10%;
+            }
+        }
+        &__confirm{
+            &__text{
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #000000;
+            }
+        }
+    }
+
+}
+
+
+
+::ng-deep .mat-dialog-container{
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(.5em);
+
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;    
+    border-radius: 5px;
+}
+
+::ng-deep .mat-dialog-container{
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(.5em);
+
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;    
+    border-radius: 5px;
+}

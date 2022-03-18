@@ -50,7 +50,7 @@ $color-success: #339966 !default;
 
 .primary {
   $alternate-primary: mat.define-palette($custom-palette, brand);
-  $alternate-accent: mat.define-palette($custom-palette, sea);
+  $alternate-accent: mat.define-palette($custom-palette, cloud);
   $alternate-warn: mat.define-palette($custom-palette, sky);
 
   $alternate-theme: mat-light-theme($alternate-primary,
