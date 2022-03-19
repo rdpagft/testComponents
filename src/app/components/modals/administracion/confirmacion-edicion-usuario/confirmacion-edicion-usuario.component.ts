@@ -20,10 +20,11 @@ export class ConfirmacionEdicionUsuarioComponent implements OnInit {
 
   agree(){
     this.confirm = true
-    setInterval(()=>{
+    let interval = setInterval(()=>{
       this.counter = this.counter - 1
       if(this.counter == 0) {
         this.dialog.close()
+        clearInterval(interval)
       }
     }, 1000)
   }
