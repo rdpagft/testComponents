@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-confirmacion-edicion-usuario',
@@ -8,14 +8,23 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ConfirmacionEdicionUsuarioComponent implements OnInit {
   confirm:boolean;
-  constructor( dialog: MatDialog) { 
+  counter: number
+  constructor(private dialog: MatDialogRef<ConfirmacionEdicionUsuarioComponent>) { 
     this.confirm = false
+    this.counter = 5
   }
 
   ngOnInit(): void {
+
   }
 
   agree(){
     this.confirm = true
+    setInterval(()=>{
+      this.counter = this.counter - 1
+      if(this.counter == 0) {
+        this.dialog.close()
+      }
+    }, 1000)
   }
 }

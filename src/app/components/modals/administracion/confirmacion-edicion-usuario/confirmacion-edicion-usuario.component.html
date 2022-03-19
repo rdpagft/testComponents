@@ -10,7 +10,7 @@
                 ¿Deseas confirmar la edición del usuario?
             </p>
             <p *ngIf="confirm" class="container__confirm__text">
-                Se cerrará en 5 segundos
+                Se cerrará en {{counter}} segundos
             </p>
             <div class="container__confirm__buttons" fxLayout="row" > 
                 <div *ngIf="!confirm" class="secondary" fxFlex="50"  fxLayoutAlign="start center">
