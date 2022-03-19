@@ -1,24 +1,15 @@
 <div class="header">
-  <div class="header__title" fxLayout="row" fxLayoutAlign="space-between center">
-    <h2 class="mat-title header__title__h2">Administración</h2>
-    <button mat-icon-button [matMenuTriggerFor]="menuUserOption" aria-label="Opciones usuarios">
-      <mat-icon class="header__title__icon">more_vert</mat-icon>
+  <div class="header__title" fxLayout="row" fxLayoutAlign="space-around center">
+    <button mat-icon-button>
+      <mat-icon class="material-icons-outlined">person_add</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon class="material-icons-outlined">assignment</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon class="material-icons-outlined">folder_delete</mat-icon>
     </button>
   </div>
-  <mat-menu #menuUserOption="matMenu">
-    <button mat-menu-item>
-      <mat-icon>person_add</mat-icon>
-      <mat-label>Nuevo usuario</mat-label>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>assignment</mat-icon>
-      <mat-label>Consultar bitácora</mat-label>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>folder_delete</mat-icon>
-      <mat-label>Depurar reportes</mat-label>
-    </button>
-  </mat-menu>
   <div class="header__actions" fxLayout="column" fxLayoutAlign="space-between center">
     <div class="header__actions__search" fxFlex="100" fxLayout="column">
       <div class="header__actions__search__header" fxLayout="row" fxLayoutAlign="space-between center">
