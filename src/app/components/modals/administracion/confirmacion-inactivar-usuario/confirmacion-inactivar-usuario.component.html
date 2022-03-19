@@ -1,1 +1,34 @@
-<p>confirmacion-inactivar-usuario works!</p>
+<main fxFill fxLayoutAlign.lt-sm="center center" fxLayoutAlign.gt-xs="start center" >
+    <div class="container" fxFlex.lt-sm="100" fxFlex.gt-xs="50">
+        <div class="container__text">
+            <img *ngIf="confirm" src="assets/images/success.png" alt="">
+            <p *ngIf="!confirm">Inactivar usuario</p>
+            <p *ngIf="confirm" class="container__text__success">Inactivación de usuario exitosa</p>
+        </div>
+        <div class="container__confirm">
+            <p *ngIf="!confirm"  class="container__confirm__text">
+                ¿Estás seguro que quieres Inactivar el usuario Aldo Martínez Jiménez?
+            </p>
+            <p *ngIf="confirm" class="container__confirm__text">
+                Se cerrará en {{counter}} segundos
+            </p>
+            <div class="container__confirm__buttons" fxLayout="row"> 
+                <div *ngIf="!confirm" class="secondary" fxFlex="50"  fxLayoutAlign="start center">
+                    <button  [mat-dialog-close]="true" fxFlex="80" color="primary" mat-raised-button>
+                       No
+                    </button>
+                </div>
+                <div *ngIf="!confirm" class="primary" fxFlex="50" fxLayoutAlign="start center">
+                    <button (click)="agree()" fxFlex="80" color="primary" mat-raised-button>
+                        Si
+                    </button>
+                </div>
+                <div *ngIf="confirm" class="primary" fxFlex="50" fxLayoutAlign="start center">
+                    <button [mat-dialog-close]="true" fxFlex="80" color="primary" mat-raised-button>
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
