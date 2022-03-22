@@ -492,6 +492,15 @@ $color-success: #339966 !default;
   .mat-form-field-appearance-fill .mat-form-field-flex {
     border-radius: 8px;
   }
+
+  .mat-form-field-outline {
+    background-color: $color-cloud;
+    border-radius: 4px;
+  }
+
+  .mat-focus-indicator.filter-text.mat-flat-button.mat-button-base {
+    background-color: inherit;
+  }
 }
 
 // ==============================================================================
@@ -529,16 +538,21 @@ $color-success: #339966 !default;
     transform: translateY(-56px);
   }
 
-  .mat-row.cdk-row{
+  .mat-row.cdk-row {
     border: none;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 405px) {
     .mat-paginator-container {
       padding: 0;
     }
     .mat-paginator-page-size.ng-star-inserted {
       transform: translateY(-150%);
+    }
+    .mat-table.cdk-table {
+      margin: -50px 0 0 0;
+      width: 100%;
+      position: relative;
     }
   }
 
@@ -633,12 +647,6 @@ $color-success: #339966 !default;
       display: block;
       font-weight: 400;
       margin-top: 16px;
-    }
-
-    .mat-table.cdk-table {
-      margin: -50px 0 0 0;
-      width: 100%;
-      position: relative;
     }
   }
 }

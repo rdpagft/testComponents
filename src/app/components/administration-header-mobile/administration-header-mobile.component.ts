@@ -27,7 +27,7 @@ export class AdministrationHeaderMobileComponent implements OnInit {
       maxHeight: '100vh',
       height: '100%',
       width: '100%',
-      autoFocus: true,
+      autoFocus: false,
     });
   }
 }
