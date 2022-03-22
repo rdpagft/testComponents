@@ -1,0 +1,50 @@
+
+.header__container{
+    &__navbar{
+        &__section{
+            width: 96%;
+            margin: 0 auto;
+            &__title{
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+            }
+            &__close{
+                &__button{
+                    color: #666666;
+                }
+                &__label{
+                    font-family: 'Quicksand';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 16px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    letter-spacing: 1.2px;
+                    color: #666666;
+                }
+            }
+        }
+    
+    }
+}
+
+.info__container{
+  
+  &__user{
+    border: 1px solid red;
+  }
+  &__permissions{
+    border: 1px solid red;
+  }
+}
+
+
+::ng-deep .mat-dialog-container{
+    padding: 0;
+}

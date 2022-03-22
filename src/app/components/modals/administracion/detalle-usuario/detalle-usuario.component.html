@@ -1,0 +1,28 @@
+<main class="light" fxFill fxLayout="column">  
+    <div class="header__container"  fxLayout="row" fxFlex="10">
+        <mat-toolbar fxLayout="row"  class="header__container__navbar" color="accent"  fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="start center">
+           <div class="header__container__navbar__section" fxLayout="row" fxLayoutAlign="space-between center">
+               <div class="header__container__navbar__section__title" fxLayoutAlign="end center" fxLayoutAlign="center center">
+                   <label for="title">Detalle de usuario</label>
+               </div>
+       
+               <div (click)="close()" class="header__container__section__navbar__close" fxLayoutAlign="end center">
+                   <button  mat-icon-button class="header__container__navbar__section__close__button">
+                       <mat-icon  class="material-icons-outlined">
+                           close 
+                       </mat-icon>
+                   </button>
+                   <label  class="header__container__navbar__section__close__label" for="close-text" fxHide.lt-md="true" fxShow.gt-sm="true" >Cerrar</label>
+               </div>
+           </div>
+        </mat-toolbar>
+    </div>
+    <div class="info__container" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxFlex="90">
+        <div class="info__container__user" fxFlex.gt-sm="50" fxFlex.lt-md="70vh">
+
+        </div>
+        <div class="info__container__permissions" fxFlex.gt-sm="50" fxFlex.lt-md="70vh">
+
+        </div>
+    </div>
+</main>
