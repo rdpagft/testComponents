@@ -1,15 +1,28 @@
 <div class="container users-admin mat-typography">
+  <app-administration-header
+    fxShow="true"
+    fxShow.lt-md="false"
+  ></app-administration-header>
+  <app-administration-header-mobile
+    fxShow="true"
+    fxShow.gt-sm="false"
+  ></app-administration-header-mobile>
 
-  <app-administration-header fxShow="true" fxShow.lt-md="false"></app-administration-header>
-  <app-administration-header-mobile fxShow="true" fxShow.gt-sm="false"></app-administration-header-mobile>
-
-  <mat-divider fxShow="true" fxShow.lt-md="false" class="border-divisor"></mat-divider>
+  <mat-divider
+    fxShow="true"
+    fxShow.lt-md="false"
+    class="border-divisor"
+  ></mat-divider>
 
   <app-filter fxShow="true" fxShow.lt-md="false"></app-filter>
   <app-filter-mobile fxShow="true" fxShow.gt-sm="false"></app-filter-mobile>
-
-  <div class="table">
+</div>
+<div class="table">
+  <div class="container">
     <app-tabla-usuarios fxShow="true" fxShow.lt-md="false"></app-tabla-usuarios>
-    <app-tabla-usuarios-mobile fxShow="true" fxShow.gt-sm="false"></app-tabla-usuarios-mobile>
   </div>
+  <app-tabla-usuarios-mobile
+    fxShow="true"
+    fxShow.gt-sm="false"
+  ></app-tabla-usuarios-mobile>
 </div>

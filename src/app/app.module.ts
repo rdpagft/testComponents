@@ -61,7 +61,11 @@ import { BusquedaInicioComponent } from './components/modals/busqueda-inicio/bus
 import {MatDialogModule} from '@angular/material/dialog';
 import { ConfirmacionEdicionUsuarioComponent } from './components/modals/administracion/confirmacion-edicion-usuario/confirmacion-edicion-usuario.component';
 import { ConfirmacionInactivarUsuarioComponent } from './components/modals/administracion/confirmacion-inactivar-usuario/confirmacion-inactivar-usuario.component';
+<<<<<<< HEAD
 import { UserDetailComponent } from './components/modals/user-detail/user-detail.component';
+=======
+import { BuscarUsuarioComponent } from './components/modals/administracion/buscar-usuario/buscar-usuario.component';
+>>>>>>> 05e6e85bd8dad87852d1bcaca168b812d6779305
 
 @NgModule({
   declarations: [
@@ -95,7 +99,11 @@ import { UserDetailComponent } from './components/modals/user-detail/user-detail
     BusquedaInicioComponent,
     ConfirmacionEdicionUsuarioComponent,
     ConfirmacionInactivarUsuarioComponent,
+<<<<<<< HEAD
     UserDetailComponent,
+=======
+    BuscarUsuarioComponent,
+>>>>>>> 05e6e85bd8dad87852d1bcaca168b812d6779305
   ],
   imports: [
     BrowserModule,

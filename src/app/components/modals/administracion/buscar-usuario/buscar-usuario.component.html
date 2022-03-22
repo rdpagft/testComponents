@@ -1,0 +1,142 @@
+<div class="users-admin buscar-modal search">
+  <div
+    class="search__text"
+    mat-dialog-title
+    fxLayout="row"
+    fxLayoutAlign="space-between"
+  >
+    <h2 class="search__title" fxFlex>Buscar usuarios</h2>
+    <button
+      mat-icon-button
+      [mat-dialog-close]="true"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+    >
+      <mat-icon> close </mat-icon>
+    </button>
+  </div>
+
+  <div fxLayout="column">
+    <!-- [formGroup]="searchFormGroup" -->
+    <form fxFlexFill>
+      <mat-form-field appearance="outline" fxFlexFill>
+        <mat-label> Buscar por nombre o correo </mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input
+          placeholder="Buscar por nombre o correo"
+          matInput
+          formControlName="username"
+          type="text"
+          #searchUsername
+        />
+        <button
+          (click)="searchUsername.value = ''"
+          *ngIf="searchUsername.value"
+          matSuffix
+          mat-icon-button
+        >
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="filters" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="20">
+    <div>
+      <input class="filters__date" [matDatepicker]="picker" />
+      <mat-datepicker #picker></mat-datepicker>
+      <button mat-flat-button class="filter-text" (click)="picker.open()">
+        <mat-label>Fecha Registro</mat-label>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuDependency"
+      >
+        <mat-label> Dependencia</mat-label>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menuDependency="matMenu">
+        <div class="filters__menu">
+          <mat-radio-group fxLayout="column" [(ngModel)]="favoriteSeason">
+            <mat-radio-button
+              class="filters__menu__button"
+              *ngFor="let season of seasons"
+              [value]="season"
+            >
+              {{ season | uppercase }}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </mat-menu>
+    </div>
+    <div>
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuCompany"
+      >
+        Compañía / Sector<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menuCompany="matMenu" fxLayout="column">
+        <mat-form-field appearance="outline" floatLabel="auto">
+          <input matInput placeholder="Compania" autofocus required />
+        </mat-form-field>
+      </mat-menu>
+    </div>
+    <div>
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuOficina"
+      >
+        Oficina<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menuOficina="matMenu" fxLayout="column">
+        <mat-radio-group
+          fxLayout="column"
+          aria-labelledby="Oficina"
+          [(ngModel)]="favoriteSeason"
+          color="primary"
+        >
+          <mat-radio-button *ngFor="let season of seasons" [value]="season">
+            {{ season }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-menu>
+    </div>
+    <div>
+      <button
+        mat-flat-button
+        class="filter-text"
+        [matMenuTriggerFor]="menuStatus"
+      >
+        Estatus<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menuStatus="matMenu" fxLayout="column">
+        <mat-radio-group
+          fxLayout="column"
+          aria-labelledby="Estatus"
+          [(ngModel)]="favoriteSeason"
+          color="primary"
+        >
+          <mat-radio-button *ngFor="let season of seasons" [value]="season">
+            {{ season }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-menu>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="16">
+    <button
+      mat-flat-button
+      color="primary"
+      class="filters__button filters__button--primary"
+    >
+      Buscar
+    </button>
+    <button mat-stroked-button class="filters__button">Limpiar busqueda</button>
+  </div>
+</div>

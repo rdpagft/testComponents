@@ -1,0 +1,50 @@
+.search {
+  width: 100%;
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 0;
+    font-family: Quicksand;
+  }
+}
+
+.filters {
+  width: 100%;
+  margin-bottom: 30px;
+
+  &__date {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &__menu {
+    width: 220px;
+
+    &__button {
+      padding: 14px 18px;
+    }
+  }
+
+  &__button {
+    border-radius: 99px;
+    min-width: 130px;
+
+    &--primary {
+      color: #fff;
+      min-width: 110px;
+    }
+  }
+}
+
+::ng-deep .mat-dialog-container {
+  background-color: #f5f5f5;
+}

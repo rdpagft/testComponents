@@ -1,4 +1,4 @@
-@use "@angular/material"as mat;
+@use "@angular/material" as mat;
 @import "~@angular/material/theming";
 @import "./custom-palette.scss";
 @include mat.core();
@@ -6,15 +6,20 @@
 $primary: mat.define-palette(mat.$orange-palette, 500);
 $accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
 $warn: mat.define-palette(mat.$yellow-palette);
-$typography: mat.define-typography-config($font-family: "Quicksand",
+$typography: mat.define-typography-config(
+  $font-family: "Quicksand",
 );
 
-$my-theme: mat.define-light-theme((color: (primary: $primary,
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
       accent: $accent,
       warn: $warn,
     ),
     typography: $typography,
-  ));
+  )
+);
 
 @include mat.all-component-themes($my-theme);
 
@@ -38,7 +43,6 @@ $color-cloud: #ffffff !default;
 $color-cloud54: rgba(255, 255, 255, 0.64) !default;
 $color-success: #339966 !default;
 
-
 // clase general para los bages de los icons
 
 .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
@@ -53,19 +57,23 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, cloud);
   $alternate-warn: mat.define-palette($custom-palette, sky);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
   @include angular-material-theme($alternate-theme);
 
-  .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  .mat-form-field-appearance-outline.mat-form-field-disabled
+    .mat-form-field-outline {
     // color: mat-color($alternate-primary) !important;;
     opacity: 0.1 !important;
     background-color: $color-carbon40;
     border-radius: 7px;
   }
 
-  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+    .mat-form-field-outline-thick {
     color: $color-error !important;
   }
 
@@ -73,7 +81,8 @@ $color-success: #339966 !default;
     color: $color-error !important;
   }
 
-  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+    .mat-form-field-outline-thick {
     color: $color-error !important;
   }
 
@@ -119,7 +128,9 @@ $color-success: #339966 !default;
     color: $color-cloud !important;
   }
 
-  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+  .mat-form-field:not(.mat-form-field-appearance-legacy)
+    .mat-form-field-suffix
+    .mat-icon-button {
     width: 1.5em !important;
     height: 1.5em !important;
   }
@@ -133,7 +144,8 @@ $color-success: #339966 !default;
     background-color: $color-carbon10 !important;
   }
 
-  .mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle {
+  .mat-radio-button.mat-radio-disabled.mat-radio-checked
+    .mat-radio-outer-circle {
     border-color: mat-color($alternate-primary) !important;
     opacity: 0.6 !important;
   }
@@ -157,12 +169,14 @@ $color-success: #339966 !default;
     color: $color-cloud !important;
   }
 
-  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon {
+  .mat-form-field:not(.mat-form-field-appearance-legacy)
+    .mat-form-field-suffix
+    .mat-icon-button
+    .mat-icon {
     color: $color-cloud;
     // width: 2em;
     // height: 2em;
   }
-
 }
 
 .big-button {
@@ -170,9 +184,11 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, sea);
   $alternate-warn: mat.define-palette($custom-palette, sky);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
   @include angular-material-theme($alternate-theme);
 
   .mat-raised-button {
@@ -205,9 +221,11 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, carbon20);
   $alternate-warn: mat.define-palette($custom-palette, carbon40);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
   @include angular-material-theme($alternate-theme);
 
   .mat-flat-button,
@@ -252,9 +270,11 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, error);
   $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
 
   @include angular-material-theme($alternate-theme);
 
@@ -298,9 +318,11 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, citrus);
   $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
   @include angular-material-theme($alternate-theme);
 
   .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
@@ -308,7 +330,8 @@ $color-success: #339966 !default;
     opacity: 0.5 !important;
   }
 
-  .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  .mat-form-field-appearance-outline.mat-form-field-disabled
+    .mat-form-field-outline {
     color: mat-color($alternate-primary) !important;
     opacity: 0.2 I !important;
   }
@@ -319,9 +342,11 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, error);
   $alternate-warn: mat.define-palette($custom-palette, warning);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
   @include angular-material-theme($alternate-theme);
 
   .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background {
@@ -329,7 +354,8 @@ $color-success: #339966 !default;
     opacity: 0.5 !important;
   }
 
-  .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  .mat-form-field-appearance-outline.mat-form-field-disabled
+    .mat-form-field-outline {
     color: mat-color($alternate-primary) !important;
     opacity: 0.1 !important;
   }
@@ -345,9 +371,11 @@ $color-success: #339966 !default;
   $alternate-accent: mat.define-palette($custom-palette, cloud54);
   $alternate-warn: mat.define-palette($custom-palette, fresh-berry);
 
-  $alternate-theme: mat-light-theme($alternate-primary,
-      $alternate-accent,
-      $alternate-warn);
+  $alternate-theme: mat-light-theme(
+    $alternate-primary,
+    $alternate-accent,
+    $alternate-warn
+  );
   @include angular-material-theme($alternate-theme);
 
   .mat-toolbar {
@@ -369,15 +397,20 @@ $color-success: #339966 !default;
   $users-primary: mat.define-palette($custom-palette, brand);
   $users-accent: mat.define-palette($custom-palette, sea);
   $users-warn: mat.define-palette($custom-palette, error);
-  $users-typography: mat.define-typography-config($font-family: "Quicksand",
-    );
+  $users-typography: mat.define-typography-config(
+    $font-family: "Quicksand",
+  );
 
-  $users-theme: mat.define-light-theme((color: (primary: $users-primary,
-          accent: $users-accent,
-          warn: $users-warn,
-        ),
-        typography: $users-typography,
-      ));
+  $users-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $users-primary,
+        accent: $users-accent,
+        warn: $users-warn,
+      ),
+      typography: $users-typography,
+    )
+  );
   @include angular-material-theme($users-theme);
 
   .mat-title {
@@ -426,7 +459,7 @@ $color-success: #339966 !default;
   }
 
   .mat-icon-button {
-    color: $color-carbon20;
+    color: $color-carbon60;
   }
 
   .filter-text {
@@ -459,6 +492,15 @@ $color-success: #339966 !default;
   .mat-form-field-appearance-fill .mat-form-field-flex {
     border-radius: 8px;
   }
+
+  .mat-form-field-outline {
+    background-color: $color-cloud;
+    border-radius: 4px;
+  }
+
+  .mat-focus-indicator.filter-text.mat-flat-button.mat-button-base {
+    background-color: inherit;
+  }
 }
 
 // ==============================================================================
@@ -467,15 +509,20 @@ $color-success: #339966 !default;
   $table-primary: mat.define-palette($custom-palette, brand);
   $table-accent: mat.define-palette($custom-palette, sea);
   $table-warn: mat.define-palette($custom-palette, error);
-  $table-typography: mat.define-typography-config($font-family: "Quicksand",
-    );
+  $table-typography: mat.define-typography-config(
+    $font-family: "Quicksand",
+  );
 
-  $table-theme: mat.define-light-theme((color: (primary: $table-primary,
-          accent: $table-accent,
-          warn: $table-warn,
-        ),
-        typography: $table-typography,
-      ));
+  $table-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $table-primary,
+        accent: $table-accent,
+        warn: $table-warn,
+      ),
+      typography: $table-typography,
+    )
+  );
   @include angular-material-theme($table-theme);
 
   .mat-header-row.cdk-header-row.ng-star-inserted {
@@ -487,14 +534,119 @@ $color-success: #339966 !default;
     background-color: $color-carbon5;
   }
 
-  .mat-header-row>.cdk-column-selector>.mat-checkbox {
-    transform: translateY(-250%);
+  .mat-header-row > .cdk-column-selector > .mat-checkbox {
+    transform: translateY(-56px);
   }
 
-  @media screen and (max-width:420px) {
+  .mat-row.cdk-row {
+    border: none;
+  }
 
+  @media screen and (max-width: 405px) {
+    .mat-paginator-container {
+      padding: 0;
+    }
     .mat-paginator-page-size.ng-star-inserted {
       transform: translateY(-150%);
+    }
+    .mat-table.cdk-table {
+      margin: -50px 0 0 0;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .mat-cell.cdk-cell {
+      display: block;
+      border: none;
+      width: 100%;
+    }
+
+    .mat-cell.cdk-cell.cdk-column-selector,
+    .mat-cell.cdk-cell.cdk-column-posicion {
+      display: inline-block;
+      border: none;
+      width: 40%;
+      display: flex;
+      margin-top: 24px;
+    }
+
+    .mat-cell.cdk-cell.cdk-column-posicion {
+      justify-content: center;
+      align-items: center;
+      margin-left: 24px;
+      width: 22px;
+      height: 22px;
+      background-color: $color-carbon10;
+      border-radius: 4px;
+      color: $color-carbon100;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+    }
+    .mat-cell.cdk-cell.cdk-column-selector {
+      justify-content: flex-end;
+      transform: translateX(100%);
+      position: absolute;
+    }
+
+    .mat-cell.cdk-cell.cdk-column-nombre,
+    .mat-cell.cdk-cell.cdk-column-dependencia,
+    .mat-cell.cdk-cell.cdk-column-compania,
+    .mat-cell.cdk-cell.cdk-column-oficina,
+    .mat-cell.cdk-cell.cdk-column-correo,
+    .mat-cell.cdk-cell.cdk-column-registro,
+    .mat-cell.cdk-cell.cdk-column-estatus {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      padding-left: 24px;
+    }
+    .mat-cell.cdk-cell.cdk-column-estatus {
+      margin-bottom: 24px;
+    }
+    .mat-cell.cdk-cell.cdk-column-nombre::before {
+      content: "Nombre / Usuario";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    .mat-cell.cdk-cell.cdk-column-dependencia::before {
+      content: "Dependencia";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    .mat-cell.cdk-cell.cdk-column-compania::before {
+      content: "Compañía / Sector";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    .mat-cell.cdk-cell.cdk-column-oficina::before {
+      content: "Oficina";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    .mat-cell.cdk-cell.cdk-column-correo::before {
+      content: "Correo";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    .mat-cell.cdk-cell.cdk-column-registro::before {
+      content: "Fecha de registro";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    .mat-cell.cdk-cell.cdk-column-estatus::before {
+      content: "Estatus";
+      display: block;
+      font-weight: 400;
+      margin-top: 16px;
     }
   }
 }
