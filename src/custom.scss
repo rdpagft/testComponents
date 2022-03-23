@@ -542,12 +542,16 @@ $color-success: #339966 !default;
     border: none;
   }
 
+  .mat-icon{
+    color: $color-carbon60;
+  }
+
   @media screen and (max-width: 405px) {
     .mat-paginator-container {
       padding: 0;
     }
     .mat-paginator-page-size.ng-star-inserted {
-      transform: translateY(-150%);
+      transform: translate(-50%,-150%);
     }
     .mat-table.cdk-table {
       margin: -50px 0 0 0;
@@ -647,6 +651,11 @@ $color-success: #339966 !default;
       display: block;
       font-weight: 400;
       margin-top: 16px;
+    }
+    .mat-table.cdk-table {
+      // margin: -50px 0 0 0;
+      width: 100%;
+      position: relative;
     }
   }
 }
