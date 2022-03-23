@@ -8,13 +8,23 @@
     >
       <span class="table-header__span"></span>
       <div *ngIf="!this.selection.hasValue()">
-        <mat-icon>save_alt</mat-icon>
+        <button mat-icon-button>
+          <mat-icon>save_alt</mat-icon>
+        </button>
       </div>
-      <div *ngIf="this.selection.hasValue()" fxLayout="row" fxLayoutGap="16">
-        <mat-icon>visibility</mat-icon>
-        <mat-icon>edit</mat-icon>
-        <mat-icon>power_settings_new</mat-icon>
-        <mat-icon>save_alt</mat-icon>
+      <div *ngIf="this.selection.hasValue()" fxLayout="row">
+        <button mat-icon-button>
+          <mat-icon>visibility</mat-icon>
+        </button>
+        <button mat-icon-button (click)="editUser()">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>power_settings_new</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>save_alt</mat-icon>
+        </button>
       </div>
     </div>
     <div class="table-header__paginator" fxFlex>

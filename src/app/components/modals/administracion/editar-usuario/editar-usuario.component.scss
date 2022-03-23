@@ -1,0 +1,80 @@
+.header__container {
+  &__navbar {
+    &__section {
+      width: 96%;
+      margin: 0 auto;
+      &__title {
+        font-family: "Quicksand";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        width: inherit;
+      }
+      &__close {
+        &__button {
+          color: #666666;
+        }
+        &__label {
+          font-family: "Quicksand";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 1.2px;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+
+.info__container {
+  width: 100%;
+  &__user {
+    padding: 3%;
+    &__generic {
+      // border: 1px solid purple;
+      border-bottom: 1px dashed #a7a7a7;
+    }
+    &__permissions {
+      //   border: 1px solid darkgoldenrod;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__container {
+    &__navbar {
+      &__section {
+        &__title {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .info__container {
+    width: 80%;
+    margin: 0 auto;
+    &__user {
+      height: 100%;
+      // box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      // height: 90% !important;
+      // margin-left: 10%;
+      // &__generic {
+      //   // border: 1px solid green;
+      //   height: 100%;
+      //   // border-bottom: 1px dashed #666666;
+      // }
+      &__permissions {
+        // border: 1px solid blue;
+        height: 100%;
+      }
+    }
+  }
+}

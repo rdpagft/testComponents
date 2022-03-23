@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subject } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
+import { EditarUsuarioComponent } from '../modals/administracion/editar-usuario/editar-usuario.component';
 
 @Component({
   selector: 'app-tabla-usuarios',
@@ -86,6 +87,17 @@ export class TablaUsuariosComponent implements AfterViewInit {
 
     if (this.selection.hasValue()) {
     }
+  }
+
+  editUser() {
+    this.dialog.open(EditarUsuarioComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      height: '100%',
+      width: '100%',
+      autoFocus: false,
+      panelClass: 'modals-admin',
+    });
   }
 }
 

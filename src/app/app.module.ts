@@ -58,7 +58,7 @@ import { TablaUsuariosMobileComponent } from './components/tabla-usuarios-mobile
 import { FilterComponent } from './components/filter/filter.component';
 import { FilterMobileComponent } from './components/filter-mobile/filter-mobile.component';
 import { BusquedaInicioComponent } from './components/modals/busqueda-inicio/busqueda-inicio.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmacionEdicionUsuarioComponent } from './components/modals/administracion/confirmacion-edicion-usuario/confirmacion-edicion-usuario.component';
 import { ConfirmacionInactivarUsuarioComponent } from './components/modals/administracion/confirmacion-inactivar-usuario/confirmacion-inactivar-usuario.component';
 import { BuscarUsuarioComponent } from './components/modals/administracion/buscar-usuario/buscar-usuario.component';
