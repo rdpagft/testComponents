@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   nameRoute:string;
   subscription !: Subscription;
+  subscriptionModal !: Subscription;
+  subscriptionModal2 !: Subscription;
+  subscriptionModal3 !: Subscription;
+
   showTableAction:boolean;
 
   constructor(private router: Router, public dialog: MatDialog) {
@@ -23,7 +27,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
  
   ngOnDestroy(){
-    this.subscription.unsubscribe()
+      this.subscriptionModal.unsubscribe()
+      this.subscriptionModal2.unsubscribe()
+      this.subscriptionModal3.unsubscribe()
+
+      this.subscription.unsubscribe()
   }
 
   ngOnInit(): void { 
@@ -41,8 +49,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
         autoFocus: false
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    this.subscriptionModal =  dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+      this.subscriptionModal.unsubscribe()
     });
   }
   openDialog2() {
@@ -54,8 +63,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
         autoFocus: false
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    this.subscriptionModal2 =  dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+      this.subscriptionModal2.unsubscribe()
     });
   }
 
@@ -68,10 +78,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
         autoFocus: false
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    this.subscriptionModal3 =  dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+      this.subscriptionModal3.unsubscribe()
     });
   }
+
 
   getRoute(){
     this.subscription = this.router.events.subscribe((event: Event) => {

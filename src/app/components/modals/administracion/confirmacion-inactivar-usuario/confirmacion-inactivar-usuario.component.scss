@@ -35,21 +35,11 @@ main{
 
 
 ::ng-deep .mat-dialog-container{
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(.5em);
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(.5em) !important;
 
 }
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    background-color: white;    
-    border-radius: 5px;
-}
-
-::ng-deep .mat-dialog-container{
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(.5em);
-
-}
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    background-color: white;    
-    border-radius: 5px;
+    background-color: white !important;    
+    border-radius: 5px !important;
 }
