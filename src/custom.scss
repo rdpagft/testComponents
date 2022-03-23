@@ -723,3 +723,47 @@ $color-success: #339966 !default;
     background-color: inherit;
   }
 }
+
+.transparent-modal{
+
+  // @include angular-material-theme($details-modals-theme);
+  .mat-dialog-container{
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(.5em) !important;
+    // padding: auto !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white !important;    
+    border-radius: 5px !important;
+  }
+  .mat-dialog-container.ng-trigger-dialogContainer {
+    padding: auto !important;
+  }
+}
+
+.user-detail-modal {
+  $details-modals-primary: mat.define-palette($custom-palette, cloud);
+  $details-modals-accent: mat.define-palette($custom-palette, cloud54);
+  $details-modals-warn: mat.define-palette($custom-palette, error);
+  $details-modals-typography: mat.define-typography-config(
+    $font-family: "Quicksand",
+  );
+
+  $details-modals-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $details-modals-primary,
+        accent: $details-modals-accent,
+        warn: $details-modals-warn,
+      ),
+      typography: $details-modals-typography,
+    )
+  );
+  @include angular-material-theme($details-modals-theme);
+  .mat-dialog-container{
+    background-color: white !important;
+  }
+  .mat-dialog-container.ng-trigger-dialogContainer {
+    padding: 0 !important;
+  }
+}

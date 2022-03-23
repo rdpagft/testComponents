@@ -42,11 +42,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
   openDialog() {
     const dialogRef = this.dialog.open(BusquedaInicioComponent, {
-        maxWidth: '100vw',
-        maxHeight: '100vh',
-        height: '100%',
-        width: '100%',
-        autoFocus: false
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      height: '100%',
+      width: '100%',
+      autoFocus: false,
+      panelClass: "transparent-modal"
     });
 
     this.subscriptionModal =  dialogRef.afterClosed().subscribe(result => {
@@ -60,7 +61,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         maxHeight: '100vh',
         height: '100%',
         width: '100%',
-        autoFocus: false
+        autoFocus: false,
+        panelClass: "transparent-modal"
     });
 
     this.subscriptionModal2 =  dialogRef.afterClosed().subscribe(result => {
@@ -75,7 +77,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         maxHeight: '100vh',
         height: '100%',
         width: '100%',
-        autoFocus: false
+        autoFocus: false,
+        panelClass: "transparent-modal"
     });
 
     this.subscriptionModal3 =  dialogRef.afterClosed().subscribe(result => {
