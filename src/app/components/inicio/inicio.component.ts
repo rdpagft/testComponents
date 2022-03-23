@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit, OnDestroy {
         height: '100%',
         width: '100%',
         autoFocus: false,
-        panelClass: "user-detail-modal"
+        panelClass: "modals-admin"
     });
 
     this.subscription = dialogRef.afterClosed().subscribe(result => {
