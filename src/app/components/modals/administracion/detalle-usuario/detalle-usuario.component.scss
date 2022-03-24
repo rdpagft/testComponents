@@ -37,8 +37,10 @@
 .info__container{
   &__user{
     padding: 3%;
-    &__generic, &__permissions{
+    &__generic{
         border-bottom: 1px dashed #A7A7A7;
+    }
+    &__generic, &__permissions{
         &__sections{
             height: 95%;
             &__one{
