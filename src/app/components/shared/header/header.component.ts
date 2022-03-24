@@ -1,23 +1,21 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, Event, NavigationEnd} from '@angular/router';
-import { Subscription } from 'rxjs';
 import { BusquedaInicioComponent } from '../../modals/busqueda-inicio/busqueda-inicio.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmacionEdicionUsuarioComponent } from '../../modals/administracion/confirmacion-edicion-usuario/confirmacion-edicion-usuario.component';
 import { ConfirmacionInactivarUsuarioComponent } from '../../modals/administracion/confirmacion-inactivar-usuario/confirmacion-inactivar-usuario.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
 
   nameRoute:string;
   subscription !: Subscription;
-  subscriptionModal !: Subscription;
-  subscriptionModal2 !: Subscription;
-  subscriptionModal3 !: Subscription;
+
 
   showTableAction:boolean;
 
@@ -26,13 +24,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.showTableAction = true
   }
  
-  ngOnDestroy(){
-      this.subscriptionModal.unsubscribe()
-      this.subscriptionModal2.unsubscribe()
-      this.subscriptionModal3.unsubscribe()
-
-      this.subscription.unsubscribe()
-  }
 
   ngOnInit(): void { 
     this.getRoute()
@@ -50,9 +41,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
       panelClass: "transparent-modal"
     });
 
-    this.subscriptionModal =  dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
-      this.subscriptionModal.unsubscribe()
     });
   }
   openDialog2() {
@@ -65,9 +55,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         panelClass: "transparent-modal"
     });
 
-    this.subscriptionModal2 =  dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
-      this.subscriptionModal2.unsubscribe()
     });
   }
 
@@ -81,9 +70,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         panelClass: "transparent-modal"
     });
 
-    this.subscriptionModal3 =  dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
-      this.subscriptionModal3.unsubscribe()
     });
   }
 

@@ -1,15 +1,13 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DetalleUsuarioComponent } from '../modals/administracion/detalle-usuario/detalle-usuario.component';
 import { MatDialog } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })
-export class InicioComponent implements OnInit, OnDestroy {
-  subscription !: Subscription;
+export class InicioComponent implements OnInit {
 
   constructor(private dialog: MatDialog) {}
 
@@ -32,15 +30,12 @@ export class InicioComponent implements OnInit, OnDestroy {
         panelClass: "modals-admin"
     });
 
-    this.subscription = dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
-      this.subscription.unsubscribe()
     });
   }
 
-  ngOnDestroy(){
-    this.subscription.unsubscribe()
-  }
+
 
 }
 
