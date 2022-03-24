@@ -1,5 +1,5 @@
-<main class="modals-admin" fxFill fxLayout="column">
-  <div class="header__container" fxLayout="row" fxFlex="10">
+<main fxFill fxLayout="column">
+  <div class="header__container light" fxLayout="row" fxFlex="10">
     <mat-toolbar
       fxLayout="row"
       class="header__container__navbar"
@@ -43,19 +43,19 @@
     </mat-toolbar>
   </div>
   <div
-    class="info__container"
-    fxFlex.lt-md="90"
-    fxFlex.gt-sm="90"
-    fxLayoutAlign.gt-sm="start center"
-  >
-    <div class="info__container__user" fxFlex>
+    class="info__container users-admin"
+    fxLayout.gt-sm="row"
+    fxLayoutGap.gt-sm="50px"
+    >
+    <div class="info__container__user" fxFlex >
       <h2 class="mat-title">Datos del usuario</h2>
-      <p class="mat-subheading-1">Captura los datos y configura los permisos</p>
+      <p class="mat-subheading-2">Captura los datos y configura los permisos</p>
       <div fxLayout="column">
+        <!-- [formGroup]="searchFormGroup" -->
         <form fxFlexFill>
-          <mat-form-field appearance="outline" fxFlexFill color="users-admin">
+          <mat-form-field appearance="outline" fxFlexFill>
             <mat-label> Buscar por nombre o correo </mat-label>
-            <mat-icon matPrefix>search</mat-icon>
+
             <input
               placeholder="Buscar por nombre o correo"
               matInput

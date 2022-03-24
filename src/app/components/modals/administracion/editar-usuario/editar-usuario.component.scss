@@ -34,16 +34,13 @@
 }
 
 .info__container {
-  width: 100%;
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+
   &__user {
-    padding: 3%;
-    &__generic {
-      // border: 1px solid purple;
-      border-bottom: 1px dashed #a7a7a7;
-    }
-    &__permissions {
-      //   border: 1px solid darkgoldenrod;
-    }
+    padding: 6px;
   }
 }
 
@@ -54,26 +51,6 @@
         &__title {
           width: auto;
         }
-      }
-    }
-  }
-
-  .info__container {
-    width: 80%;
-    margin: 0 auto;
-    &__user {
-      height: 100%;
-      // box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-      // height: 90% !important;
-      // margin-left: 10%;
-      // &__generic {
-      //   // border: 1px solid green;
-      //   height: 100%;
-      //   // border-bottom: 1px dashed #666666;
-      // }
-      &__permissions {
-        // border: 1px solid blue;
-        height: 100%;
       }
     }
   }

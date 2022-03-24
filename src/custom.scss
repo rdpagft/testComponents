@@ -433,12 +433,12 @@ $color-success: #339966 !default;
   }
 
   .mat-subheading-2 {
-    color: $color-sea;
-    font-size: 14px;
+    color: $color-carbon60;
+    font-size: 16px;
     font-family: Quicksand;
-    font-weight: 300;
-    line-height: 16px;
-    letter-spacing: 1.2px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
     margin: 0;
   }
 
@@ -500,6 +500,26 @@ $color-success: #339966 !default;
 
   .mat-focus-indicator.filter-text.mat-flat-button.mat-button-base {
     background-color: inherit;
+  }
+
+  @media screen and (max-width: 960px) {
+    .mat-title {
+      color: $color-carbon100;
+      font-size: 24px;
+      font-family: Quicksand;
+      font-weight: 700;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+    // .mat-subheading-1 {
+    //   color: $color-carbon60;
+    //   font-size: 16px;
+    //   font-family: Quicksand;
+    //   font-weight: 400;
+    //   line-height: 20px;
+    //   letter-spacing: 0.2px;
+    //   margin: 0;
+    // }
   }
 }
 
@@ -661,78 +681,25 @@ $color-success: #339966 !default;
 }
 
 .modals-admin {
-  $modals-primary: mat.define-palette($custom-palette, cloud);
-  $modals-accent: mat.define-palette($custom-palette, cloud54);
-  $modals-warn: mat.define-palette($custom-palette, error);
-  $modals-typography: mat.define-typography-config(
-    $font-family: "Quicksand",
-  );
-
-  $modals-theme: mat.define-light-theme(
-    (
-      color: (
-        primary: $modals-primary,
-        accent: $modals-accent,
-        warn: $modals-warn,
-      ),
-      typography: $modals-typography,
-    )
-  );
-  @include angular-material-theme($modals-theme);
-
   .mat-toolbar {
     margin: 0;
     box-shadow: 0 4px 6px -6px #222;
   }
-
   .mat-dialog-container.ng-trigger-dialogContainer {
     padding: 0;
-  }
-
-  .mat-title {
-    color: $color-carbon100;
-    font-size: 24px;
-    font-family: Quicksand;
-    font-weight: 700;
-    line-height: 28px;
-    margin-bottom: 24px;
-  }
-  .mat-subheading-1 {
-    color: $color-carbon60;
-    font-size: 16px;
-    font-family: Quicksand;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    margin: 0;
-  }
-  .mat-form-field-underline {
-    width: 0;
-  }
-
-  .mat-form-field-appearance-fill .mat-form-field-flex {
-    border-radius: 8px;
-  }
-
-  .mat-form-field-outline {
     background-color: $color-cloud;
-    border-radius: 4px;
-  }
-
-  .mat-focus-indicator.filter-text.mat-flat-button.mat-button-base {
-    background-color: inherit;
   }
 }
 
-.transparent-modal{
+.transparent-modal {
   // @include angular-material-theme($details-modals-theme);
-  .mat-dialog-container{
+  .mat-dialog-container {
     background-color: rgba(255, 255, 255, 0.7) !important;
-    backdrop-filter: blur(.5em) !important;
+    backdrop-filter: blur(0.5em) !important;
     // padding: auto !important;
   }
   .mat-form-field-appearance-outline .mat-form-field-outline {
-    background-color: white !important;    
+    background-color: white !important;
     border-radius: 5px !important;
   }
   .mat-dialog-container.ng-trigger-dialogContainer {
@@ -741,7 +708,7 @@ $color-success: #339966 !default;
 }
 
 .user-detail-modal {
-  .mat-dialog-container{
+  .mat-dialog-container {
     background-color: white !important;
   }
   .mat-dialog-container.ng-trigger-dialogContainer {
