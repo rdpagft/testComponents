@@ -1,0 +1,19 @@
+<main fxFill fxLayoutAlign.lt-sm="center center" fxLayoutAlign.gt-xs="start center" >
+    <div class="container" fxFlex.lt-sm="100" fxFlex.gt-xs="50">
+        <div class="container__text">
+            <p  class="container__text__text">Se encontró 
+                una localización para este vehículo</p>
+        </div>
+        <div class="container__confirm">
+            <p class="container__confirm__text">
+                El número de serie capturado tiene una localización registrada por OCRA.            </p>
+            <div class="container__confirm__buttons" fxLayout="row" > 
+                <div class="primary" fxFlex="50" fxLayoutAlign="start center">
+                    <button [mat-dialog-close]="true" fxFlex="80" color="primary" mat-raised-button>
+                        Ver detalle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

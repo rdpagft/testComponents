@@ -1,0 +1,23 @@
+<main fxFill fxLayoutAlign.lt-sm="center center" fxLayoutAlign.gt-xs="start center" >
+    <div class="container" fxFlex.lt-sm="100" fxFlex.gt-xs="50">
+        <div class="container__text">
+            <img  src="assets/images/Error.png" alt="">
+            <p  class="container__text__reported">El vehículo ya está reportado</p>
+        </div>
+        <div class="container__confirm">
+            <p class="container__confirm__text">
+                El número de serie capturado ya tiene un reporte de Robo o Abuso de Confianza vigente.
+            </p>
+            <p  class="container__confirm__counter">
+                Se cerrará en {{counter}} segundos
+            </p>
+            <div class="container__confirm__buttons" fxLayout="row" > 
+                <div class="primary" fxFlex="50" fxLayoutAlign="start center">
+                    <button [mat-dialog-close]="true" fxFlex="80" color="primary" mat-raised-button>
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
