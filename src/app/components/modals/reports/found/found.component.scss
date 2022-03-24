@@ -7,15 +7,7 @@
         line-height: 44px;
         color: #000000;
         padding-right: 10%;
-        &__reported{
-            font-family: 'Quicksand';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 44px;
-            color:#CC0000;
-            padding-right: 10%;
-        }
+
     }
     &__confirm{
         &__text{
@@ -25,15 +17,6 @@
             font-size: 16px;
             line-height: 20px;
             color: #000000;
-        }
-        &__counter{
-            font-family: 'Quicksand';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
-            letter-spacing: 0.2px;
-            color: #666666;
         }
     }
 }
