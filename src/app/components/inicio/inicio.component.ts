@@ -22,7 +22,7 @@ export class InicioComponent implements OnInit {
     console.log("reditect to", redirection);
     switch(redirection){
       case 'reported':{
-        this.router.navigateByUrl('vehicles/reported')
+        this.router.navigateByUrl('reported')
       }
     }
   }

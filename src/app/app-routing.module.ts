@@ -32,7 +32,7 @@ const routes: Routes = [
   {path:'gestor', component:GestorComponent},
   {path:'administracion', component:AministracionComponent, data:{ title:"Administración" }},
   {path:'inicio', component:InicioComponent, data:{ title:"Inicio" }},
-  {path:'vehicles/reported', component:DataVehicleComponent },
+  {path:'reported', component:DataVehicleComponent },
   {path:'**', component:InicioComponent}
 ];
 

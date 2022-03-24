@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
     this.getRoute()
   }
   back(){
-    this.showTableAction = false
+    this.router.navigateByUrl('/')
   }
   openDialog() {
     const dialogRef = this.dialog.open(BusquedaInicioComponent, {
@@ -81,6 +81,7 @@ export class HeaderComponent implements OnInit {
 
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
+        console.log("RUTA", event.url);
         this.nameRoute = event.url.toString().replace('/', '');          
         if(this.nameRoute == "administracion") this.nameRoute = "administración"
       }

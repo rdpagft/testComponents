@@ -1,6 +1,4 @@
-.container__navbar__dekstop{
-    // height: 10%;
-
+.container__navbar__home{
     .container__navbar{
         &__logo{
             font-size: 24px !important;
@@ -95,5 +93,40 @@
 
 }
 
-
+.container__navbar__vehicle{
+    &__toolbar{
+        // border: 1px solid red;
+        &__title{
+        padding-left: 5%;
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #000000;
+        }
+    }
+    &__close{
+        cursor: pointer;
+        &__button, &__label{
+        // border: 1px solid blue;
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 1.2px;
+        color: #666666;
+        }
+        &__button{
+            .mat-icon{
+                // border: 1px solid green;
+                padding: 0;
+            }
+        }
+    }
+}
     
