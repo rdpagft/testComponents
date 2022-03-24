@@ -65,6 +65,7 @@ import { BuscarUsuarioComponent } from './components/modals/administracion/busca
 import { DetalleUsuarioComponent } from './components/modals/administracion/detalle-usuario/detalle-usuario.component';
 import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
 import { ReportedComponent } from './components/modals/reports/reported/reported.component';
+import { FoundComponent } from './components/modals/reports/found/found.component';
 
 @NgModule({
   declarations: [
@@ -102,6 +103,7 @@ import { ReportedComponent } from './components/modals/reports/reported/reported
     DetalleUsuarioComponent,
     EditarUsuarioComponent,
     ReportedComponent,
+    FoundComponent,
   ],
   imports: [
     BrowserModule,

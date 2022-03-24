@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DetalleUsuarioComponent } from '../modals/administracion/detalle-usuario/detalle-usuario.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ReportedComponent } from '../modals/reports/reported/reported.component';
+import { FoundComponent } from '../modals/reports/found/found.component';
 
 @Component({
   selector: 'app-inicio',
@@ -36,8 +37,23 @@ export class InicioComponent implements OnInit {
     });
   }
 
-  openUserReportedVehicle() {
+  openReportedVehicleModal() {
     let dialogRef = this.dialog.open(ReportedComponent, {
+        maxWidth:  '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+        autoFocus: false,
+        panelClass: "transparent-modal"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openFoundVehicleModal() {
+    let dialogRef = this.dialog.open(FoundComponent, {
         maxWidth:  '100vw',
         maxHeight: '100vh',
         height: '100%',
