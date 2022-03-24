@@ -16,6 +16,7 @@ import { GestorComponent } from './components/gestor/gestor.component';
 import { AministracionComponent } from './components/aministracion/aministracion.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { TemplateComponent } from './components/shared/template/template.component';
+import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
 const routes: Routes = [
   {  path: '', pathMatch: 'full', redirectTo: 'inicio'},
   {path:'inputs-text', component:InputsComponent},
@@ -31,11 +32,12 @@ const routes: Routes = [
   {path:'gestor', component:GestorComponent},
   {path:'administracion', component:AministracionComponent, data:{ title:"Administración" }},
   {path:'inicio', component:InicioComponent, data:{ title:"Inicio" }},
+  {path:'vehicles/reported', component:DataVehicleComponent },
   {path:'**', component:InicioComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

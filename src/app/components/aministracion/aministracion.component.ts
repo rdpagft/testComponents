@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aministracion.component.scss'],
 })
 export class AministracionComponent implements OnInit {
-  constructor() {}
+  
+  showTableAction:boolean;
+
+  constructor() {
+    this.showTableAction = true
+
+  }
   ngOnInit(): void {}
+  back(){
+    this.showTableAction = false
+  }
 }

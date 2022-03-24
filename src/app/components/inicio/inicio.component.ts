@@ -3,6 +3,7 @@ import { DetalleUsuarioComponent } from '../modals/administracion/detalle-usuari
 import { MatDialog } from '@angular/material/dialog';
 import { ReportedComponent } from '../modals/reports/reported/reported.component';
 import { FoundComponent } from '../modals/reports/found/found.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -11,15 +12,19 @@ import { FoundComponent } from '../modals/reports/found/found.component';
 })
 export class InicioComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private router: Router) {}
 
   ngOnInit(): void {
   }
 
 
-  option(redirect: string):void{
-    console.log("reditect to", redirect);
-    this.openUserOptions()
+  option(redirection: string):void{
+    console.log("reditect to", redirection);
+    switch(redirection){
+      case 'reported':{
+        this.router.navigateByUrl('vehicles/reported')
+      }
+    }
   }
 
   openUserOptions() {

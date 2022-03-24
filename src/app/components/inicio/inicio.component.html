@@ -12,7 +12,7 @@
     
     <div class="container__section__options"  fxFlex="100" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
         <div class="container__section__options__one" fxFlex.lt-md="33"  fxFlex.gt-sm="25" fxLayoutAlign="center center">
-            <section class="container__section__options__one__card"  fxFlex.lt-md="100" fxFlex="80" fxLayoutAlign="center none" (click)="openReportedVehicleModal()">
+            <section class="container__section__options__one__card"  fxFlex.lt-md="100" fxFlex="80" fxLayoutAlign="center none" (click)="option('reported')">
                 <div class="container__section__options__one__card__img">
                     <img src="assets/images/robo.png" alt="">
                 </div>
@@ -38,7 +38,7 @@
             </section>
         </div>
         <div class="container__section__options__three" fxFlex.lt-md="33"  fxFlex.gt-sm="25" fxLayoutAlign="center center">
-            <section class="container__section__options__three__card"  fxFlex.lt-md="100" fxFlex="80" fxLayoutAlign="center none" (click)="option('recovery')">
+            <section class="container__section__options__three__card"  fxFlex.lt-md="100" fxFlex="80" fxLayoutAlign="center none" (click)="openReportedVehicleModal()">
                 <div class="container__section__options__one__card__img">
                     <img src="assets/images/recuperar.png" alt="">
                 </div>

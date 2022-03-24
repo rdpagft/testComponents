@@ -66,6 +66,7 @@ import { DetalleUsuarioComponent } from './components/modals/administracion/deta
 import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
 import { ReportedComponent } from './components/modals/reports/reported/reported.component';
 import { FoundComponent } from './components/modals/reports/found/found.component';
+import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import { FoundComponent } from './components/modals/reports/found/found.componen
     EditarUsuarioComponent,
     ReportedComponent,
     FoundComponent,
+    DataVehicleComponent,
   ],
   imports: [
     BrowserModule,
