@@ -37,23 +37,59 @@
 .info__container{
   &__user{
     padding: 3%;
-    &__generic{
-        // border: 1px solid purple;
+    &__generic, &__permissions{
         border-bottom: 1px dashed #A7A7A7;
+        &__sections{
+            height: 95%;
+            &__one{
+                // border: 1px solid green;
+                &__name{
+                    font-family: 'Quicksand';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.3em;
+                    line-height: 28px;
+                    display: flex;
+                    align-items: center;
+                    color: #000000;
+                    // border: 1px solid green;
 
-    }
-    &__permissions{
-    //   border: 1px solid darkgoldenrod;
+                }
+                
+                &__tel,&__dependence,&__sector,&__office,&__email,&__date,&__status,&__observations{
+                    &__title{
+                        font-family: 'Quicksand';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 16px;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 1px;
+                        color: #666666;
+                    }
+                    &__description{
+                        font-family: 'Quicksand';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 10px;
+                        line-height: 16px;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.2px;
+                        color: #000000;
+                    }
+                }
+            }
+            &__two{
+                // border: 1px solid red;
+                // height: 80%;
+            }
+        }
+
     }
   }
 }
-
-
-// ::ng-deep .mat-dialog-container{
-//     padding: 0;
-//     background-color: white !important;
-// }
-
 
 @media screen and (min-width: 960px) {
     .header__container{
