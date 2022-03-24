@@ -9,21 +9,21 @@
       <span class="table-header__span"></span>
       <div *ngIf="!this.selection.hasValue()">
         <button mat-icon-button>
-          <mat-icon>save_alt</mat-icon>
+          <mat-icon class="material-icons-outlined">save_alt</mat-icon>
         </button>
       </div>
       <div *ngIf="this.selection.hasValue()" fxLayout="row">
         <button mat-icon-button>
-          <mat-icon>visibility</mat-icon>
+          <mat-icon class="material-icons-outlined">visibility</mat-icon>
         </button>
         <button mat-icon-button (click)="editUser()">
-          <mat-icon>edit</mat-icon>
+          <mat-icon class="material-icons-outlined">edit</mat-icon>
         </button>
         <button mat-icon-button>
-          <mat-icon>power_settings_new</mat-icon>
+          <mat-icon class="material-icons-outlined">power_settings_new</mat-icon>
         </button>
         <button mat-icon-button>
-          <mat-icon>save_alt</mat-icon>
+          <mat-icon class="material-icons-outlined">save_alt</mat-icon>
         </button>
       </div>
     </div>

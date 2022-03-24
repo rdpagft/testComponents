@@ -64,6 +64,7 @@ import { ConfirmacionInactivarUsuarioComponent } from './components/modals/admin
 import { BuscarUsuarioComponent } from './components/modals/administracion/buscar-usuario/buscar-usuario.component';
 import { DetalleUsuarioComponent } from './components/modals/administracion/detalle-usuario/detalle-usuario.component';
 import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
+import { RolUsuarioComponent } from './components/rol-usuario/rol-usuario.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +101,7 @@ import { EditarUsuarioComponent } from './components/modals/administracion/edita
     BuscarUsuarioComponent,
     DetalleUsuarioComponent,
     EditarUsuarioComponent,
+    RolUsuarioComponent,
   ],
   imports: [
     BrowserModule,

@@ -442,6 +442,15 @@ $color-success: #339966 !default;
     margin: 0;
   }
 
+  .subtitle{
+    color: $color-carbon100;
+    font-size: 20px;
+    font-family: Quicksand;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+  }
+
   .cta {
     color: inherit;
     font-family: inherit;
@@ -500,6 +509,37 @@ $color-success: #339966 !default;
 
   .mat-focus-indicator.filter-text.mat-flat-button.mat-button-base {
     background-color: inherit;
+  }
+
+  .mat-form-field.mat-form-field-appearance-outline {
+    width: 100%;
+  }
+
+  .mat-form-field.mat-form-field-type-mat-input.mat-form-field-appearance-outline.comments
+    > .mat-form-field-wrapper
+    > .mat-form-field-flex {
+    height: 110px;
+  }
+
+  .mat-focus-indicator.mat-flat-button.mat-button-base.mat-primary {
+    border-radius: 99px;
+    color: $color-cloud;
+    margin-bottom: 24px;
+  }
+
+  .mat-focus-indicator.mat-flat-button.mat-button-base.mat-primary.mat-button-disabled {
+    border-radius: 99px;
+    color: $color-carbon20;
+    margin-bottom: 24px;
+  }
+
+  .mat-focus-indicator.mat-icon-button.mat-button-base {
+    transform: translateY(-50%);
+  }
+
+  mat-form-field.mat-form-field-disabled .mat-form-field-outline {
+    background-color: $color-carbon10;
+    color: $color-carbon20;
   }
 
   @media screen and (max-width: 960px) {

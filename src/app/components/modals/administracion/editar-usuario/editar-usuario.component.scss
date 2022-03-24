@@ -39,8 +39,17 @@
   margin: 0 auto;
   height: 100%;
 
+  &__header {
+    margin: 48px 0 24px 0;
+  }
+
   &__user {
     padding: 6px;
+
+
+    &__card{
+      width: 100%;
+    }
   }
 }
 
