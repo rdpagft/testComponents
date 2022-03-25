@@ -1,5 +1,5 @@
-<div class="light container__navbar__dekstop">  
-    <mat-toolbar class="container__navbar" color="accent"  fxLayoutAlign="space-between center" >
+<div *ngIf="nameRoute !== 'reported'" class="light container__navbar__home">  
+    <mat-toolbar  class="container__navbar" color="accent"  fxLayoutAlign="space-between center" >
         <div class="container__navbar__logotext" fxLayout="row">
             <div class="container__navbar__logo" fxLayout="row" fxFlexAlign="center center" fxHide.lt-md="true" fxShow.gt-sm="true">
                 <img src="assets/images/Logo.png" alt="">
@@ -58,82 +58,21 @@
                 </mat-icon>
             </button>
         </div>
-
-        <!-- <div *ngIf="nameRoute === 'administración'" class="container__navbar__admin" fxShow.lt-md="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center">
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon  class="material-icons-outlined">
-                    person_add 
-                </mat-icon>
-            </button>
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon class="material-icons-outlined" >
-                    assignment
-                </mat-icon>
-            </button>
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon class="material-icons-outlined">
-                    folder_delete        
-                </mat-icon>
-            </button>
-        </div> -->
-
-
-        <!-- <div class="container__navbar__user__menu" fxLayout="row"  fxLayoutAlign="center center" fxShow.gt-sm="true"  fxShow.sm="false" fxShow.xs="false">
-            <div class="user-name" fxLayout="column">
-                <span>Nombre</span>
-            </div>
-            <div class="menu-icon" >
-                <button  mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-                    <mat-icon>arrow_drop_down</mat-icon>
-                </button>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>
-                        <mat-icon>dialpad</mat-icon>
-                        <span>Redial</span>
-                    </button>
-                    <button mat-menu-item disabled>
-                        <mat-icon>voicemail</mat-icon>
-                        <span>Check voice mail</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon>notifications_off</mat-icon>
-                        <span>Disable alerts</span>
-                    </button>
-                    </mat-menu>
-            </div>
-        </div> -->
     </mat-toolbar>
-    <mat-toolbar  *ngIf="showTableAction && nameRoute === 'administración'" class="container__navbar" color="accent"  fxLayoutAlign.gt-sm="space-between center"  fxLayoutAlign.lt-md="none center" fxShow.lt-md="true" fxHide.gt-sm="true">
-        <div (click)="back()" class="container__navbar__logo__table" fxLayout="row" fxFlexAlign="center center" fxShow.lt-md="true" fxHide.gt-sm="true">
-           <mat-icon>
-            chevron_left
-           </mat-icon>
-        </div>
-        <div class="container__navbar__title__table">
-            <label for="section">11</label>
+
+</div>
+
+<div class="light container__navbar__vehicle"  *ngIf="nameRoute === 'reported'" >
+    <mat-toolbar class="container__navbar__vehicle__toolbar" color="accent"  fxLayoutAlign="space-between center">
+        <div class="container__navbar__vehicle__toolbar__title">
+            <label for="title">Alta de Robo o Abuso de Confianza</label>
         </div>
 
-        <div class="container__navbar__admin2" fxShow.lt-md="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center">
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon  class="material-icons-outlined">
-                    visibility 
-                </mat-icon>
+        <div (click)="back()"  class="container__navbar__vehicle__close" fxLayoutAlign="space-between center">
+            <button mat-icon-button class="container__navbar__vehicle__close__button" fxLayoutAlign="center center">
+                <mat-icon> close </mat-icon>
             </button>
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon class="material-icons-outlined" >
-                    edit
-                </mat-icon>
-            </button>
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon class="material-icons-outlined">
-                    power_settings_new        
-                </mat-icon>
-            </button>
-            <button mat-icon-button class="container__navbar__admin__icons">
-                <mat-icon class="material-icons-outlined">
-                    file_download        
-                </mat-icon>
-            </button>
+            <label  class="container__navbar__vehicle__close__label" for="close-text" fxShow.lt-md="false" fxShow.gt-sm="true" >Cerrar</label>
         </div>
     </mat-toolbar>
 </div>
