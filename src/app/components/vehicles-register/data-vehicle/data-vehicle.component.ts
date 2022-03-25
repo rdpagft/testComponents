@@ -7,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataVehicleComponent implements OnInit {
   step: number;
+  title: string
   constructor() { 
-    this.step = 1
+    this.step = 2
+    this.title = ""
   }
 
   ngOnInit(): void {
+    switch(this.step){
+      case 1:
+        this.title = "Datos del vehiculo"
+        break;
+      case 2:
+        this.title = "Datos del suceso"
+        break;
+      default:
+        this.title = "Datos de la ubicacion del suceso"
+    }
   }
 
 }

@@ -1,1 +1,96 @@
-<p>two-event works!</p>
+<main class="container" fxFill>
+    <div class="container__sections primary" fxLayout="column" >
+        
+        <div class="container__sections__title" fxHide.lt-md="true">
+            <label for="title">
+                Datos del suceso
+            </label>
+        </div>
+
+
+        <div class="container__sections__information ">
+            <div class="container__sections__information__subtitle">
+                <label for="subtitle">
+                    Revisa que los datos estén completos y presiona continuar.
+                </label>
+            </div>
+            <!-- close button -->
+            <form [formGroup]="infoFormGroup" class="container__sections__information__form" > 
+                <mat-form-field appearance="outline" fxFill floatLabel="always"> 
+                    <mat-label> Numero de siniestro </mat-label>
+                    <input placeholder="Numero de siniestro" matInput formControlName="claim_number" type="text" />
+                    <!-- <button *ngIf="infoFormGroup.controls['claim_number'].value !== '' && infoFormGroup.controls['claim_number'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['claim_number'].reset()"> -->
+                    <mat-icon class="close" *ngIf="infoFormGroup.controls['claim_number'].value !== '' && infoFormGroup.controls['claim_number'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['claim_number'].reset()">close</mat-icon>
+                    <!-- </button> -->
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Fecha de reporte a la compañía </mat-label>
+                    <input placeholder="Fecha de reporte a la compañía" matInput formControlName="company_date" type="date" />
+                    <mat-icon matSuffix class="material-icons-outlined">calendar_today</mat-icon>
+                    
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Fecha del suceso </mat-label>
+                    <input placeholder="Fecha del suceso " matInput formControlName="event_date" type="date" />
+                    <mat-icon matSuffix class="material-icons-outlined">calendar_today</mat-icon>
+                    
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Hora del suceso </mat-label>
+                    <input placeholder="Hora del suceso" matInput formControlName="event_hour" type="time" />
+                    <mat-icon matSuffix>schedule</mat-icon>
+                </mat-form-field>
+
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Tipo de registro</mat-label>
+                    <mat-select  formControlName="type_register" placeholder="Tipo de registro"  >
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Tipo de suceso</mat-label>
+                    <mat-select  formControlName="event_type" placeholder="Tipo de suceso"  >
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Número de asaltantes o involucrados </mat-label>
+                    <input placeholder="Número de asaltantes o involucrados" matInput formControlName="involved_number" type="text" />
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Reporta carpeta de investigación</mat-label>
+                    <mat-select  formControlName="research_folderRepoted" placeholder="Reporta carpeta de investigación" >
+                      <mat-option> Si </mat-option>
+                      <mat-option> No </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!-- close button -->
+                <mat-form-field appearance="outline" fxFill floatLabel="always"> 
+                    <mat-label> Carpeta de investigación </mat-label>
+                    <input placeholder="Carpeta de investigación" matInput formControlName="research_folder" type="text" />
+                    <!-- <button *ngIf="infoFormGroup.controls['research_folder'].value !== '' && infoFormGroup.controls['research_folder'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['research_folder'].reset()"> -->
+                    <mat-icon class="close" *ngIf="infoFormGroup.controls['research_folder'].value !== '' && infoFormGroup.controls['research_folder'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['research_folder'].reset()">close</mat-icon>
+                    <!-- </button> -->
+                </mat-form-field>
+
+                <div class="container__sections__information__button" fxLayoutAlign="end center">
+                    <button color="primary" mat-raised-button>
+                        Continuar
+                    </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</main>
