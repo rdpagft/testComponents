@@ -68,6 +68,7 @@ import { RolUsuarioComponent } from './components/rol-usuario/rol-usuario.compon
 import { ReportedComponent } from './components/modals/reports/reported/reported.component';
 import { FoundComponent } from './components/modals/reports/found/found.component';
 import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -142,6 +143,7 @@ import { DataVehicleComponent } from './components/vehicles-register/data-vehicl
     MatNativeDateModule,
     MatCardModule,
     MatDialogModule,
+    MatTreeModule,
   ],
   providers: [
     MatDatepickerModule,

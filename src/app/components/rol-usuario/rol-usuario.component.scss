@@ -1,3 +1,13 @@
-.rol{
+.rol {
   width: 100%;
+
+  &__card {
+    &__select {
+      text-align: end;
+    }
+
+    &__permissions {
+      margin-top: 24px;
+    }
+  }
 }
