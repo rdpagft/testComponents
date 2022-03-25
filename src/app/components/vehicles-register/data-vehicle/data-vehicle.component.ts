@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-vehicle.component.scss']
 })
 export class DataVehicleComponent implements OnInit {
-
-  constructor() { }
+  step: number;
+  constructor() { 
+    this.step = 1
+  }
 
   ngOnInit(): void {
   }

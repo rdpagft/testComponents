@@ -1,0 +1,137 @@
+<main class="container" fxFill>
+    <div class="container__sections primary" fxLayout="column" >
+        
+        <div class="container__sections__title" fxHide.lt-md="true">
+            <label for="title">
+                Datos del vehículo
+            </label>
+        </div>
+        <div class="container__sections__subtitle" *ngIf="!showFound">
+            <label for="title">
+                Ingresa un número de serie para validarlo.
+            </label>
+        </div>
+        <div class="container__sections__search"  fxLayout="row" *ngIf="!showFound">
+            <div class="container__sections__search__input" fxFlex.lt-md="80" fxFlex.gt-sm="70">
+                <form [formGroup]="firstFormGroup" > 
+                    <mat-form-field appearance="outline" fxFill>
+                        <mat-label> Número de serie del vehículo </mat-label>
+                        <input placeholder="Serie" matInput formControlName="username" type="text" />
+                    </mat-form-field>
+                </form>    
+            </div>
+            <div class="container__sections__search__button">
+                <button mat-icon-button [disabled]="isEmpty" >
+                    <mat-icon>check</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="showFound" class="container__sections__card" fxLayout="column">
+            <div class="container__sections__card__serie">
+                Número de serie del vehículo
+            </div>
+            <div class="container__sections__card__number" fxFlex="row" fxLayoutAlign="space-between center">
+                <div class="container__sections__card__number__desc">
+                    MR0GT34K9B0987654
+                </div>
+                <div class="container__sections__card__number__close">      
+                    <mat-icon>close</mat-icon>
+                </div>
+
+            </div>
+            <div class="container__sections__card__statussuccess" fxLayoutAlign="start center">
+                <mat-icon>verified_user</mat-icon>
+                <label for="Número correcto">Número correcto</label>
+            </div>
+            <!-- <div class="container__sections__card__statuserror"  fxLayoutAlign="start center">
+                <mat-icon>verified_user</mat-icon>
+                <label for="Número correcto">Número incorrecto</label>
+            </div> -->
+
+        </div>
+
+   
+
+        <div *ngIf="showFound" class="container__sections__information primary">
+            <div class="container__sections__information__subtitle">
+                <label for="subtitle">
+                    Revisa que los datos estén completos y presiona continuar.
+                </label>
+            </div>
+            <form [formGroup]="infoFormGroup" > 
+                <mat-form-field appearance="outline" fxFill floatLabel="always"> 
+                    <mat-label> Modelo </mat-label>
+                    <input placeholder="Modelo" matInput formControlName="model" type="text" />
+                </mat-form-field>
+                
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Tipo de transporte</mat-label>
+                    <mat-select  formControlName="type" placeholder="Tipo de transporte"  required>
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Marca</mat-label>
+                    <mat-select  formControlName="brand" placeholder="Marca"  required>
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Submarca</mat-label>
+                    <mat-select  formControlName="subbrand" placeholder="Submarca"  required>
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Motor </mat-label>
+                    <input placeholder="Motor" matInput formControlName="motor" type="text" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Color </mat-label>
+                    <input placeholder="Color" matInput formControlName="color" type="text" />
+                </mat-form-field>
+
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Origen</mat-label>
+                    <mat-select  formControlName="origin" placeholder="Origen"  required>
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always">
+                    <mat-label> Placa </mat-label>
+                    <input placeholder="Placa" matInput formControlName="plate" type="text" />
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Estatus placa</mat-label>
+                    <mat-select [disabled]="true"  formControlName="status_plate" placeholder="Estatus placa"  required>
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div class="container__sections__information__button" fxLayoutAlign="end center">
+                    <button color="primary" mat-raised-button>
+                        Continuar
+                    </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</main>

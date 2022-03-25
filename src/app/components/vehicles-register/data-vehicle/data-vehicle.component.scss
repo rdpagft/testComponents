@@ -1,0 +1,20 @@
+.container{
+    width: 95%;
+    margin: 0 auto;
+    // border: 1px solid red;
+    height: auto !important;
+    &__title{
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 36px;
+        color: #000000;
+    }
+    &__stepper{
+        // border: 1px solid blue;
+    }
+    &__proccess{
+        // border: 1px solid green;
+    }
+}

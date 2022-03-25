@@ -1,1 +1,16 @@
-<p>data-vehicle works!</p>
+<div class="container" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="center none">
+    <div class="container__title" fxHide.gt-sm="true">
+        <label for="title">
+            Datos del vehículo
+        </label>
+    </div>
+    <div class="container__stepper" fxFlex.gt-sm="45" fxFlex.lt-md="100vh" fxLayoutAlign="center center">
+       
+        stepper
+    </div>
+    <div class="container__proccess" fxFlex.gt-sm="45" fxFlex.lt-md="100vh">
+        <app-one-data *ngIf="step==1" ></app-one-data>
+        <app-two-event *ngIf="step==2" ></app-two-event>
+        <app-three-location *ngIf="step==3"></app-three-location>
+    </div>
+</div>

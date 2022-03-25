@@ -67,6 +67,9 @@ import { EditarUsuarioComponent } from './components/modals/administracion/edita
 import { ReportedComponent } from './components/modals/reports/reported/reported.component';
 import { FoundComponent } from './components/modals/reports/found/found.component';
 import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
+import { OneDataComponent } from './components/vehicles-register/steps/one-data/one-data.component';
+import { ThreeLocationComponent } from './components/vehicles-register/steps/three-location/three-location.component';
+import { TwoEventComponent } from './components/vehicles-register/steps/two-event/two-event.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +109,9 @@ import { DataVehicleComponent } from './components/vehicles-register/data-vehicl
     ReportedComponent,
     FoundComponent,
     DataVehicleComponent,
+    OneDataComponent,
+    ThreeLocationComponent,
+    TwoEventComponent,
   ],
   imports: [
     BrowserModule,
