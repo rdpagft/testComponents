@@ -1,0 +1,83 @@
+<main class="container" fxFill>
+    <div class="container__sections primary" fxLayout="column" >
+        
+        <div class="container__sections__title" fxHide.lt-md="true">
+            <label for="title">
+                Datos de la ubicación del suceso
+            </label>
+        </div>
+
+
+        <div class="container__sections__information ">
+            <div class="container__sections__information__subtitle">
+                <label for="subtitle">
+                    Ubica la dirección del suceso en el mapa o ingresa los datos manualmente.                </label>
+            </div>
+            <div class="container__sections__information__infomap" fxLayoutAlign="center center">
+                <div class="container__sections__information__infomap__map" fxLayoutAlign="center center">
+                    mapa
+                </div>
+            </div>
+            <form [formGroup]="infoFormGroup" class="container__sections__information__form" > 
+                <mat-form-field appearance="outline" fxFill floatLabel="always"> 
+                    <mat-label> Código Postal </mat-label>
+                    <input placeholder="Código Postal" matInput formControlName="postal_code" type="text" />
+                    <mat-icon class="close" *ngIf="infoFormGroup.controls['postal_code'].value !== '' && infoFormGroup.controls['postal_code'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['postal_code'].reset()">close</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>País</mat-label>
+                    <mat-select  formControlName="country" placeholder="País"  >
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">{{animal.name}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Estado</mat-label>
+                    <mat-select  formControlName="state" placeholder="Estado"  >
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal"> {{animal.name}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Minicipio</mat-label>
+                    <mat-select  formControlName="town" placeholder="Municipio"  >
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">{{animal.name}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFill class="primary" appearance="outline" floatLabel="always">
+                    <mat-label>Colonia</mat-label>
+                    <mat-select  formControlName="suburb" placeholder="Colonia"  >
+                      <mat-option selected> --</mat-option>
+                      <mat-option *ngFor="let animal of animals" [value]="animal">{{animal.name}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" fxFill floatLabel="always"> 
+                    <mat-label> Calle </mat-label>
+                    <input placeholder="Calle" matInput formControlName="street" type="text" />
+                    <mat-icon class="close" *ngIf="infoFormGroup.controls['street'].value !== '' && infoFormGroup.controls['street'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['street'].reset()">close</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline" fxFill floatLabel="always"> 
+                    <mat-label> Número  </mat-label>
+                    <input placeholder="Número" matInput formControlName="number" type="text" />
+                    <mat-icon class="close" *ngIf="infoFormGroup.controls['number'].value !== '' && infoFormGroup.controls['number'].value !== null" matSuffix mat-icon-button aria-label="Clear" (click)="infoFormGroup.controls['number'].reset()">close</mat-icon>
+                </mat-form-field>
+
+                <div class="container__sections__information__button" fxLayoutAlign="end center">
+                    <button color="primary" mat-raised-button>
+                        Continuar
+                    </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</main>
