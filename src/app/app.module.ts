@@ -64,12 +64,14 @@ import { ConfirmacionInactivarUsuarioComponent } from './components/modals/admin
 import { BuscarUsuarioComponent } from './components/modals/administracion/buscar-usuario/buscar-usuario.component';
 import { DetalleUsuarioComponent } from './components/modals/administracion/detalle-usuario/detalle-usuario.component';
 import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
+import { RolUsuarioComponent } from './components/rol-usuario/rol-usuario.component';
 import { ReportedComponent } from './components/modals/reports/reported/reported.component';
 import { FoundComponent } from './components/modals/reports/found/found.component';
 import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
 import { OneDataComponent } from './components/vehicles-register/steps/one-data/one-data.component';
 import { ThreeLocationComponent } from './components/vehicles-register/steps/three-location/three-location.component';
 import { TwoEventComponent } from './components/vehicles-register/steps/two-event/two-event.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -106,6 +108,7 @@ import { TwoEventComponent } from './components/vehicles-register/steps/two-even
     BuscarUsuarioComponent,
     DetalleUsuarioComponent,
     EditarUsuarioComponent,
+    RolUsuarioComponent,
     ReportedComponent,
     FoundComponent,
     DataVehicleComponent,
@@ -146,6 +149,7 @@ import { TwoEventComponent } from './components/vehicles-register/steps/two-even
     MatNativeDateModule,
     MatCardModule,
     MatDialogModule,
+    MatTreeModule,
   ],
   providers: [
     MatDatepickerModule,

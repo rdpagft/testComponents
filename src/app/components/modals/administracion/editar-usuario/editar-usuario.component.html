@@ -1,5 +1,5 @@
-<main class="modals-admin" fxFill fxLayout="column">
-  <div class="header__container" fxLayout="row" fxFlex="10">
+<main fxFill fxLayout="column">
+  <div class="header__container light" fxLayout="row" fxFlex="10">
     <mat-toolbar
       fxLayout="row"
       class="header__container__navbar"
@@ -42,39 +42,178 @@
       </div>
     </mat-toolbar>
   </div>
+  <div class="info__container">
+    <div class="info__container__header">
+      <h2 class="mat-title">Datos del usuario</h2>
+      <p class="mat-subheading-2">Captura los datos y configura los permisos</p>
+    </div>
+  </div>
   <div
-    class="info__container"
-    fxFlex.lt-md="90"
-    fxFlex.gt-sm="90"
-    fxLayoutAlign.gt-sm="start center"
+    class="info__container users-admin"
+    fxLayout.gt-sm="row"
+    fxLayoutGap.gt-sm="50px"
   >
     <div class="info__container__user" fxFlex>
-      <h2 class="mat-title">Datos del usuario</h2>
-      <p class="mat-subheading-1">Captura los datos y configura los permisos</p>
       <div fxLayout="column">
+        <!-- [formGroup]="searchFormGroup" -->
         <form fxFlexFill>
-          <mat-form-field appearance="outline" fxFlexFill color="users-admin">
-            <mat-label> Buscar por nombre o correo </mat-label>
-            <mat-icon matPrefix>search</mat-icon>
+          <mat-form-field appearance="outline" fxFlexFill>
+            <mat-label> Primer apellido </mat-label>
             <input
-              placeholder="Buscar por nombre o correo"
+              placeholder="Primer apellido"
               matInput
-              formControlName="username"
               type="text"
-              #searchUsername
+              #firstLastname
             />
             <button
-              (click)="searchUsername.value = ''"
-              *ngIf="searchUsername.value"
+              (click)="firstLastname.value = ''"
+              *ngIf="firstLastname.value"
               matSuffix
               mat-icon-button
             >
               <mat-icon>cancel</mat-icon>
             </button>
           </mat-form-field>
+          <mat-form-field appearance="outline" fxFlexFill>
+            <mat-label> Segundo apellido </mat-label>
+            <input
+              placeholder="Segundo apellido"
+              matInput
+              type="text"
+              #secondLastname
+            />
+            <button
+              (click)="secondLastname.value = ''"
+              *ngIf="secondLastname.value"
+              matSuffix
+              mat-icon-button
+            >
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field appearance="outline" fxFlexFill>
+            <mat-label> Nombre(s) </mat-label>
+            <input placeholder="Nombre(s)" matInput type="text" #name />
+            <button
+              (click)="name.value = ''"
+              *ngIf="name.value"
+              matSuffix
+              mat-icon-button
+            >
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field appearance="outline" fxFlexFill>
+            <mat-label> Telefóno </mat-label>
+            <input placeholder="Telefóno" matInput type="text" #phone />
+            <button
+              (click)="phone.value = ''"
+              *ngIf="phone.value"
+              matSuffix
+              mat-icon-button
+            >
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field appearance="outline" fxFlexFill>
+            <mat-label> Correo electrónico </mat-label>
+            <input
+              [disabled]="true"
+              placeholder="Correo electrónico"
+              matInput
+              type="text"
+              #email
+            />
+            <button
+              (click)="email.value = ''"
+              *ngIf="email.value"
+              matSuffix
+              mat-icon-button
+            >
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field
+            class="primary"
+            appearance="outline"
+            floatLabel="always"
+          >
+            <mat-label>Dependencia</mat-label>
+            <mat-select [disabled]="true" placeholder="Dependencia">
+              <mat-option selected> --</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field
+            class="primary"
+            appearance="outline"
+            floatLabel="always"
+          >
+            <mat-label>Compañía / Sector</mat-label>
+            <mat-select placeholder="Compañía / Sector">
+              <mat-option selected> --</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field
+            class="primary"
+            appearance="outline"
+            floatLabel="always"
+          >
+            <mat-label>Oficina</mat-label>
+            <mat-select placeholder="Oficina">
+              <mat-option selected> --</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="comments" appearance="outline" fxFlexFill>
+            <mat-label> Observaciones (opcional) </mat-label>
+            <textarea
+              matInput
+              placeholder="Observaciones (opcional)"
+              #comments
+            ></textarea>
+            <button
+              (click)="comments.value = ''"
+              *ngIf="comments.value"
+              matSuffix
+              mat-icon-button
+            >
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field appearance="outline" fxFlexFill>
+            <mat-label> Fecha de registro en el sistema </mat-label>
+            <input
+              [disabled]="true"
+              placeholder="Fecha de registro en el sistema"
+              matInput
+              type="text"
+              #date
+            />
+            <mat-icon matSuffix class="material-icons-outlined"
+              >calendar_today</mat-icon
+            >
+          </mat-form-field>
+
+          <div fxLayout="row" fxLayoutAlign="flex-end">
+            <button
+              [disabled]="true"
+              mat-flat-button
+              color="primary"
+              class="info__container__user__button"
+            >
+              Aplicar filtros
+            </button>
+          </div>
         </form>
       </div>
     </div>
-    <div class="info__container__user" fxFlex>Hola</div>
+    <div
+      class="info__container__user"
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign="flex-start"
+    >
+      <app-rol-usuario class="info__container__user__card"></app-rol-usuario>
+    </div>
   </div>
 </main>

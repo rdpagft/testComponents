@@ -34,15 +34,24 @@
 }
 
 .info__container {
-  width: 100%;
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+
+  &__header {
+    margin: 48px 0 24px 0;
+  }
+
   &__user {
-    padding: 3%;
-    &__generic {
-      // border: 1px solid purple;
-      border-bottom: 1px dashed #a7a7a7;
+    padding: 6px;
+
+    &__card {
+      width: 100%;
     }
-    &__permissions {
-      //   border: 1px solid darkgoldenrod;
+
+    &__button {
+      margin-bottom: 24px;
     }
   }
 }
@@ -54,26 +63,6 @@
         &__title {
           width: auto;
         }
-      }
-    }
-  }
-
-  .info__container {
-    width: 80%;
-    margin: 0 auto;
-    &__user {
-      height: 100%;
-      // box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-      // height: 90% !important;
-      // margin-left: 10%;
-      // &__generic {
-      //   // border: 1px solid green;
-      //   height: 100%;
-      //   // border-bottom: 1px dashed #666666;
-      // }
-      &__permissions {
-        // border: 1px solid blue;
-        height: 100%;
       }
     }
   }
