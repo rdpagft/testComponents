@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, Event, NavigationEnd} from '@angular/router';
+import { Router, Event, NavigationEnd, ActivationEnd} from '@angular/router';
 import { BusquedaInicioComponent } from '../../modals/busqueda-inicio/busqueda-inicio.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmacionEdicionUsuarioComponent } from '../../modals/administracion/confirmacion-edicion-usuario/confirmacion-edicion-usuario.component';
@@ -15,13 +15,14 @@ export class HeaderComponent implements OnInit {
 
   nameRoute:string;
   subscription !: Subscription;
-
+  title: string
 
   showTableAction:boolean;
 
   constructor(private router: Router, public dialog: MatDialog) {
     this.nameRoute = "";  
     this.showTableAction = true
+    this.title = ''
   }
  
 
@@ -78,13 +79,17 @@ export class HeaderComponent implements OnInit {
 
   getRoute(){
     this.subscription = this.router.events.subscribe((event: Event) => {
-
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
-        console.log("RUTA", event.url);
         this.nameRoute = event.url.toString().replace('/', '');          
+        console.log("RUTA", this.nameRoute);
         if(this.nameRoute == "administracion") this.nameRoute = "administración"
       }
+      if(event instanceof ActivationEnd){
+        console.log(event);
+        this.title = event.snapshot.data['title']
+      }
     });
+
   }
 }

@@ -72,6 +72,7 @@ import { OneDataComponent } from './components/vehicles-register/steps/one-data/
 import { ThreeLocationComponent } from './components/vehicles-register/steps/three-location/three-location.component';
 import { TwoEventComponent } from './components/vehicles-register/steps/two-event/two-event.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { LocationDetailComponent } from './components/vehicles-register/location-detail/location-detail.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +116,7 @@ import { MatTreeModule } from '@angular/material/tree';
     OneDataComponent,
     ThreeLocationComponent,
     TwoEventComponent,
+    LocationDetailComponent,
   ],
   imports: [
     BrowserModule,

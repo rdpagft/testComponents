@@ -9,14 +9,13 @@ import { ListComponent } from './components/list/list.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { ChipsComponent } from './components/chips/chips.component';
 import { BadgesComponent } from './components/badges/badges.component';
-import { TypografyComponent } from './components/typografy/typografy.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { SearchComponent } from './components/search/search.component';
 import { GestorComponent } from './components/gestor/gestor.component';
 import { AministracionComponent } from './components/aministracion/aministracion.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { TemplateComponent } from './components/shared/template/template.component';
 import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
+import { LocationDetailComponent } from './components/vehicles-register/location-detail/location-detail.component';
 const routes: Routes = [
   {  path: '', pathMatch: 'full', redirectTo: 'inicio'},
   {path:'inputs-text', component:InputsComponent},
@@ -32,7 +31,8 @@ const routes: Routes = [
   {path:'gestor', component:GestorComponent},
   {path:'administracion', component:AministracionComponent, data:{ title:"Administración" }},
   {path:'inicio', component:InicioComponent, data:{ title:"Inicio" }},
-  {path:'reported', component:DataVehicleComponent },
+  {path:'reported', component:DataVehicleComponent, data:{title: 'Alta de Robo o Abuso de Confianza'}} ,
+  { path: 'location-detail', component: LocationDetailComponent,  data:{ title:"Detalle de Localización" } },
   {path:'**', component:InicioComponent}
 ];
 

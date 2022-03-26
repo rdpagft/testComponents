@@ -1,4 +1,4 @@
-<div *ngIf="nameRoute !== 'reported'" class="light container__navbar__home">  
+<div *ngIf="nameRoute !== 'reported' && nameRoute !== 'location-detail'" class="light container__navbar__home">  
     <mat-toolbar  class="container__navbar" color="accent"  fxLayoutAlign="space-between center" >
         <div class="container__navbar__logotext" fxLayout="row">
             <div class="container__navbar__logo" fxLayout="row" fxFlexAlign="center center" fxHide.lt-md="true" fxShow.gt-sm="true">
@@ -62,10 +62,10 @@
 
 </div>
 
-<div class="light container__navbar__vehicle"  *ngIf="nameRoute === 'reported'" >
+<div class="light container__navbar__vehicle"  *ngIf="nameRoute === 'reported' || nameRoute == 'location-detail'" >
     <mat-toolbar class="container__navbar__vehicle__toolbar" color="accent"  fxLayoutAlign="space-between center">
         <div class="container__navbar__vehicle__toolbar__title">
-            <label for="title">Alta de Robo o Abuso de Confianza</label>
+            <label for="title">{{title}}</label>
         </div>
 
         <div (click)="back()"  class="container__navbar__vehicle__close" fxLayoutAlign="space-between center">
