@@ -94,9 +94,11 @@ $color-success: #339966 !default;
   .mat-raised-button,
   .mat-fab,
   .mat-mini-fab {
+    background-color: $color-brand !important;
     color: $color-cloud !important;
     border-radius: 20px;
     padding: 0 5%;
+    width: auto !important;
   }
 
   .mat-flat-button:hover,
