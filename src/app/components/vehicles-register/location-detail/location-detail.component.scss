@@ -1,40 +1,4 @@
 
-.header__container{
-    &__navbar{
-        &__section{
-            width: 96%;
-            margin: 0 auto;
-            &__title{
-                font-family: 'Quicksand';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
-                color: #000000;
-                width: inherit;
-            }
-            &__close{
-                &__button{
-                    color: #666666;
-                }
-                &__label{
-                    font-family: 'Quicksand';
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 14px;
-                    line-height: 16px;
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    letter-spacing: 1.2px;
-                    color: #666666;
-                }
-            }
-        }
-
-    }
-}
-
 .info__container{
     &__header{
         align-self: flex-start;
@@ -62,19 +26,20 @@
         }
     }
    
-    &__user{
+    &__detail{
         padding: 3%;
-        &__generic{
+        padding-bottom: 0;
+        &__robbery{
             height: auto !important;
         }
-        &__generic, &__permissions{
+        &__robbery, &__localation, &__vehicle, &__corralon, &__provision, &__additional {
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 1px dashed #A7A7A7;
 
             &__sections{
                 height: 95%;
-                &__one{
+                &__one, &__two{
                     // border: 1px solid green;
                     &__name{
                         font-family: 'Quicksand';
@@ -89,7 +54,7 @@
 
                     }
                     
-                    &__tel,&__dependence,&__sector,&__office,&__email,&__date,&__status,&__observations{
+                    &__data{
                         &__title{
                             font-family: 'Quicksand';
                             font-style: normal;
@@ -100,6 +65,7 @@
                             align-items: center;
                             letter-spacing: 1px;
                             color: #666666;
+                            padding: 5px 0;
                         }
                         &__description{
                             font-family: 'Quicksand';
@@ -111,15 +77,29 @@
                             align-items: center;
                             letter-spacing: 0.2px;
                             color: #000000;
+                            padding: 3px 0;
+
                         }
                     }
                 }
-                &__two{
-                    // border: 1px solid red;
-                    // height: 80%;
+              
+                &__components{
+                    padding-top: 20px;
                 }
             }
-
+        }
+        &__additional{
+            border-bottom: none !important;
+            &__sections{
+                &__components{
+                    &__one, &__two{
+                        border-bottom: 1px dashed #A7A7A7 !important;
+                        // margin-bottom: 10px !important;
+                        padding: 10px 0 !important;
+                    }
+                }
+                
+            }
         }
     }
 }
@@ -146,19 +126,20 @@
             }
         }
         
-        &__user{
+        &__detail{
             align-self: flex-start;
 
             width: 70% !important;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            // box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
             height: 90% !important;
             margin-left: 5%;
-            &__generic{
+            &__robbery{
                 // border: 1px solid green;
                 height: 100%;
                 // border-bottom: 1px dashed #666666;
             }
-            &__permissions{
+            // permission before
+            &__localation{
                 // border: 1px solid blue;
                 height: 100%;
             }

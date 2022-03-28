@@ -34,7 +34,7 @@ export class OneDataComponent implements OnInit {
       status_plate: [''],
     });
     this.isEmpty = true
-    this.showFound = true
+    this.showFound = false
 
  
    }
