@@ -451,6 +451,7 @@ $color-success: #339966 !default;
     font-weight: 700;
     line-height: 24px;
     margin: 0;
+    margin-bottom: 16px;
   }
 
   .cta {
@@ -533,7 +534,8 @@ $color-success: #339966 !default;
     color: $color-carbon20;
   }
 
-  .mat-focus-indicator.mat-icon-button.mat-button-base {
+  .mat-form-field-suffix
+    > .mat-focus-indicator.mat-icon-button.mat-button-base {
     transform: translateY(-50%);
   }
 
@@ -542,7 +544,7 @@ $color-success: #339966 !default;
     color: $color-carbon20;
   }
 
-  .mat-select-placeholder.mat-select-min-line{
+  .mat-select-placeholder.mat-select-min-line {
     margin-right: 12px;
   }
 
