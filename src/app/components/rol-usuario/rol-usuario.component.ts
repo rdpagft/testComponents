@@ -62,32 +62,42 @@ export class RolUsuarioComponent implements OnInit {
     };
   };
 
-  treeControl = new FlatTreeControl<PermissionFlatNode>(
-    (node) => node.level,
-    (node) => node.expandable
-  );
+  treeControl: FlatTreeControl<PermissionFlatNode>;
 
-  treeFlattener = new MatTreeFlattener(
-    this._transformer,
-    (node) => node.level,
-    (node) => node.expandable,
-    (node) => node.children
-  );
+  treeFlattener: MatTreeFlattener<PermissionNode, PermissionFlatNode>;
 
-  dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-
-  getLevel = (node: PermissionFlatNode) => node.level;
+  dataSource: MatTreeFlatDataSource<PermissionNode, PermissionFlatNode>;
 
   checklistSelection = new SelectionModel<PermissionFlatNode>(
     true /* multiple */
   );
 
   constructor() {
+    this.treeFlattener = new MatTreeFlattener(
+      this._transformer,
+      this.getLevel,
+      this.isExpandable,
+      this.getChildren
+    );
+
+    this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
+
+    this.dataSource = new MatTreeFlatDataSource(
+      this.treeControl,
+      this.treeFlattener
+    );
     this.dataSource.data = TREE_DATA;
+
     console.log(this.dataSource.data);
   }
 
   ngOnInit(): void {}
+
+  getLevel = (node: PermissionFlatNode) => node.level;
+
+  isExpandable = (node: PermissionFlatNode) => node.expandable;
+
+  getChildren = (node: PermissionNode): PermissionNode[] => node.children || [];
 
   hasChild = (_: number, node: PermissionFlatNode) => node.expandable;
 
