@@ -548,6 +548,46 @@ $color-success: #339966 !default;
     margin-right: 12px;
   }
 
+  .mat-tree-node {
+    padding-left: 0 !important;
+
+    .mat-checkbox {
+      width: 100%;
+    }
+    .mat-checkbox-layout {
+      width: 100%;
+    }
+    .mat-checkbox-inner-container {
+      order: 1;
+    }
+    .mat-checkbox-label {
+      flex: 1 1 0;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 11px;
+    }
+    .mat-checkbox-inner-container {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  .mat-tree-node .mat-checkbox-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: $color-carbon60;
+  }
+
+  .checkbox-selected-items {
+    font-size: 12px;
+    font-weight: 300;
+    color: $color-carbon60;
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
+
   @media screen and (max-width: 960px) {
     .mat-title {
       color: $color-carbon100;
