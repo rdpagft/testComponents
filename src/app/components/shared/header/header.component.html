@@ -1,4 +1,4 @@
-<div *ngIf="nameRoute !== 'reported' && nameRoute !== 'location-detail'" class="light container__navbar__home">  
+<div *ngIf="nameRoute !== 'reported' && nameRoute !== 'location-detail'" class="light container__navbar__home">
     <mat-toolbar  class="container__navbar" color="accent"  fxLayoutAlign="space-between center" >
         <div class="container__navbar__logotext" fxLayout="row">
             <div class="container__navbar__logo" fxLayout="row" fxFlexAlign="center center" fxHide.lt-md="true" fxShow.gt-sm="true">
@@ -10,10 +10,10 @@
             <div class="container__navbar__title" fxLayoutAlign="center center" fxShow.lt-md="true" fxHide.gt-sm="true">
                 <label for="section">{{nameRoute | titlecase }}</label>
                 <!-- <img src="assets/images/ocra-text.png" alt=""> -->
-            </div>            
-        </div>      
+            </div>
+        </div>
 
-        
+
         <div class="container__navbar__options" fxLayout="row" fxShow.sm="false" fxShow.xs="false" fxLayoutAlign="space-between center">
             <ul fxLayout="row" fxLayoutAlign="space-around none" fxFill>
                 <li routerLinkActive="active" >
@@ -44,7 +44,7 @@
                 <mat-icon>
                     search
                 </mat-icon>
-                
+
             </button>
             <button mat-icon-button (click)="openDialog2()">
                 <mat-icon class="material-icons-outlined" matBadge="15" matBadgeColor="warn">
@@ -62,7 +62,7 @@
 
 </div>
 
-<div class="light container__navbar__vehicle"  *ngIf="nameRoute === 'reported' || nameRoute == 'location-detail'" >
+<div class="light container__navbar__vehicle"  *ngIf="nameRoute === 'reported' || nameRoute == 'location-detail' || nameRoute =='editar-usuario/1' " >
     <mat-toolbar class="container__navbar__vehicle__toolbar" color="accent"  fxLayoutAlign="space-between center">
         <div class="container__navbar__vehicle__toolbar__title">
             <label for="title">{{title}}</label>

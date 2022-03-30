@@ -5,7 +5,9 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subject } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
-import { EditarUsuarioComponent } from '../modals/administracion/editar-usuario/editar-usuario.component';
+import { EditarUsuarioComponent } from '../../modals/administracion/editar-usuario/editar-usuario.component';
+import { Router } from '@angular/router';
+import { DetalleUsuarioComponent } from '../../modals/administracion/detalle-usuario/detalle-usuario.component';
 
 @Component({
   selector: 'app-tabla-usuarios',
@@ -20,7 +22,7 @@ export class TablaUsuariosComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private router: Router) {
     this.displayedColumns = [
       'selector',
       'posicion',
@@ -90,7 +92,19 @@ export class TablaUsuariosComponent implements AfterViewInit {
   }
 
   editUser() {
-    this.dialog.open(EditarUsuarioComponent, {
+    this.router.navigate(['editar-usuario', '1']);
+    // this.dialog.open(EditarUsuarioComponent, {
+    //   maxWidth: '100vw',
+    //   maxHeight: '100vh',
+    //   height: '100%',
+    //   width: '100%',
+    //   autoFocus: false,
+    //   panelClass: 'modals-admin',
+    // });
+  }
+
+  detailUser() {
+    this.dialog.open(DetalleUsuarioComponent, {
       maxWidth: '100vw',
       maxHeight: '100vh',
       height: '100%',
