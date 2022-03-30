@@ -16,7 +16,7 @@ import { AministracionComponent } from './components/administration/aministracio
 import { InicioComponent } from './components/inicio/inicio.component';
 import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
 import { LocationDetailComponent } from './components/vehicles-register/location-detail/location-detail.component';
-import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 const routes: Routes = [
   {  path: '', pathMatch: 'full', redirectTo: 'inicio'},
   {path:'inputs-text', component:InputsComponent},
