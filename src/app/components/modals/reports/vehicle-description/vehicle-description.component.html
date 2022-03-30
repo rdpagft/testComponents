@@ -1,1 +1,229 @@
-<p>vehicle-description works!</p>
+<main class="" fxFill fxLayout="column">  
+    <div class="header__container"  fxLayout="row" fxFlex="5">
+        <mat-toolbar fxLayout="row"  class="header__container__navbar" color="accent"  fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="start center">
+           <div class="header__container__navbar__section" fxLayout="row" fxLayoutAlign="end center">       
+               <div (click)="close()" class="header__container__navbar__section__close" fxLayoutAlign="end center">
+                   <button  mat-icon-button class="header__container__navbar__section__close__button">
+                       <mat-icon  class="material-icons-outlined">
+                           close 
+                       </mat-icon>
+                   </button>
+                   <label  class="header__container__navbar__section__close__label" for="close-text" fxHide.lt-md="true" fxShow.gt-sm="true" >Cerrar</label>
+               </div>
+           </div>
+        </mat-toolbar>
+    </div>
+    <div class="info__container"  fxLayout="column"  fxFlex.lt-md="90" fxFlex.gt-sm="90" fxLayoutAlign.gt-sm="center center">    
+        <div class="info__container__text" fxFlex.gt-sm="15" fxFlex.lt-md="auto" fxLayout="column" fxLayoutAlign="space-evenly start">
+            <div class="info__container__text__title" fxLayoutAlign="start center">
+                <label for="title">
+                    Se encontró más de una descripción para el vehículo
+                </label>
+            </div> 
+            <div class="info__container__text__subtitle" fxLayoutAlign="start center">
+                <label for="subtitle">
+                    Selecciona la descripción que corresponda para utilizar su información y pre-llenar algunos datos en tu reporte de Robo o Abuso de Confianza.
+                </label>
+            </div> 
+        </div>
+         
+        <div class="info__container__user" fxFlex.gt-sm="70" fxFlex.lt-md="auto"  fxFill fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-between center">
+            <div class="info__container__user__insurance1" fxLayout="column" fxFlex.gt-sm="48" fxFlex.lt-md="auto" >
+                <div class="info__container__user__insurance1__sections__one__name" fxFlex.lt-md="10" fxFlex.gt-sm="10" fxLayoutAlign="start center">
+                    <mat-icon class="material-icons-outlined">drive_eta</mat-icon>
+                    <label for="">Vehículo</label>
+                </div>
+                <div class="info__container__user__insurance1__sections" fxFill fxLayout.lt-md="row" fxLayout.gt-sm="column" fxFlex.gt-sm="70" fxFlex.lt-md="100" fxLayoutAlign="space-evenly none">
+                    <!-- up section -->
+                    <div class="info__container__user__insurance1__sections__up" fxFlex.lt-md="50" fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-evenly space-evenly">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Número de serie
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    MR0GT34K9B0987654
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Modelo                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    2018
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33" >
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Tipo de transporte
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Automóvil
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title" >
+                                    Marca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    NISSAN
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Submarca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    VERSA
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Motor
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    12DE343D34445DC321
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- down secttion -->
+                    <div class="info__container__user__insurance1__sections__down" fxFlex.lt-md="50"  fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-between space-between">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Color
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Negro
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Origen
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Nacional
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Placas
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    456RFD
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                             
+                <div class="info__container__user__insurance1__button primary" fxLayoutAlign="end center"  fxFlex.gt-sm="20" fxFlex.lt-md="">
+                    <button mat-raised-button color="primary">
+                        Seleccionar
+                    </button>
+                </div>
+            </div>
+
+            <div class="info__container__user__insurance2" fxLayout="column" fxFlex.gt-sm="48" fxFlex.lt-md="auto" >
+                <div class="info__container__user__insurance2__sections__one__name" fxFlex.lt-md="10" fxFlex.gt-sm="10" fxLayoutAlign="start center">
+                    <mat-icon class="material-icons-outlined">drive_eta</mat-icon>
+                    <label for="">Vehículo</label>
+                </div>
+                <div class="info__container__user__insurance1__sections" fxFill fxLayout.lt-md="row" fxLayout.gt-sm="column" fxFlex.gt-sm="70" fxFlex.lt-md="100">
+                    <!-- up section -->
+                    <div class="info__container__user__insurance1__sections__up" fxFlex.lt-md="50" fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-evenly space-evenly">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Número de serie
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    MR0GT34K9B0987654
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Modelo                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    2018
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33" >
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Tipo de transporte
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Automóvil
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title" >
+                                    Marca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    NISSAN
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Submarca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    VERSA
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Motor
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    12DE343D34445DC321
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- down secttion -->
+                    <div class="info__container__user__insurance1__sections__down" fxFlex.lt-md="50"  fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-between space-between">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Color
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Negro
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Origen
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Nacional
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Placas
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    456RFD
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info__container__user__insurance2__button primary" fxLayoutAlign="end center"  fxFlex.gt-sm="20" fxFlex.lt-md="">
+                    <button mat-raised-button color="primary">
+                        Seleccionar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -5,6 +5,7 @@ import { ReportedComponent } from '../modals/reports/reported/reported.component
 import { FoundComponent } from '../modals/reports/found/found.component';
 import { Router } from '@angular/router';
 import { InsurancePolicyComponent } from '../modals/reports/insurance-policy/insurance-policy.component';
+import { VehicleDescriptionComponent } from '../modals/reports/vehicle-description/vehicle-description.component';
 
 @Component({
   selector: 'app-inicio',
@@ -42,8 +43,22 @@ export class InicioComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  openInsuranceVehicleModal() {
+  openVehicleInsuranceModal() {
     let dialogRef = this.dialog.open(InsurancePolicyComponent, {
+        maxWidth:  '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+        autoFocus: false,
+        panelClass: "semi-transparent-modal"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openVehicleDescriptionModal() {
+    let dialogRef = this.dialog.open(VehicleDescriptionComponent, {
         maxWidth:  '100vw',
         maxHeight: '100vh',
         height: '100%',

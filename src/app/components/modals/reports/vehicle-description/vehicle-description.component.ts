@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-vehicle-description',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleDescriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialogRef<VehicleDescriptionComponent>) { }
 
   ngOnInit(): void {
+  }
+  
+  close(){
+    this.dialog.close()
   }
 
 }
