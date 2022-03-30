@@ -44,7 +44,7 @@
   }
 
   &__user {
-    padding: 6px;
+    // padding: 6px;
 
     &__card {
       width: 100%;
@@ -64,6 +64,15 @@
           width: auto;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  .info__container {
+    width: 90%;
+
+    &__user__form {
+      border-bottom: 1px dashed #a7a7a7;
     }
   }
 }

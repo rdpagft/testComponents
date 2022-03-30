@@ -12,10 +12,11 @@ import { BadgesComponent } from './components/badges/badges.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { SearchComponent } from './components/search/search.component';
 import { GestorComponent } from './components/gestor/gestor.component';
-import { AministracionComponent } from './components/aministracion/aministracion.component';
+import { AministracionComponent } from './components/administration/aministracion/aministracion.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { DataVehicleComponent } from './components/vehicles-register/data-vehicle/data-vehicle.component';
 import { LocationDetailComponent } from './components/vehicles-register/location-detail/location-detail.component';
+import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
 const routes: Routes = [
   {  path: '', pathMatch: 'full', redirectTo: 'inicio'},
   {path:'inputs-text', component:InputsComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path:'search', component:SearchComponent},
   {path:'gestor', component:GestorComponent},
   {path:'administracion', component:AministracionComponent, data:{ title:"Administración" }},
+  { path: 'editar-usuario/:id', component: EditarUsuarioComponent, data:{title:"Editar Usuario"} },
   {path:'inicio', component:InicioComponent, data:{ title:"Inicio" }},
   {path:'reported', component:DataVehicleComponent, data:{title: 'Alta de Robo o Abuso de Confianza'}} ,
   { path: 'location-detail', component: LocationDetailComponent,  data:{ title:"Detalle de Localización" } },

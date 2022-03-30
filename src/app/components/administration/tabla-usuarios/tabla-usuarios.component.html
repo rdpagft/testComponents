@@ -13,7 +13,7 @@
         </button>
       </div>
       <div *ngIf="this.selection.hasValue()" fxLayout="row">
-        <button mat-icon-button>
+        <button mat-icon-button (click)="detailUser()">
           <mat-icon class="material-icons-outlined">visibility</mat-icon>
         </button>
         <button mat-icon-button (click)="editUser()">

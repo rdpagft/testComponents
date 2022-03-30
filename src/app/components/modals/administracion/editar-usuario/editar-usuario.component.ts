@@ -8,12 +8,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class EditarUsuarioComponent implements OnInit {
 
-  constructor(private dialog: MatDialogRef<EditarUsuarioComponent>) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   close(){
-    this.dialog.close()
+    // this.dialog.close()
   }
 }

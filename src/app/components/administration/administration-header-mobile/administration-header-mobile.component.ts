@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { BuscarUsuarioComponent } from '../modals/administracion/buscar-usuario/buscar-usuario.component';
+import { BuscarUsuarioComponent } from '../../modals/administracion/buscar-usuario/buscar-usuario.component';
 
 @Component({
   selector: 'app-administration-header-mobile',

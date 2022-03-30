@@ -46,6 +46,7 @@ interface PermissionFlatNode {
   expandable: boolean;
   name: string;
   level: number;
+  selectedItems: number;
 }
 
 @Component({
@@ -59,6 +60,7 @@ export class RolUsuarioComponent implements OnInit {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
       level: level,
+      selectedItems: 0,
     };
   };
 
@@ -88,7 +90,7 @@ export class RolUsuarioComponent implements OnInit {
     );
     this.dataSource.data = TREE_DATA;
 
-    console.log(this.dataSource.data);
+    console.log('treeControl :>> ', this.treeControl);
   }
 
   ngOnInit(): void {}
@@ -131,6 +133,8 @@ export class RolUsuarioComponent implements OnInit {
     // Force update for the parent
     descendants.forEach((child) => this.checklistSelection.isSelected(child));
     this.checkAllParentsSelection(node);
+
+    this.checkboxValues(node);
   }
 
   /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
@@ -138,16 +142,41 @@ export class RolUsuarioComponent implements OnInit {
     this.checklistSelection.toggle(node);
     this.checkAllParentsSelection(node);
 
-    console.log(this.checklistSelection.selected);
+    this.checkboxValues(node);
   }
 
   /* Checks all the parents when a leaf node is selected/unselected */
   checkAllParentsSelection(node: PermissionFlatNode): void {
     let parent: PermissionFlatNode | null = this.getParentNode(node);
-    console.log('>>> parent: ', parent);
     while (parent) {
       this.checkRootNodeSelection(parent);
       parent = this.getParentNode(parent);
+    }
+  }
+
+  checkboxValues(node: PermissionFlatNode): void {
+    if (node.level == 0) {
+      const descendant = this.treeControl.getDescendants(node);
+
+      const variable = descendant.filter((data) =>
+        this.checklistSelection.isSelected(data)
+      );
+
+      node.selectedItems = variable.length;
+    }
+    if (node.level == 1) {
+      const parent = this.getParentNode(node);
+      if (parent) {
+        if (this.checklistSelection.isSelected(node)) {
+          parent.selectedItems = parent.selectedItems + 1;
+        } else {
+          parent.selectedItems = parent.selectedItems - 1;
+
+          if (parent.selectedItems < 0) {
+            parent.selectedItems = 0;
+          }
+        }
+      }
     }
   }
 
@@ -155,7 +184,6 @@ export class RolUsuarioComponent implements OnInit {
   checkRootNodeSelection(node: PermissionFlatNode): void {
     const nodeSelected = this.checklistSelection.isSelected(node);
     const descendants = this.treeControl.getDescendants(node);
-    console.log('descendants :>> ', descendants);
     const descAllSelected =
       descendants.length > 0 &&
       descendants.every((child) => {

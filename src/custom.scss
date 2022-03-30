@@ -451,7 +451,7 @@ $color-success: #339966 !default;
     font-weight: 700;
     line-height: 24px;
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
   }
 
   .cta {
@@ -534,18 +534,76 @@ $color-success: #339966 !default;
     color: $color-carbon20;
   }
 
-  .mat-form-field-suffix
+  .comments
+    .mat-form-field-suffix
     > .mat-focus-indicator.mat-icon-button.mat-button-base {
     transform: translateY(-50%);
   }
 
-  mat-form-field.mat-form-field-disabled .mat-form-field-outline {
+  .mat-form-field.mat-form-field-disabled .mat-form-field-outline {
     background-color: $color-carbon10;
     color: $color-carbon20;
   }
 
   .mat-select-placeholder.mat-select-min-line {
     margin-right: 12px;
+  }
+
+  .mat-tree-node {
+    padding-left: 0 !important;
+
+    .mat-checkbox {
+      width: 100%;
+    }
+    .mat-checkbox-layout {
+      width: 100%;
+    }
+    .mat-checkbox-inner-container {
+      order: 1;
+    }
+    .mat-checkbox-label {
+      flex: 1 1 0;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 11px;
+    }
+    .mat-checkbox-inner-container {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  .mat-card.rol__card {
+    padding: 0;
+  }
+
+  .mat-tree-node .mat-checkbox-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: $color-carbon60;
+  }
+
+  .checkbox-selected-items {
+    font-size: 12px;
+    font-weight: 300;
+    color: $color-carbon60;
+    line-height: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  .mat-checkbox-indeterminate .mat-checkbox-background {
+    background-color: $color-carbon60 !important;
+  }
+
+  .mat-tree-node {
+    padding-right: 10px;
+  }
+
+  .mat-tree-node.rol__card__permissions__children {
+    background-color: $color-carbon5;
   }
 
   @media screen and (max-width: 960px) {
@@ -556,6 +614,14 @@ $color-success: #339966 !default;
       font-weight: 700;
       line-height: 28px;
       margin-bottom: 24px;
+    }
+
+    .mat-card.rol__card {
+      box-shadow: none;
+    }
+    .subtitle{
+      font-size: 16px;
+      line-height: 20px;
     }
     // .mat-subheading-1 {
     //   color: $color-carbon60;
