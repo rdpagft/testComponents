@@ -63,7 +63,7 @@ import { ConfirmacionEdicionUsuarioComponent } from './components/modals/adminis
 import { ConfirmacionInactivarUsuarioComponent } from './components/modals/administracion/confirmacion-inactivar-usuario/confirmacion-inactivar-usuario.component';
 import { BuscarUsuarioComponent } from './components/modals/administracion/buscar-usuario/buscar-usuario.component';
 import { DetalleUsuarioComponent } from './components/modals/administracion/detalle-usuario/detalle-usuario.component';
-import { EditarUsuarioComponent } from './components/modals/administracion/editar-usuario/editar-usuario.component';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 import { RolUsuarioComponent } from './components/rol-usuario/rol-usuario.component';
 import { ReportedComponent } from './components/modals/reports/reported/reported.component';
 import { FoundComponent } from './components/modals/reports/found/found.component';
@@ -75,6 +75,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { LocationDetailComponent } from './components/vehicles-register/location-detail/location-detail.component';
 import { InsurancePolicyComponent } from './components/modals/reports/insurance-policy/insurance-policy.component';
 import { VehicleDescriptionComponent } from './components/modals/reports/vehicle-description/vehicle-description.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +122,7 @@ import { VehicleDescriptionComponent } from './components/modals/reports/vehicle
     LocationDetailComponent,
     InsurancePolicyComponent,
     VehicleDescriptionComponent,
+    NewUserComponent,
   ],
   imports: [
     BrowserModule,
