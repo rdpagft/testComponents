@@ -752,6 +752,17 @@ $color-success: #339966 !default;
     padding: auto !important;
   }
 }
+.semi-transparent-modal {
+  // @include angular-material-theme($details-modals-theme);
+  .mat-dialog-container {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px) !important;
+    // padding: auto !important;
+  }
+  .mat-dialog-container.ng-trigger-dialogContainer {
+    padding: auto !important;
+  }
+}
 
 .user-detail-modal {
   .mat-dialog-container {

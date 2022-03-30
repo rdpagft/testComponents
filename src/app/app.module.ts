@@ -73,6 +73,8 @@ import { ThreeLocationComponent } from './components/vehicles-register/steps/thr
 import { TwoEventComponent } from './components/vehicles-register/steps/two-event/two-event.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { LocationDetailComponent } from './components/vehicles-register/location-detail/location-detail.component';
+import { InsurancePolicyComponent } from './components/modals/reports/insurance-policy/insurance-policy.component';
+import { VehicleDescriptionComponent } from './components/modals/reports/vehicle-description/vehicle-description.component';
 
 @NgModule({
   declarations: [
@@ -117,6 +119,8 @@ import { LocationDetailComponent } from './components/vehicles-register/location
     ThreeLocationComponent,
     TwoEventComponent,
     LocationDetailComponent,
+    InsurancePolicyComponent,
+    VehicleDescriptionComponent,
   ],
   imports: [
     BrowserModule,

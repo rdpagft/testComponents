@@ -1,0 +1,288 @@
+<main class="" fxFill fxLayout="column">  
+    <div class="header__container"  fxLayout="row" fxFlex="5">
+        <mat-toolbar fxLayout="row"  class="header__container__navbar" color="accent"  fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="start center">
+           <div class="header__container__navbar__section" fxLayout="row" fxLayoutAlign="end center">       
+               <div (click)="close()" class="header__container__navbar__section__close" fxLayoutAlign="end center">
+                   <button  mat-icon-button class="header__container__navbar__section__close__button">
+                       <mat-icon  class="material-icons-outlined">
+                           close 
+                       </mat-icon>
+                   </button>
+                   <label  class="header__container__navbar__section__close__label" for="close-text" fxHide.lt-md="true" fxShow.gt-sm="true" >Cerrar</label>
+               </div>
+           </div>
+        </mat-toolbar>
+    </div>
+    <div class="info__container"  fxLayout="column"  fxFlex.lt-md="90" fxFlex.gt-sm="90" fxLayoutAlign.gt-sm="center center">    
+        <div class="info__container__text" fxFlex.gt-sm="15" fxFlex.lt-md="auto" fxLayout="column" fxLayoutAlign="end start">
+            <div class="info__container__text__title" fxLayoutAlign="start center">
+                <label for="title">
+                Se encontró la siguiente póliza para el vehículo
+                </label>
+            </div> 
+            <div class="info__container__text__subtitle" fxLayoutAlign="start center">
+                <label for="subtitle">
+                    Selecciona la póliza para utilizar su información y pre-llenar algunos datos en tu reporte de Robo o Abuso de Confianza.
+                </label>
+            </div> 
+        </div>
+         
+        <div class="info__container__user" fxFlex.gt-sm="85" fxFlex.lt-md="auto"  fxFill fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-evenly center">
+            <div class="info__container__user__insurance1" fxLayout="column" fxFlex.gt-sm="46" fxFlex.lt-md="auto" >
+                <div class="info__container__user__insurance1__sections__one__name" fxFlex.lt-md="10" fxFlex.gt-sm="15" fxLayoutAlign="start center">
+                    <mat-icon>support</mat-icon>
+                    <label for="">Seguro</label>
+                </div>
+                <div class="info__container__user__insurance1__sections" fxFill fxLayout.lt-md="row" fxLayout.gt-sm="column" fxFlex="">
+                    <!-- up section -->
+                    <div class="info__container__user__insurance1__sections__up" fxFlex.lt-md="50" fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-evenly space-evenly">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__tel" fxLayout="column" fxFlex=""> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Compañía
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    Quálitas
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__dependence" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Tipo de seguro
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    Cobertura amplia
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__sector" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Póliza
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    123456789
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__email" fxFlex="33">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Fecha de inicio
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    12 / 06 / 2021
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__date" fxFlex="34"> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Fecha de vigencia
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    12 / 06 / 2022
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__status" fxFlex="33">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Modelo
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    2018
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- down secttion -->
+                    <div class="info__container__user__insurance1__sections__down" fxFlex.lt-md="50"  fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-between space-between">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__tel" fxLayout="column" fxFlex=""> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Tipo de transporte
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    Automóvil
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__dependence" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Marca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    NISSAN
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__sector" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Submarca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    VERSA
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__email" fxFlex="33">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Número de serie
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    MR0GT34K9B0987654
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__date" fxFlex="34"> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Placas
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    456RFD
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__status" fxFlex="33" fxShow.gt-sm="true" fxShow.lt-md="false">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                             
+                <div class="info__container__user__insurance1__button primary" fxLayoutAlign="end center">
+                    <button mat-raised-button color="primary">
+                        Seleccionar
+                    </button>
+                </div>
+            </div>
+
+
+
+            
+            <div class="info__container__user__insurance2" fxLayout="column" fxFlex.gt-sm="46" fxFlex.lt-md="auto" >
+                <div class="info__container__user__insurance1__sections__one__name" fxFlex.lt-md="10" fxFlex.gt-sm="15" fxLayoutAlign="start center">
+                    <mat-icon>support</mat-icon>
+                    <label for="">Seguro</label>
+                </div>
+                <div class="info__container__user__insurance1__sections" fxFill fxLayout.lt-md="column" fxLayout.gt-sm="column" fxFlex="">
+                    <!-- up section -->
+                    <div class="info__container__user__insurance1__sections__up" fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-evenly space-evenly">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__tel" fxLayout="column" fxFlex=""> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Compañía
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    Quálitas
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__dependence" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Tipo de seguro
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    Cobertura amplia
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__sector" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Póliza
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    123456789
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__email" fxFlex="33">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Fecha de inicio
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    12 / 06 / 2021
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__date" fxFlex="34"> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Fecha de vigencia
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    12 / 06 / 2022
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__status" fxFlex="33">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Modelo
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    2018
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- down secttion -->
+                    <div class="info__container__user__insurance1__sections__down" fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-between space-between">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__tel" fxLayout="column" fxFlex=""> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Tipo de transporte
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    Automóvil
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__dependence" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Marca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    NISSAN
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__sector" fxFlex="">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Submarca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    VERSA
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__email" fxFlex="33">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Número de serie
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    MR0GT34K9B0987654
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__date" fxFlex="34"> 
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    Placas
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    456RFD
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__name__status" fxFlex="33" fxShow.gt-sm="true" fxShow.lt-md="false">
+                                <div class="info__container__user__insurance1__sections__one__tel__title">
+                                    
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__tel__description">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info__container__user__insurance1__sections__button primary" fxLayoutAlign="end center">
+                        <button mat-raised-button color="primary">
+                            Seleccionar
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

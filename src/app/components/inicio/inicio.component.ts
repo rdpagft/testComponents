@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ReportedComponent } from '../modals/reports/reported/reported.component';
 import { FoundComponent } from '../modals/reports/found/found.component';
 import { Router } from '@angular/router';
+import { InsurancePolicyComponent } from '../modals/reports/insurance-policy/insurance-policy.component';
 
 @Component({
   selector: 'app-inicio',
@@ -35,6 +36,20 @@ export class InicioComponent implements OnInit {
         width: '100%',
         autoFocus: false,
         panelClass: "modals-admin"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openInsuranceVehicleModal() {
+    let dialogRef = this.dialog.open(InsurancePolicyComponent, {
+        maxWidth:  '100vw',
+        maxHeight: '100vh',
+        height: '100%',
+        width: '100%',
+        autoFocus: false,
+        panelClass: "semi-transparent-modal"
     });
 
     dialogRef.afterClosed().subscribe(result => {
