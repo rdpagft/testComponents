@@ -90,7 +90,6 @@ export class HeaderComponent implements OnInit {
       //   if(this.nameRoute == "administracion") this.nameRoute = "administración"
       // }
       if(event instanceof ActivationEnd){
-        console.log(event);
         this.title = event.snapshot.data['title']
         this.headerType = event.snapshot.data['hType']
       }
