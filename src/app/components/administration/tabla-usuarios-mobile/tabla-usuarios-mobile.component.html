@@ -18,7 +18,7 @@
   <table class="table" mat-table [dataSource]="dataSource" matSort>
     <ng-container matColumnDef="selector">
       <th mat-header-cell *matHeaderCellDef>
-        <mat-checkbox> </mat-checkbox>
+        <mat-checkbox color="primary"> </mat-checkbox>
         <!-- (change)="$event ? masterToggle() : null"
       [checked]="selection.hasValue() && isAllSelected()"
       [indeterminate]="selection.hasValue() && !isAllSelected()"
