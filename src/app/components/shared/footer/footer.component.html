@@ -1,43 +1,3 @@
-<!-- 
-
-<mat-toolbar *ngIf="mostrarMenuRestante" class="container__navbar__menu2__responsive" fxLayout="column">
-    <div class="container__options__responsive">
-      <ul fxLayout="row" fxLayoutAlign="space-around end" >
-          <li routerLinkActive="active">
-              <a [routerLink]='["/s"]'  fxLayout="column" fxLayoutAlign="center center">
-                  <mat-icon class="material-icons-outlined">
-                    search
-                </mat-icon>
-                <span>Buscar</span>
-
-              </a>
-          </li>
-          <li routerLinkActive="active">
-              <a [routerLink]='["/s"]'   fxLayout="column" fxLayoutAlign="center center">
-                  <mat-icon class="material-icons-outlined">notifications</mat-icon>
-                <span>Avisos</span>
-
-              </a>
-          </li>
-          <li routerLinkActive="active" >
-              <a [routerLink]='["/s"]' fxLayout="column" fxLayoutAlign="center center">
-                  <mat-icon class="material-icons-outlined">logout</mat-icon>
-                <span>Salir</span>
-
-              </a>
-          </li>
-
-
-          <li class="container__close__button" routerLinkActive="active" fxLayout="row" fxLayoutAlign="center center">
-              <a (click)="ocultarOpcionesRestantes()" fxLayout="row" fxLayoutAlign="center center">
-                  <mat-icon>close</mat-icon>
-                  <mat-label>cerrar</mat-label>
-              </a>
-          </li>
-      </ul>
-  </div>
-</mat-toolbar>
- -->
 
 <mat-toolbar class="container__navbar__responsive" fxLayout="column">
  
@@ -51,8 +11,8 @@
                 <span>Inicio</span>
               </a>
           </li>
-          <li routerLinkActive="active">
-              <a [routerLink]='["/select"]'   fxLayout="column" fxLayoutAlign="center center">
+          <li routerLinkActive="active" >
+              <a  [routerLink]='["/select"]'   fxLayout="column" fxLayoutAlign="center center">
                   <mat-icon>manage_search</mat-icon>
                     <span>Consultas</span>
               </a>

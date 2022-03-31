@@ -1,4 +1,4 @@
-<div *ngIf="nameRoute !== 'reported' && nameRoute !== 'location-detail'" class="light container__navbar__home">
+<div *ngIf="headerType == '0' " class="light container__navbar__home">
     <mat-toolbar  class="container__navbar" color="accent"  fxLayoutAlign="space-between center" >
         <div class="container__navbar__logotext" fxLayout="row">
             <div class="container__navbar__logo" fxLayout="row" fxFlexAlign="center center" fxHide.lt-md="true" fxShow.gt-sm="true">
@@ -8,7 +8,7 @@
                 <img src="assets/images/logo-img.png" alt="">
             </div>
             <div class="container__navbar__title" fxLayoutAlign="center center" fxShow.lt-md="true" fxHide.gt-sm="true">
-                <label for="section">{{nameRoute | titlecase }}</label>
+                <label for="section">{{ title }}</label>
                 <!-- <img src="assets/images/ocra-text.png" alt=""> -->
             </div>
         </div>
@@ -62,7 +62,7 @@
 
 </div>
 
-<div class="light container__navbar__vehicle"  *ngIf="nameRoute === 'reported' || nameRoute == 'location-detail' || nameRoute =='editar-usuario/1' " >
+<div *ngIf="headerType == '1'" class="light container__navbar__vehicle" >
     <mat-toolbar class="container__navbar__vehicle__toolbar" color="accent"  fxLayoutAlign="space-between center">
         <div class="container__navbar__vehicle__toolbar__title">
             <label for="title">{{title}}</label>

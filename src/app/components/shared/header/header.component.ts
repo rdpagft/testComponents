@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   nameRoute:string;
   subscription !: Subscription;
   title: string
+  headerType: string
 
   showTableAction:boolean;
 
@@ -23,6 +24,8 @@ export class HeaderComponent implements OnInit {
     this.nameRoute = "";  
     this.showTableAction = true
     this.title = ''
+    this.headerType=''
+    
   }
  
 
@@ -77,17 +80,19 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  getRoute(){
+   getRoute(){
     this.subscription = this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationEnd) {
-        // Hide loading indicator
-        this.nameRoute = event.url.toString().replace('/', '');          
-        console.log("RUTA", this.nameRoute);
-        if(this.nameRoute == "administracion") this.nameRoute = "administración"
-      }
+      // if (event instanceof NavigationEnd) {
+      //   // console.log("navigation end", event);
+      //   // Hide loading indicator
+      //   this.nameRoute = event.url.toString().replace('/', '');          
+      //   // console.log("RUTA", this.nameRoute);
+      //   if(this.nameRoute == "administracion") this.nameRoute = "administración"
+      // }
       if(event instanceof ActivationEnd){
         console.log(event);
         this.title = event.snapshot.data['title']
+        this.headerType = event.snapshot.data['hType']
       }
     });
 
