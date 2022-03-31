@@ -35,19 +35,13 @@ export class HeaderComponent implements OnInit {
     this.getRoute()
   }
   back(){
-    console.log("flujo", this.flow);
+    //flow validation for the differents headers
     switch(this.flow){
       case "admin":
-        console.log("redeireccionando a flujo principal de admin");
         this.router.navigateByUrl("/administracion")
         break;
       case "vehicle":
-        console.log("redeireccionando a flujo principal de reporte");
         this.router.navigateByUrl('/reported')
-        break;
-      case "home":
-        console.log("redeireccionando a flujo principal de inicio");
-        this.router.navigateByUrl('/')
         break;
       default:
         this.router.navigateByUrl('/')
