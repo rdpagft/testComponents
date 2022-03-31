@@ -1,47 +1,4 @@
 <main fxFill fxLayout="column">
-  <div class="header__container light" fxLayout="row" fxFlex="10">
-    <mat-toolbar
-      fxLayout="row"
-      class="header__container__navbar"
-      color="accent"
-      fxLayoutAlign.lt-md="center center"
-      fxLayoutAlign.gt-sm="start center"
-    >
-      <div
-        class="header__container__navbar__section"
-        fxLayout="row"
-        fxLayoutAlign="space-between center"
-      >
-        <div
-          class="header__container__navbar__section__title"
-          fxLayoutAlign="end center"
-          fxLayoutAlign="center center"
-        >
-          <label for="title">Editar usuario</label>
-        </div>
-
-        <div
-          (click)="close()"
-          class="header__container__section__navbar__close"
-          fxLayoutAlign="end center"
-        >
-          <button
-            mat-icon-button
-            class="header__container__navbar__section__close__button"
-          >
-            <mat-icon class="material-icons-outlined"> close </mat-icon>
-          </button>
-          <label
-            class="header__container__navbar__section__close__label"
-            for="close-text"
-            fxHide.lt-md="true"
-            fxShow.gt-sm="true"
-            >Cerrar</label
-          >
-        </div>
-      </div>
-    </mat-toolbar>
-  </div>
   <div class="info__container">
     <div class="info__container__header">
       <h2 class="mat-title">Datos del usuario</h2>
@@ -51,6 +8,7 @@
   <div
     class="info__container users-admin"
     fxLayout.gt-sm="row"
+    fxLayout.lt-md="column"
     fxLayoutGap.gt-sm="50px"
   >
     <div class="info__container__user" fxFlex>
