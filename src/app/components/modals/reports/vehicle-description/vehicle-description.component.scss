@@ -146,10 +146,13 @@ height: auto !important;
     width: 80%;
     margin: 0 auto;
     &__user{
+        overflow: hidden;
+        overflow-y: auto;
         &__insurance1, &__insurance2{
-            height: 70%;
+            height: 292px;
             border-bottom: 0px;
             width: 100%;
+            margin: 10px;
             &__sections{
                 width: 100% !important;
             }
