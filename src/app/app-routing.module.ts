@@ -15,15 +15,15 @@ import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuar
 
 const routes: Routes = [
   {  path: '', pathMatch: 'full', redirectTo: 'inicio'},
-  {path:'select', component:SelectComponent, data:{ title:"Consultas", hType:'0' }},
-  {path:'autocomplete', component:AutocompleteComponent, data:{ title:"Lotes", hType:'0' } },
-  {path:'chips', component:ChipsComponent, data:{ title:"Reportes", hType:'0' }},
-  {path:'administracion', component:AministracionComponent, data:{ title:"Administración", hType:'0' }},
-  { path: 'editar-usuario/:id', component: EditarUsuarioComponent, data:{title:"Editar Usuario", hType: "1"} },
-  {path: 'nuevo-usuario', component: EditarUsuarioComponent, data:{title:"Nuevo Usuario", hType: 1} },
-  {path:'inicio', component:InicioComponent, data:{ title:"Inicio", hType:'0' }},
-  {path:'reported', component:DataVehicleComponent, data:{title: 'Alta de Robo o Abuso de Confianza', hType: '1'}} ,
-  { path: 'location-detail', component: LocationDetailComponent,  data:{ title:"Detalle de Localización", hType: '' } },
+  {path:'select', component:SelectComponent, data:{ title:"Consultas", hType:'0', flow: "home" }},
+  {path:'autocomplete', component:AutocompleteComponent, data:{ title:"Lotes", hType:'0', flow: "home" } },
+  {path:'chips', component:ChipsComponent, data:{ title:"Reportes", hType:'0', flow: "home" }},
+  {path:'administracion', component:AministracionComponent, data:{ title:"Administración", hType:'0', flow: "home" }},
+  {path: 'editar-usuario/:id', component: EditarUsuarioComponent, data:{title:"Editar Usuario", hType: "1", flow: "admin"}},
+  {path: 'nuevo-usuario', component: EditarUsuarioComponent, data:{title:"Nuevo Usuario", hType: 1, flow: "admin" } },
+  {path:'inicio', component:InicioComponent, data:{ title:"Inicio", hType:'0', flow: "home" }},
+  {path:'reported', component:DataVehicleComponent, data:{title: 'Alta de Robo o Abuso de Confianza', hType: '1', flow: "home"}} ,
+  {path: 'location-detail', component: LocationDetailComponent,  data:{ title:"Detalle de Localización", hType: '', flow: "vehicle"}},
   {path:'**', component:InicioComponent}
 ];
 

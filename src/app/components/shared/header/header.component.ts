@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   subscription !: Subscription;
   title: string
   headerType: string
+  flow: string
 
   showTableAction:boolean;
 
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
     this.showTableAction = true
     this.title = ''
     this.headerType=''
+    this.flow= ""
     
   }
  
@@ -33,8 +35,23 @@ export class HeaderComponent implements OnInit {
     this.getRoute()
   }
   back(){
-    console.log("TITULO", this.title);
-    this.router.navigateByUrl('/')
+    console.log("flujo", this.flow);
+    switch(this.flow){
+      case "admin":
+        console.log("redeireccionando a flujo principal de admin");
+        this.router.navigateByUrl("/administracion")
+        break;
+      case "vehicle":
+        console.log("redeireccionando a flujo principal de reporte");
+        this.router.navigateByUrl('/reported')
+        break;
+      case "home":
+        console.log("redeireccionando a flujo principal de inicio");
+        this.router.navigateByUrl('/')
+        break;
+      default:
+        this.router.navigateByUrl('/')
+    }
   }
   openDialog() {
     const dialogRef = this.dialog.open(BusquedaInicioComponent, {
@@ -93,6 +110,7 @@ export class HeaderComponent implements OnInit {
       if(event instanceof ActivationEnd){
         this.title = event.snapshot.data['title']
         this.headerType = event.snapshot.data['hType']
+        this.flow = event.snapshot.data['flow']
       }
     });
 
