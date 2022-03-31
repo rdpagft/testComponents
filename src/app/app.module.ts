@@ -76,6 +76,7 @@ import { LocationDetailComponent } from './components/vehicles-register/location
 import { InsurancePolicyComponent } from './components/modals/reports/insurance-policy/insurance-policy.component';
 import { VehicleDescriptionComponent } from './components/modals/reports/vehicle-description/vehicle-description.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import { ResearchFolderComponent } from './components/modals/reports/research-folder/research-folder.component';
 
 @NgModule({
   declarations: [
@@ -123,6 +124,7 @@ import { NewUserComponent } from './components/new-user/new-user.component';
     InsurancePolicyComponent,
     VehicleDescriptionComponent,
     NewUserComponent,
+    ResearchFolderComponent,
   ],
   imports: [
     BrowserModule,

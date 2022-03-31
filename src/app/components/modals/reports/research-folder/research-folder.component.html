@@ -1,0 +1,196 @@
+<main class="" fxFill fxLayout="column">  
+    <div class="header__container"  fxLayout="row" fxFlex="5">
+        <mat-toolbar fxLayout="row"  class="header__container__navbar" color="accent"  fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="start center">
+           <div class="header__container__navbar__section" fxLayout="row" fxLayoutAlign="end center">       
+               <div (click)="close()" class="header__container__navbar__section__close" fxLayoutAlign="end center">
+                   <button  mat-icon-button class="header__container__navbar__section__close__button">
+                       <mat-icon  class="material-icons-outlined">
+                           close 
+                       </mat-icon>
+                   </button>
+                   <label  class="header__container__navbar__section__close__label" for="close-text" fxHide.lt-md="true" fxShow.gt-sm="true" >Cerrar</label>
+               </div>
+           </div>
+        </mat-toolbar>
+    </div>
+    <div class="info__container"  fxLayout="column"  fxFlex.lt-md="90" fxFlex.gt-sm="90" fxLayoutAlign.gt-sm="center center">    
+        <div class="info__container__text" fxFlex.gt-sm="15" fxFlex.lt-md="auto" fxLayout="column" fxLayoutAlign="space-evenly start">
+            <div class="info__container__text__title" fxLayoutAlign="start center">
+                <label for="title">
+                    Vehículos con la misma Carpeta de Investigación                </label>
+            </div> 
+            <div class="info__container__text__subtitle" fxLayoutAlign="start center">
+                <label for="subtitle">
+                    os siguientes vehículos forman parte de la carpeta de investigación que capturaste.                </label>
+            </div> 
+        </div>
+         
+        <div class="info__container__user" fxFlex.gt-sm="70" fxFlex.lt-md="auto"  fxFill fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-between center">
+            <div class="info__container__user__insurance1" fxLayout="column" fxFlex.gt-sm="48" fxFlex.lt-md="auto" >
+                <div class="info__container__user__insurance1__sections__one__name" fxFlex.lt-md="10" fxFlex.gt-sm="10" fxLayoutAlign="start center">
+                    <mat-icon class="material-icons-outlined">drive_eta</mat-icon>
+                    <label for="">Vehículo</label>
+                </div>
+                <div class="info__container__user__insurance1__sections" fxFill fxLayout.lt-md="row" fxLayout.gt-sm="column" fxFlex.gt-sm="70" fxFlex.lt-md="100" fxLayoutAlign="space-evenly none">
+                    <!-- up section -->
+                    <div class="info__container__user__insurance1__sections__up" fxFlex.lt-md="50" fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-evenly space-evenly">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Tipo de transporte
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Automóvil
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Marca                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FORD
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33" >
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Submarca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FIESTA
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title" >
+                                    Número de serie
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    463HD58KD485KD75E
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Número de siniestro
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FORD
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Fecha de robo
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FIESTA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- down secttion -->
+                    <div class="info__container__user__insurance1__sections__down" fxFlex.lt-md="50"  fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-between space-between">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Color
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Negro
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                             
+                <div class="info__container__user__insurance1__button " fxLayoutAlign="end center"  fxFlex.gt-sm="20" fxFlex.lt-md="">
+                    <a>
+                        Ver detalle
+                    </a>
+                </div>
+            </div>
+
+            <div class="info__container__user__insurance2" fxLayout="column" fxFlex.gt-sm="48" fxFlex.lt-md="auto" >
+                <div class="info__container__user__insurance1__sections__one__name" fxFlex.lt-md="10" fxFlex.gt-sm="10" fxLayoutAlign="start center">
+                    <mat-icon class="material-icons-outlined">drive_eta</mat-icon>
+                    <label for="">Vehículo</label>
+                </div>
+                <div class="info__container__user__insurance1__sections" fxFill fxLayout.lt-md="row" fxLayout.gt-sm="column" fxFlex.gt-sm="70" fxFlex.lt-md="100" fxLayoutAlign="space-evenly none">
+                    <!-- up section -->
+                    <div class="info__container__user__insurance1__sections__up" fxFlex.lt-md="50" fxLayout="column" fxLayoutAlign.gt-sm="space-evenly space-evenly">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Tipo de transporte
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Automóvil
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Marca                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FORD
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33" >
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Submarca
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FIESTA
+                                </div>
+                            </div>
+                        </div>
+                         <div class="info__container__user__insurance1__sections__two" fxLayout.lt-md="column" fxLayout.gt-sm="row"> 
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title" >
+                                    Número de serie
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    463HD58KD485KD75E
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="34"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Número de siniestro
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FORD
+                                </div>
+                            </div>
+                            <div class="info__container__user__insurance1__sections__one__data" fxFlex.gt-sm="33">
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Fecha de robo
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    FIESTA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- down secttion -->
+                    <div class="info__container__user__insurance1__sections__down" fxFlex.lt-md="50"  fxLayout.gt-sm="column" fxLayoutAlign.gt-sm="space-between space-between">
+                        <div class="info__container__user__insurance1__sections__one"fxLayout.gt-sm="row" fxLayout.lt-md="column" >
+                            <div class="info__container__user__insurance1__sections__one__data" fxLayout="column" fxFlex.gt-sm="33"> 
+                                <div class="info__container__user__insurance1__sections__one__data__title">
+                                    Color
+                                </div>
+                                <div class="info__container__user__insurance1__sections__one__data__description">
+                                    Negro
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                             
+                <div class="info__container__user__insurance1__button" fxLayoutAlign="end center"  fxFlex.gt-sm="20" fxFlex.lt-md="">
+                    <a >
+                        Ver detalle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
