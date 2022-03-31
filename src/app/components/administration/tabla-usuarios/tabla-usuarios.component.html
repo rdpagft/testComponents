@@ -20,7 +20,9 @@
           <mat-icon class="material-icons-outlined">edit</mat-icon>
         </button>
         <button mat-icon-button>
-          <mat-icon class="material-icons-outlined">power_settings_new</mat-icon>
+          <mat-icon class="material-icons-outlined"
+            >power_settings_new</mat-icon
+          >
         </button>
         <button mat-icon-button>
           <mat-icon class="material-icons-outlined">save_alt</mat-icon>
@@ -42,6 +44,7 @@
     <ng-container matColumnDef="selector">
       <th mat-header-cell *matHeaderCellDef>
         <mat-checkbox
+          color="primary"
           (change)="$event ? masterToggle() : null"
           [checked]="selection.hasValue() && isAllSelected()"
           [indeterminate]="selection.hasValue() && !isAllSelected()"
@@ -51,6 +54,7 @@
       </th>
       <td mat-cell *matCellDef="let row">
         <mat-checkbox
+          color="primary"
           (click)="$event.stopPropagation()"
           (change)="$event ? rowSelected($event.checked, row) : null"
           [checked]="selection.isSelected(row)"

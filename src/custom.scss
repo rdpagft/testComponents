@@ -669,6 +669,10 @@ $color-success: #339966 !default;
     color: $color-carbon60;
   }
 
+  .mat-checkbox-indeterminate .mat-checkbox-background {
+    background-color: $color-carbon60 !important;
+  }
+
   @media screen and (max-width: 405px) {
     .mat-paginator-container {
       padding: 0;
