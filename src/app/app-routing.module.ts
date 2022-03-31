@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:'chips', component:ChipsComponent, data:{ title:"Reportes", hType:'0' }},
   {path:'administracion', component:AministracionComponent, data:{ title:"Administración", hType:'0' }},
   { path: 'editar-usuario/:id', component: EditarUsuarioComponent, data:{title:"Editar Usuario", hType: "1"} },
+  {path: 'nuevo-usuario', component: EditarUsuarioComponent, data:{title:"Nuevo Usuario", hType: 1} },
   {path:'inicio', component:InicioComponent, data:{ title:"Inicio", hType:'0' }},
   {path:'reported', component:DataVehicleComponent, data:{title: 'Alta de Robo o Abuso de Confianza', hType: '1'}} ,
   { path: 'location-detail', component: LocationDetailComponent,  data:{ title:"Detalle de Localización", hType: '' } },

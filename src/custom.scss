@@ -455,7 +455,7 @@ $color-success: #339966 !default;
   }
 
   .cta {
-    color: inherit;
+    color: $color-sea;
     font-family: inherit;
     font-size: inherit;
     text-decoration: none;
@@ -619,19 +619,10 @@ $color-success: #339966 !default;
     .mat-card.rol__card {
       box-shadow: none;
     }
-    .subtitle{
+    .subtitle {
       font-size: 16px;
       line-height: 20px;
     }
-    // .mat-subheading-1 {
-    //   color: $color-carbon60;
-    //   font-size: 16px;
-    //   font-family: Quicksand;
-    //   font-weight: 400;
-    //   line-height: 20px;
-    //   letter-spacing: 0.2px;
-    //   margin: 0;
-    // }
   }
 }
 

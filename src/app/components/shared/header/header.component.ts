@@ -33,6 +33,7 @@ export class HeaderComponent implements OnInit {
     this.getRoute()
   }
   back(){
+    console.log("TITULO", this.title);
     this.router.navigateByUrl('/')
   }
   openDialog() {
