@@ -37,7 +37,7 @@ export class ThreeLocationComponent implements OnInit {
     this.isEmpty = true
     this.showFound = true
 
-    this.lat = 19.290950;
+    this.lat = 28.704060;
     this.lng = -99.653015;
     this.zoom = 9;
  

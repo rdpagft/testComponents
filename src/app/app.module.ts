@@ -164,7 +164,7 @@ import { MapComponent } from './components/modals/reports/map/map.component';
     MatDialogModule,
     MatTreeModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCtX3QdbLGxTuTmf3_LmKz33hNvXA3wavA'
+      apiKey: ''
     })
   ],
   providers: [
