@@ -9,7 +9,7 @@ export class DataVehicleComponent implements OnInit {
   step: number;
   title: string
   constructor() { 
-    this.step = 1
+    this.step = 3
     this.title = ""
   }
 

@@ -122,3 +122,8 @@
 input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator  {
     background: none;
   }
+
+  agm-map {
+    height: 100%;
+    width: 100%;
+}

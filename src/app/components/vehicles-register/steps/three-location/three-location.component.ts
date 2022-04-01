@@ -20,6 +20,10 @@ export class ThreeLocationComponent implements OnInit {
     {id:4,name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
   ];
 
+  zoom: number
+  lat: number 
+  lng: number 
+
   constructor(private _formBuilder: FormBuilder) {
     this.infoFormGroup = this._formBuilder.group({
       postal_code: [''],
@@ -33,10 +37,15 @@ export class ThreeLocationComponent implements OnInit {
     this.isEmpty = true
     this.showFound = true
 
+    this.lat = 19.290950;
+    this.lng = -99.653015;
+    this.zoom = 9;
  
    }
+
 
   ngOnInit(): void {
     
   }
 }
+

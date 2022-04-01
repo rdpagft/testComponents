@@ -77,6 +77,8 @@ import { InsurancePolicyComponent } from './components/modals/reports/insurance-
 import { VehicleDescriptionComponent } from './components/modals/reports/vehicle-description/vehicle-description.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
 import { ResearchFolderComponent } from './components/modals/reports/research-folder/research-folder.component';
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './components/modals/reports/map/map.component';
 
 @NgModule({
   declarations: [
@@ -125,6 +127,7 @@ import { ResearchFolderComponent } from './components/modals/reports/research-fo
     VehicleDescriptionComponent,
     NewUserComponent,
     ResearchFolderComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -160,6 +163,9 @@ import { ResearchFolderComponent } from './components/modals/reports/research-fo
     MatCardModule,
     MatDialogModule,
     MatTreeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCtX3QdbLGxTuTmf3_LmKz33hNvXA3wavA'
+    })
   ],
   providers: [
     MatDatepickerModule,
