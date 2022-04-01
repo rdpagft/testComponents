@@ -78,6 +78,8 @@ import { VehicleDescriptionComponent } from './components/modals/reports/vehicle
 import { NewUserComponent } from './components/new-user/new-user.component';
 import { ResearchFolderComponent } from './components/modals/reports/research-folder/research-folder.component';
 import { MapComponent } from './components/modals/reports/map/map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -161,7 +163,8 @@ import { MapComponent } from './components/modals/reports/map/map.component';
     MatNativeDateModule,
     MatCardModule,
     MatDialogModule,
-    MatTreeModule
+    MatTreeModule,
+    GoogleMapsModule
   ],
   providers: [
     MatDatepickerModule,

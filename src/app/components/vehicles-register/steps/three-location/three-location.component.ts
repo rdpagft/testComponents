@@ -19,10 +19,9 @@ export class ThreeLocationComponent implements OnInit {
     {id:3,name: 'Cow', sound: 'Moo!'},
     {id:4,name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
   ];
-
-  zoom: number
-  lat: number 
-  lng: number 
+  zoom = 12
+  center !: google.maps.LatLngLiteral
+  options: google.maps.MapOptions
 
   constructor(private _formBuilder: FormBuilder) {
     this.infoFormGroup = this._formBuilder.group({
@@ -36,16 +35,27 @@ export class ThreeLocationComponent implements OnInit {
     });
     this.isEmpty = true
     this.showFound = true
+    this.options = {
+      mapTypeId: 'hybrid',
+      zoomControl: false,
+      scrollwheel: false,
+      disableDoubleClickZoom: true,
+      maxZoom: 15,
+      minZoom: 8,
+    }
 
-    this.lat = 28.704060;
-    this.lng = -99.653015;
-    this.zoom = 9;
- 
+
    }
 
-
-  ngOnInit(): void {
-    
+   ngOnInit() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      }
+    })
   }
+
+
 }
 
