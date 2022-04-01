@@ -77,10 +77,8 @@ import { InsurancePolicyComponent } from './components/modals/reports/insurance-
 import { VehicleDescriptionComponent } from './components/modals/reports/vehicle-description/vehicle-description.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
 import { ResearchFolderComponent } from './components/modals/reports/research-folder/research-folder.component';
-import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './components/modals/reports/map/map.component';
 
-import { environment } from './../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -163,10 +161,7 @@ import { environment } from './../environments/environment';
     MatNativeDateModule,
     MatCardModule,
     MatDialogModule,
-    MatTreeModule,
-    AgmCoreModule.forRoot({
-      apiKey: environment.apikeyAGM
-    })
+    MatTreeModule
   ],
   providers: [
     MatDatepickerModule,
