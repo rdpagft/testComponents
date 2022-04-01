@@ -80,6 +80,7 @@ import { ResearchFolderComponent } from './components/modals/reports/research-fo
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './components/modals/reports/map/map.component';
 
+import { environment } from './../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -164,7 +165,7 @@ import { MapComponent } from './components/modals/reports/map/map.component';
     MatDialogModule,
     MatTreeModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: environment.apikeyAGM
     })
   ],
   providers: [
