@@ -15,7 +15,13 @@
     </div>
   </div>
 
-  <table class="table" mat-table [dataSource]="dataSource" matSort>
+  <table
+    #userTableMobile
+    class="table"
+    mat-table
+    [dataSource]="dataSource"
+    matSort
+  >
     <ng-container matColumnDef="selector">
       <th mat-header-cell *matHeaderCellDef>
         <mat-checkbox color="primary"> </mat-checkbox>
@@ -25,11 +31,14 @@
       [aria-label]="checkboxLabel()" -->
       </th>
       <td mat-cell *matCellDef="let row">
-        <mat-checkbox color="primary"> </mat-checkbox>
-        <!-- (click)="$event.stopPropagation()"
-      (change)="$event ? selection.toggle(row) : null"
-      [checked]="selection.isSelected(row)"
-      [aria-label]="checkboxLabel(row)" -->
+        <mat-checkbox
+          color="primary"
+          (click)="$event.stopPropagation()"
+          (change)="$event ? checkRow() : null"
+          [checked]="selection.isSelected(row)"
+          [aria-label]="checkboxLabel(row)"
+        >
+        </mat-checkbox>
       </td>
     </ng-container>
 

@@ -42,10 +42,10 @@ export class TablaUsuariosComponent implements AfterViewInit {
 
     this.paginator._intl = {
       itemsPerPageLabel: 'Mostrar',
-      firstPageLabel: '',
-      lastPageLabel: '',
-      nextPageLabel: '',
-      previousPageLabel: '',
+      firstPageLabel: 'Ir al inicio',
+      lastPageLabel: 'Última página',
+      nextPageLabel: 'Siguiente',
+      previousPageLabel: 'Anterior',
       changes: new Subject(),
       getRangeLabel(page, pageSize, lenght): string {
         return `Mostrando ${page + 1 + page * (pageSize - 1)} al ${
@@ -83,23 +83,9 @@ export class TablaUsuariosComponent implements AfterViewInit {
     }`;
   }
 
-  rowSelected(checked: boolean, row: any) {
-    this.selection.toggle(row);
-
-    if (this.selection.hasValue()) {
-    }
-  }
-
   editUser() {
+    console.log('users :>> ', this.selection.selected);
     this.router.navigate(['editar-usuario', '1']);
-    // this.dialog.open(EditarUsuarioComponent, {
-    //   maxWidth: '100vw',
-    //   maxHeight: '100vh',
-    //   height: '100%',
-    //   width: '100%',
-    //   autoFocus: false,
-    //   panelClass: 'modals-admin',
-    // });
   }
 
   detailUser() {
@@ -110,6 +96,7 @@ export class TablaUsuariosComponent implements AfterViewInit {
       width: '100%',
       autoFocus: false,
       panelClass: 'modals-admin',
+      data: this.selection.selected,
     });
   }
 }

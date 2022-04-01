@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosUsuarios } from '../tabla-usuarios/tabla-usuarios.component';
 
 @Component({
   selector: 'app-aministracion',
@@ -6,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aministracion.component.scss'],
 })
 export class AministracionComponent implements OnInit {
-  
-  showTableAction:boolean;
+  selectedUser: DatosUsuarios[];
+  showTableAction: boolean;
 
   constructor() {
-    this.showTableAction = true
-
+    this.showTableAction = true;
+    this.selectedUser = [];
   }
   ngOnInit(): void {}
-  back(){
-    this.showTableAction = false
+  back() {
+    this.showTableAction = false;
+  }
+
+  selectedUsers(selectedUser: DatosUsuarios[]) {
+    this.selectedUser = selectedUser;
   }
 }
