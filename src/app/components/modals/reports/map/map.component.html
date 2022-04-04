@@ -9,10 +9,10 @@
       </div>
     </section>
     <label class="container__text" for="title">Dirección del suceso</label>
-    <section class="container__map" fxFlex.gt-sm="80vh" fxFlex.lt-md="auto" >
+    <section class="container__map" fxFlex.gt-sm="80vh" fxFlex.lt-md="80vh" >
         <div class="container__map__localation">
-
-            <google-map id="2" height="100%" width="100%" ></google-map>
+            <!-- google maps component -->
+            <app-google-maps [options]="options" [center]="center" [zoom]="zoom"></app-google-maps>
         </div>
     </section>
   </main>

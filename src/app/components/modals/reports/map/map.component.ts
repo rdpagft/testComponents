@@ -9,13 +9,28 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class MapComponent implements OnInit {
   searchFormGroup!: FormGroup
   zoom = 12
-  center !: google.maps.LatLngLiteral
+  center : google.maps.LatLngLiteral
   options: google.maps.MapOptions
   
   constructor(private _formBuilder: FormBuilder) {
     this.searchFormGroup = this._formBuilder.group({
       username: [''],
     });
+
+    //google maps latitude & longitude 
+    this.center= {
+      lat: 50,
+      lng: 100
+    }
+    // google map options
+    
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      }
+    })
+    
     this.options = {
       mapTypeId: 'hybrid',
       zoomControl: false,
@@ -24,16 +39,15 @@ export class MapComponent implements OnInit {
       maxZoom: 15,
       minZoom: 8,
     }
-
    }
 
   ngOnInit(): void {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.center = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      }
-    })
+    // navigator.geolocation.getCurrentPosition((position) => {
+    //   this.center = {
+    //     lat: position.coords.latitude,
+    //     lng: position.coords.longitude,
+    //   }
+    // })
   }
 
 }

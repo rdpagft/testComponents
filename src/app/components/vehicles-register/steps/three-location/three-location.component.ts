@@ -22,7 +22,7 @@ export class ThreeLocationComponent implements OnInit {
     {id:4,name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
   ];
   zoom = 12
-  center !: google.maps.LatLngLiteral
+  center : google.maps.LatLngLiteral
   options: google.maps.MapOptions
 
   constructor(private _formBuilder: FormBuilder, private dialog: MatDialog) {
@@ -37,6 +37,21 @@ export class ThreeLocationComponent implements OnInit {
     });
     this.isEmpty = true
     this.showFound = true
+
+
+    this.center= {
+      lat: 50,
+      lng: 100
+    }
+    // google map options
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      }
+    })
+
     this.options = {
       mapTypeId: 'hybrid',
       zoomControl: false,
@@ -45,17 +60,19 @@ export class ThreeLocationComponent implements OnInit {
       maxZoom: 15,
       minZoom: 8,
     }
+    //google maps latitude & longitude 
+  
 
 
    }
 
    ngOnInit() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.center = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      }
-    })
+    // navigator.geolocation.getCurrentPosition((position) => {
+    //   this.center = {
+    //     lat: position.coords.latitude,
+    //     lng: position.coords.longitude,
+    //   }
+    // })
   }
 
   openMapModal(){

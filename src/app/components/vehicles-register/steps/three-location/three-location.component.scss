@@ -106,11 +106,14 @@
                 padding: 0 0 15px 0;
             }
             &__infomap{
-                // border: 1px solid red;
                 height: 210px;
                 &__map{
                     height: 85%;
                     width: 100%;
+                    app-google-maps{
+                        height: 100% !important;
+                        width: 100% !important;
+                    }
 
                 }
             }

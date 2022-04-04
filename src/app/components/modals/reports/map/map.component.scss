@@ -18,9 +18,12 @@
         &__localation{
             border: 1px solid green;
             height: 100%;
+            width: 100%;
+            app-google-maps{
+                height: 100%;
+                width: 100%;    
+            }
         }
-        border: 1px solid red;
-
     }
 }
 
