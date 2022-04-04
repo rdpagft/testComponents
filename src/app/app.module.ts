@@ -79,6 +79,7 @@ import { NewUserComponent } from './components/new-user/new-user.component';
 import { ResearchFolderComponent } from './components/modals/reports/research-folder/research-folder.component';
 import { MapComponent } from './components/modals/reports/map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapsComponent } from './componentes/shared/google-maps/google-maps.component';
 
 
 @NgModule({
@@ -129,6 +130,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     NewUserComponent,
     ResearchFolderComponent,
     MapComponent,
+    GoogleMapsComponent,
   ],
   imports: [
     BrowserModule,

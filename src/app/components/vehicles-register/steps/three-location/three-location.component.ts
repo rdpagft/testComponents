@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MapComponent } from '../../../modals/reports/map/map.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-three-location',
@@ -23,7 +25,7 @@ export class ThreeLocationComponent implements OnInit {
   center !: google.maps.LatLngLiteral
   options: google.maps.MapOptions
 
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: FormBuilder, private dialog: MatDialog) {
     this.infoFormGroup = this._formBuilder.group({
       postal_code: [''],
       country: [''],
@@ -54,6 +56,21 @@ export class ThreeLocationComponent implements OnInit {
         lng: position.coords.longitude,
       }
     })
+  }
+
+  openMapModal(){
+    let dialogRef = this.dialog.open(MapComponent, {
+      maxWidth:  '100vw',
+      maxHeight: '100vh',
+      height: '100%',
+      width: '100%',
+      autoFocus: false,
+      panelClass: "transparent-modal"
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
+  });
   }
 
 
