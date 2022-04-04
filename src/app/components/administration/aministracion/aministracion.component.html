@@ -2,7 +2,7 @@
   <mat-toolbar
     fxShow="true"
     fxShow.gt-sm="false"
-    *ngIf="showTableAction"
+    *ngIf="!unselect"
     class="container__navbar light"
     color="accent"
     fxLayoutAlign.gt-sm="space-between center"
@@ -11,19 +11,17 @@
     fxHide.gt-sm="true"
   >
     <div
-      (click)="back()"
       class="container__navbar__logo__table"
       fxLayout="row"
       fxLayoutAlign="center center"
       fxShow.lt-md="true"
       fxHide.gt-sm="true"
     >
-      <mat-icon fxFlexAlign="center center"> chevron_left </mat-icon>
-      <label for="selects">11</label>
+      <button (click)="back()" mat-icon-button>
+        <mat-icon fxFlexAlign="center center"> chevron_left </mat-icon>
+        <label for="selects">{{ selectedUser.length }}</label>
+      </button>
     </div>
-    <!-- <div class="container__navbar__title__table">
-        <label for="section">11</label>
-    </div> -->
 
     <div
       class="container__navbar__admin2"
@@ -31,10 +29,14 @@
       fxHide.gt-sm="true"
       fxLayoutAlign="space-between center"
     >
-      <button mat-icon-button class="container__navbar__admin__icons">
+      <button (click)="detailUser()" mat-icon-button class="container__navbar__admin__icons">
         <mat-icon class="material-icons-outlined"> visibility </mat-icon>
       </button>
-      <button mat-icon-button class="container__navbar__admin__icons">
+      <button
+        (click)="editUser()"
+        mat-icon-button
+        class="container__navbar__admin__icons"
+      >
         <mat-icon class="material-icons-outlined"> edit </mat-icon>
       </button>
       <button mat-icon-button class="container__navbar__admin__icons">
@@ -73,6 +75,7 @@
     <app-tabla-usuarios fxShow="true" fxShow.lt-md="false"></app-tabla-usuarios>
   </div>
   <app-tabla-usuarios-mobile
+    [unselect]="unselect"
     (selectedUser)="selectedUsers($event)"
     fxShow="true"
     fxShow.gt-sm="false"

@@ -2,11 +2,14 @@ import {
   AfterViewInit,
   Component,
   EventEmitter,
+  Input,
+  OnChanges,
   OnInit,
   Output,
+  SimpleChanges,
   ViewChild,
 } from '@angular/core';
-import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
 import { DatosUsuarios } from '../tabla-usuarios/tabla-usuarios.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { Subject } from 'rxjs';
@@ -17,7 +20,9 @@ import { SelectionModel } from '@angular/cdk/collections';
   templateUrl: './tabla-usuarios-mobile.component.html',
   styleUrls: ['./tabla-usuarios-mobile.component.scss'],
 })
-export class TablaUsuariosMobileComponent implements OnInit, AfterViewInit {
+export class TablaUsuariosMobileComponent
+  implements OnInit, AfterViewInit, OnChanges
+{
   displayedColumns: string[];
   dataSource: MatTableDataSource<DatosUsuarios>;
   selection: SelectionModel<DatosUsuarios>;
@@ -25,6 +30,7 @@ export class TablaUsuariosMobileComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild('userTableMobile') userTable!: any;
   @Output('selectedUser') selectedUser: EventEmitter<DatosUsuarios[]>;
+  @Input('unselect') unselect: boolean;
 
   constructor() {
     this.displayedColumns = [
@@ -41,6 +47,17 @@ export class TablaUsuariosMobileComponent implements OnInit, AfterViewInit {
     this.dataSource = new MatTableDataSource<DatosUsuarios>(ELEMENT_DATA);
     this.selection = new SelectionModel<DatosUsuarios>(true, []);
     this.selectedUser = new EventEmitter<DatosUsuarios[]>();
+    this.unselect = false;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (
+      changes['unselect'].currentValue !== changes['unselect'].previousValue
+    ) {
+      if (changes['unselect'].currentValue == true) {
+        this.selection.clear();
+      }
+    }
   }
 
   ngAfterViewInit(): void {
@@ -59,11 +76,6 @@ export class TablaUsuariosMobileComponent implements OnInit, AfterViewInit {
         } de ${lenght} registros`;
       },
     };
-
-    console.log(
-      'userTable :>> ',
-      this.userTable._elementRef.nativeElement.children[1].children
-    );
   }
 
   ngOnInit(): void {}
@@ -84,9 +96,21 @@ export class TablaUsuariosMobileComponent implements OnInit, AfterViewInit {
     }`;
   }
 
-  checkRow() {
-    this.selectedUser.emit(this.selection.selected);
-    console.log('Si entro');
+  checkRow(row?: DatosUsuarios) {
+    if (row) {
+      this.selection.toggle(row);
+      this.selectedUser.emit(this.selection.selected);
+
+      setTimeout(() => {
+        document.querySelectorAll('.mat-checkbox').forEach((row) => {
+          row.parentElement?.parentElement?.classList.remove('checkedElement');
+        });
+
+        document.querySelectorAll('.mat-checkbox-checked').forEach((row) => {
+          row.parentElement?.parentElement?.classList.add('checkedElement');
+        });
+      }, 100);
+    }
   }
 }
 
