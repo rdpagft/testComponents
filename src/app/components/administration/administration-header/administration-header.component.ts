@@ -10,9 +10,14 @@ import { Router } from '@angular/router';
 export class AdministrationHeaderComponent implements OnInit {
   favoriteSeason!: string;
   seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+  status: string[];
 
   searchFormGroup!: FormGroup;
-  constructor(private _formBuilder: FormBuilder, private router: Router) {}
+
+  constructor(private _formBuilder: FormBuilder, private router: Router) {
+    this.status = ['Activo', 'Inactivo'];
+  }
+
   ngOnInit(): void {
     this.searchFormGroup = this._formBuilder.group({
       username: [''],
