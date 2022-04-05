@@ -502,7 +502,8 @@ $color-success: #339966 !default;
   }
 
   .mat-form-field-appearance-fill .mat-form-field-flex {
-    border-radius: 8px;
+    // border-radius: 8px;
+    border-radius: 0px;
   }
 
   .mat-form-field-outline {

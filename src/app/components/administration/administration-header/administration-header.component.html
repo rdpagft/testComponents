@@ -131,6 +131,7 @@
         <div class="header__filters__menu">
           <mat-radio-group fxLayout="column" [(ngModel)]="favoriteSeason">
             <mat-radio-button
+              color="primary"
               class="header__filters__menu__button"
               *ngFor="let season of seasons"
               [value]="season"
@@ -150,8 +151,14 @@
         Compañía / Sector<mat-icon>arrow_drop_down</mat-icon>
       </button>
       <mat-menu #menuCompany="matMenu" fxLayout="column">
-        <mat-form-field appearance="outline" floatLabel="auto">
-          <input matInput placeholder="Compania" autofocus required />
+        <mat-form-field
+          (click)="$event.stopPropagation()"
+          appearance="outline"
+          floatLabel="auto"
+        >
+          <mat-label>Buscar</mat-label>
+          <input matInput placeholder="Buscar" autofocus />
+          <mat-icon matPrefix>search</mat-icon>
         </mat-form-field>
       </mat-menu>
     </div>
@@ -182,19 +189,22 @@
         class="filter-text"
         [matMenuTriggerFor]="menuStatus"
       >
-        Estatus<mat-icon>arrow_drop_down</mat-icon>
+        <mat-label>Estatus</mat-label>
+        <mat-icon>arrow_drop_down</mat-icon>
       </button>
-      <mat-menu #menuStatus="matMenu" fxLayout="column">
-        <mat-radio-group
-          fxLayout="column"
-          aria-labelledby="Estatus"
-          [(ngModel)]="favoriteSeason"
-          color="primary"
-        >
-          <mat-radio-button *ngFor="let season of seasons" [value]="season">
-            {{ season }}
-          </mat-radio-button>
-        </mat-radio-group>
+      <mat-menu #menuStatus="matMenu">
+        <div class="header__filters__menu">
+          <mat-radio-group fxLayout="column" [(ngModel)]="favoriteSeason">
+            <mat-radio-button
+              class="header__filters__menu__button"
+              color="primary"
+              *ngFor="let state of status"
+              [value]="state"
+            >
+              {{ state }}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
       </mat-menu>
     </div>
   </div>
