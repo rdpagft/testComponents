@@ -1,5 +1,7 @@
-<div class="container__map">
+<div #container__map class="container__map">
     <!-- <label for="inputText" class="label">Dirección del suceso</label> -->
     <input #mapSearchField class="search" />
-    <google-map height="100%" width="100%" [options]="options" [center]="center" [zoom]="zoom"></google-map>
+    <google-map height="100%" width="100%" [options]="options" [center]="center" [zoom]="zoom">
+        <map-marker [position]="{ lat: center.lat, lng: center.lng }"></map-marker>
+    </google-map>
 </div>

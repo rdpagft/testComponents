@@ -19,33 +19,26 @@ export class GoogleMapsComponent implements OnInit, AfterViewInit{
 
   constructor() { }
   ngAfterViewInit(): void {
-
-    // setTimeout(() => {
-      console.log(this.mapSearchField);
-     const searchBox = new google.maps.places.SearchBox(this.mapSearchField.nativeElement)
-     this.map.controls[google.maps.ControlPosition.TOP_CENTER].push(
-      this.mapSearchField.nativeElement
-     )
-     searchBox.addListener('places_changed', ()=>{
-       const places =searchBox.getPlaces()
-       if(places?.length === 0) return
-       const bounds  = new google.maps.LatLngBounds()
-       places?.forEach(place => {
-          if(!place.geometry || !place.geometry.location) return
-          place.geometry.viewport ? bounds.union(place.geometry.viewport) : bounds.extend(place.geometry.location)
-       })
-       this.map.fitBounds(bounds)
-     })
-      
-    // }, 1000);
+    console.log(this.container__map);
+    console.log(this.mapSearchField);
+    const searchBox = new google.maps.places.SearchBox(this.mapSearchField.nativeElement)
+    this.map.controls[google.maps.ControlPosition.TOP_CENTER].push(
+    this.mapSearchField.nativeElement
+    )
+    searchBox.addListener('places_changed', ()=>{
+      const places =searchBox.getPlaces()
+      if(places?.length === 0) return
+      const bounds  = new google.maps.LatLngBounds()
+      places?.forEach(place => {
+        if(!place.geometry || !place.geometry.location) return
+        place.geometry.viewport ? bounds.union(place.geometry.viewport) : bounds.extend(place.geometry.location)
+      })
+      this.map.fitBounds(bounds)
+    })
   }
 
 
   ngOnInit(): void {
-    // console.log("options", this.options);
-    // console.log("center", this.center);
-    // console.log("zoom", this.zoom);
-
   }
 
   
