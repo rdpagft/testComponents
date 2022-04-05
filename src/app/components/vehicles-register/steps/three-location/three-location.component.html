@@ -14,11 +14,14 @@
                     Ubica la dirección del suceso en el mapa o ingresa los datos manualmente.
                 </label>
             </div>
-            <div class="container__sections__information__infomap" fxLayoutAlign="center center" (click)="openMapModal()">
-            <!-- <div class="container__sections__information__infomap" fxLayoutAlign="center center"> -->
+            <!-- <div class="container__sections__information__infomap" fxLayoutAlign="center center" (click)="openMapModal()"> -->
+            <div class="container__sections__information__infomap" fxLayoutAlign="center center">
                 <div class="container__sections__information__infomap__map" fxLayoutAlign="center center">
                     <!--  -->
-                    <!-- <app-google-maps [zoom]="zoom" [center]="center" [options]="options"></app-google-maps> -->
+                    <!-- <input #mapSearchField  class="search-input" type="text"> -->
+                    <app-google-maps  [zoom]="zoom" [center]="center" [options]="options">
+   
+                    </app-google-maps>
                     <!-- <google-map id="1" height="100%" width="100%" [zoom]="zoom" [center]="center" [options]="options"></google-map> -->
                     <!--  -->
                 </div>

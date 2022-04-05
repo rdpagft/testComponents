@@ -108,8 +108,14 @@
             &__infomap{
                 height: 210px;
                 &__map{
+                    // position: relative;
                     height: 85%;
                     width: 100%;
+                    // .search-input{
+                    //     position: absolute;
+                    //     top: 0;
+                    //     z-index: 99999999999;
+                    // }
                     app-google-maps{
                         height: 100% !important;
                         width: 100% !important;
